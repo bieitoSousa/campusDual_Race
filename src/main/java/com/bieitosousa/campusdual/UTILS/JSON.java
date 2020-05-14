@@ -9,6 +9,8 @@ import com.bieitosousa.campusdual.DATA.Car;
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
 
+import static com.bieitosousa.campusdual.UTILS.JSON.CargarFileCar;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -57,18 +59,26 @@ public class JSON {
 	}
 
 	public static List<Car> CargarFileCar(File f) {
+		List<Car> laux = new ArrayList<>();
 		Gson gson = new Gson();
-		ArrayList<Car> objList = null;
+		ArrayList<Car> objList = new ArrayList<>();
 		BufferedReader in;
 		try (Reader reader = (in = new BufferedReader(new InputStreamReader(new FileInputStream(f), "utf-8")))) {
 			objList = gson.fromJson(reader, new TypeToken<ArrayList<Car>>() {
 			}.getType());
-			if (objList != null || objList.size() > 17) {
+			
+			if (objList == null || objList.size() < 16) {
 				throw new Exception("No se han cargado correctamente " + f.getPath());
 			}
+
+			for (int i = 0; i < objList.size(); i++) {
+				laux.add(new Car(objList.get(i).getMark(), objList.get(i).getModel()));
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return objList;
+		return laux;
 	}
+
 }

@@ -22,7 +22,8 @@ public class Car {
     // max sped is 5 
     private final int MAXSPEED = 5;
     // String to identificate a car
-    static int id;
+    static int sumid;
+    private int id;
     // Company make the car
     private String mark;
     // name of the model of a car
@@ -32,10 +33,10 @@ public class Car {
     // units the car move
     private int distance;
 
-    Car(String mark, String model) {
+    public Car(String mark, String model) {
         this.mark = mark;
         this.model = model;
-        Car.id = id++;
+        this.id = sumid++;
     }
 
     public String getMark() {
@@ -70,12 +71,12 @@ public class Car {
         this.distance = distance;
     }
 
-    public static int getId() {
+    public  int getId() {
         return id;
     }
 
-    public static void setId(int id) {
-        Car.id = id;
+    public  void setId(int id) {
+        this.id = id;
     }
 
     public int getMAXSPEED() {
@@ -113,7 +114,8 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car_" + id + " { distance=" + distance +", speed = "+speed+ '}';
+        return "Car_" + id +"_"+model+"_"+mark
+        		+ " { distance=" + distance +", speed = "+speed+ '}';
     }
 
 

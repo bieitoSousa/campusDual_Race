@@ -33,18 +33,21 @@ public class Race_Standar extends Race {
             boolean isAllCarPasrticipe
     ) throws Exception {
 		 super(name, type, ListGCar, isAllCarPasrticipe);
-        if (type != 1) {
-        	throw new Exception(" Type erroneo no se puede crear la clase Race_Elimination");
-        }
+		 if (type != 0 ) {
+				throw new Exception(" Type tiene que ser 0. Error no se puede crear la clase Race_Standar");
+			}
+			if (ListGCar.size() == 0 ) {
+				throw new Exception(" La lista de garajes no contiene ningun valor, no se puede crear la clase Race_Standar");
+			}
         // Definimos la lista de participantes
         if (isAllCarPasrticipe) {
             // Loop the gararges and take one the cart to participate
             for (Garage g : ListGCar) {
-                this.listCarParticipe = ListGCar.get(ListGCar.indexOf(g)).getOneCar();
+                this.listCarParticipe.addAll( g.getOneCar());
             }
         } else { // Loop the gararges and take all the cart to participate
             for (Garage g : ListGCar) {
-                this.listCarParticipe = ListGCar.get(ListGCar.indexOf(g)).getAllCar();
+                this.listCarParticipe.addAll(g.getAllCar());
             }
         }
         
@@ -86,7 +89,7 @@ public class Race_Standar extends Race {
 				// [B4] = = = Actualizamos las vueltas , generamos ditancia de vuleta = = = =
 				if (time == lapTime) {// = Vueltas ; cada vuelta dura --> lap = 60 t
 					lapTime = +lapTime;
-					printArray(listCarParticipe);
+					printList(listCarParticipe);
 				}
 			}
 			// ================================================//

@@ -23,22 +23,28 @@ import org.apache.commons.lang.ArrayUtils;
 public class Race_Elimination extends Race {
 
 	private final int type = 1;
-	private ArrayList<Car> listCarParticipe = null;
+	private ArrayList<Car> listCarParticipe ;
 
 	public Race_Elimination(String name, int type, List<Garage> ListGCar, boolean isAllCarPasrticipe) throws Exception {
 		super(name, type, ListGCar, isAllCarPasrticipe);
-		if (type != 1) {
+		// Filtramos 
+		if (type != 1 ) {
 			throw new Exception(" Type erroneo no se puede crear la clase Race_Elimination");
+		}
+		if (ListGCar.size() == 0 ) {
+			throw new Exception(" La lista de garajes no contiene ningun valor, no se puede crear la clase Race_Elimination");
 		}
 		// Definimos la lista de participantes
 		if (isAllCarPasrticipe) {
 			// Loop the gararges and take one the cart to participate
 			for (Garage g : ListGCar) {
-				this.listCarParticipe = ListGCar.get(ListGCar.indexOf(g)).getOneCar();
+				ArrayList <Car> a = g.getOneCar();
+				 this.listCarParticipe.addAll(a);
 			}
+			String a = "parada";
 		} else { // Loop the gararges and take all the cart to participate
 			for (Garage g : ListGCar) {
-				this.listCarParticipe = ListGCar.get(ListGCar.indexOf(g)).getAllCar();
+				 this.listCarParticipe.addAll( g.getAllCar());
 			}
 		}
 
@@ -55,11 +61,11 @@ public class Race_Elimination extends Race {
 		// lap , MaxLap
 		int lap = 0; // inicio en vuelta 0
 		int maxLap = partic.length - 1; // maximas vueltas
-		int[] lapDistances = null; // distancia por vuelta
+		List <Integer> lapDistances = new ArrayList <>(); // distancia por vuelta
 		int lapTime = 60; // cada vuelta dura 60 time
 		int lapActive = 0; // numero de vuelta hasta que pase el ultimo coche por meta
-		ArrayList<Car> listRace = listCarParticipe;// listRace -> tratamineto de la carrera
-		ArrayList<Car> listResult = listCarParticipe;// listResult -> tratar de la clasificacion
+		ArrayList<Car> listRace = this.listCarParticipe;// listRace -> tratamineto de la carrera
+		ArrayList<Car> listResult = this.listCarParticipe;// listResult -> tratar de la clasificacion
 		// [A2] = = = Definimos parametros de los coches = = = =
 
 		for (Car c : listRace) {// speed =0 // distance = 0
@@ -81,39 +87,43 @@ public class Race_Elimination extends Race {
 			if (time == lapTime) {// = Vueltas ; cada vuelta dura --> lap = 60 t
 				lapTime = +lapTime;
 				// Ditancia de vulta es la distancia que recorrio el 1 al pasar 60 t
-				lapDistances[lap] = listRace.get(0).getDistance();
+				lapDistances.set(lap, listRace.get(0).getDistance());
 				lap++; // Empieza la proxima vuelta
 			}
 			// [B5] = = = Eliminamos el ultimo coche que pase por meta = = = =
 			// Cuando un coche sea eliminado la ultima vuelta activa se actualiza
-			lapActive = deleteCar(listRace, lapDistances, lapActive);
+			lapActive = deleteCar(listRace, listResult, lapDistances, lapActive);
 		}
 		// ================================================//
 		// C = = = TRAS Carrera = = = = = =
 		// ================================================//
 		// introducimos el primer coche en la lista de resultados
-		listResult.get(listRace.size() - 1) = listRace.get(listRace.size() - 1);
+		Car a = listResult.get(listRace.size() -1);
+		listRace.set(listRace.size() - 1 , a) ;
 		// metemos la lista de resultados en la de participantes
 		listCarParticipe = listResult;
 		exportRace();
 	}// FinmakeRace
+	
 
-	private int deleteCar(ArrayList<Car> listRace, int[] lapDistances, int lapActive) {
+	private int deleteCar(ArrayList<Car> listRace,ArrayList<Car> listResult, List <Integer>lapDistances, int lapActive) {
 		// Eliminar coche
 		// Elimino el coche cuando el ultimo coche tenga mas distancia
 		// que la distancia de la vuelta
-		if (lapDistances[lapActive] == listRace.get(listRace.size() - 1).getDistance()) {
+		if (lapDistances.get(lapActive) == listRace.get(listRace.size() - 1).getDistance()) {
 			// añadimos el coche eliminado en la ultima posicion activa
 			// del array resultados
-			// Car a = listResult.get(listRace.size() -1);
-			listResult.get(listRace.size() - 1) = listRace.get(listRace.size() - 1);
+			Car a = listResult.get(listRace.size() -1);
+			listRace.set(listRace.size() - 1 , a) ;
+			//array1[array2.lenght -1] = array2[array1.lenght -1]
+			//listResult.get(listRace.size() - 1) = listRace.get(listRace.size() - 1);
 			// org.apache.commons.lang.ArrayUtils;
 			// Elimino el coche
 			listRace.remove(listRace.size());
 			// paso el ultimo coche se focaliza la siguente vuelta
 			lapActive++;
-			printArray(listClasificacion);
-			printArray(listRace);
+			printList(listResult);
+			printList(listRace);
 		}
 		return lapActive;
 	}

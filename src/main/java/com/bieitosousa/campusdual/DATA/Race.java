@@ -57,11 +57,11 @@ public abstract class Race {
 
 	abstract protected void makeRace() throws Exception;//FinmakeRace
 
-    protected List<Car> OrderCarAsPosition(List<Car> listCar) {
+    protected List<Car> OrderCarAsPosition(List<Car> listCar) throws Exception {
         int cuentaintercambios = 0;
-        Car[] arrayCars = null;
+        Car[] arrayCars = new Car[listCar.size()];
 		listCar.toArray(arrayCars);
-        //Usamos un bucle anidado, saldra cuando este ordenado el array
+		//Usamos un bucle anidado, saldra cuando este ordenado el array
         for (boolean ordenado = false; !ordenado;) {
             for (int i = 0; i < arrayCars.length - 1; i++) {
                 if (arrayCars[i].getDistance() > arrayCars[i + 1].getDistance()) {
@@ -80,13 +80,11 @@ public abstract class Race {
             //Inicializamos la variable de nuevo para que empiece a contar de nuevo
             cuentaintercambios = 0;
         }
-        return listCar;
+               return listCar;
     }
-
-    public void printArray(List <Object> listObj) {
-        for (Object o : listObj) {
-            System.out.println(o);
-        }
+    
+    public void printList(ArrayList <?> l) {
+    	 l.forEach((a)->System.out.println(a));
     }
 
     public boolean exportRace() {

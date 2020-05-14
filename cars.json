@@ -1,5 +1,5 @@
-{
-    "Car":[
+
+  [
         {
             "mark" : "Audi",
             "model" : "A4"
@@ -72,4 +72,4 @@
             "mark" : "PORSCHE",
             "model" : "CAYENE"
         }
-   ]}
+   ]
