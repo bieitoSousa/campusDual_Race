@@ -84,35 +84,45 @@ public class Car {
     }
 
     @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 47 * hash + Objects.hashCode(this.mark);
-        hash = 47 * hash + Objects.hashCode(this.model);
-        return hash;
-    }
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + distance;
+		result = prime * result + id;
+		result = prime * result + ((mark == null) ? 0 : mark.hashCode());
+		result = prime * result + ((model == null) ? 0 : model.hashCode());
+		return result;
+	}
+
+ 
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Car other = (Car) obj;
-        if (!Objects.equals(this.mark, other.mark)) {
-            return false;
-        }
-        if (!Objects.equals(this.model, other.model)) {
-            return false;
-        }
-        return true;
-    }
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Car other = (Car) obj;
+		if (distance != other.distance)
+			return false;
+		if (id != other.id)
+			return false;
+		if (mark == null) {
+			if (other.mark != null)
+				return false;
+		} else if (!mark.equals(other.mark))
+			return false;
+		if (model == null) {
+			if (other.model != null)
+				return false;
+		} else if (!model.equals(other.model))
+			return false;
+		return true;
+	}
 
-    @Override
+	@Override
     public String toString() {
         return "Car_" + id +"_"+model+"_"+mark
         		+ " { distance=" + distance +", speed = "+speed+ '}';
