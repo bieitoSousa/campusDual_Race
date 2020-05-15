@@ -6,16 +6,10 @@
 package com.bieitosousa.campusdual.DATA;
 
 import com.bieitosousa.campusdual.UTILS.JSON;
-import com.bieitosousa.campusdual.UTILS.Utilss.*;
-import java.io.File;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import com.bieitosousa.campusdual.UTILS.Utilss;
 
-import org.apache.commons.lang.ArrayUtils;
+import java.io.File;
+import java.util.*;
 
 /**
  *
@@ -36,24 +30,27 @@ public abstract class Race {
 	// store of the race result
 	// store of the race participants
 	protected ArrayList<Garage> ParticG = new ArrayList<>();
+	protected String cabeceraR = "";
+	protected String cabeceraT = "";
 
 // ===================================================//
 //  =   Class to create Race
 //  =   you can add Garages , makeRace and printResult
 // ===================================================//
-	public Race(String name, int type, ArrayList<Garage> listGarageG
+	public Race(String name, int type, ArrayList<Garage> listGarageG, String cabeceraR
 	// all Cars on the garage participate true
 	// one Car on the garage participate false
 	) {
 		this.name = name;
 		this.type = type;
 		this.ParticG = listGarageG;
+		this.cabeceraR = cabeceraR;
 
 	}
 
 	abstract public void makeRace() throws Exception;// FinmakeRace
 
-	protected List<Car> OrderCarAsPosition(List<Car> listCar) throws Exception {
+	public static List<Car> OrderCarAsPosition(List<Car> listCar) throws Exception {
 		int cuentaintercambios = 0;
 		Car[] arrayCars = new Car[listCar.size()];
 		listCar.toArray(arrayCars);
@@ -80,23 +77,110 @@ public abstract class Race {
 		return listCar;
 	}
 
+	public static int POINTSFIRSTS = 12;
+	public static int POINTS_SECOND = 6;
+	public static int POINTS_THIRD = 3;
+	public static int POINTS_DEFAULT = 1;
+
+	protected void takePoints(ArrayList<Car> resRace) {
+		// ORDENO
+
+		try {
+			resRace = (ArrayList<Car>) OrderCarAsPosition(resRace);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		// PUNTUO
+		for (int i = 0; i < resRace.size(); i++) {
+			switch (i) {
+			case 0:
+				resRace.get(i).setPoints( Utilss.POINTS_FIRSTS);
+				break;
+			case 1:
+				resRace.get(i).setPoints( Utilss.POINTS_SECOND);
+				break;
+			case 2:
+				resRace.get(i).setPoints( Utilss.POINTS_THIRD);
+				break;
+
+			default:
+				resRace.get(i).setPoints(Utilss.POINTS_DEFAULT);
+
+			}
+		}
+		// lOS METO EN LA LISTA DE GARAJES
+		ArrayList<Garage> superListG = getParticG();
+		for (Garage supgarlist : superListG) {
+			for (Car sgc : supgarlist.listGCar) {
+				for (Car pc : resRace) {
+					if (sgc.equals(pc)) {
+						sgc.setDistance(pc.getDistance());
+						sgc.setPoints( pc.getPoints());
+					}
+				}
+			}
+		}
+		setParticG(superListG);
+	}
+
+	// = = = = [PRINT ]RACE_VIEW = = = =
+
+	public void print(String mnj) {
+		if (Utilss.RACE_VIEW) {
+		if (Utilss.CONSOLE_PRINT_RACE_VIEW) {
+			System.out.println(mnj);
+		} else {
+			Utilss.printONFile(mnj, new File(Utilss.R_LOG + getCabecera() + getCabeceraT()+".txt"));
+		}
+		}
+	}
+
 	public void printList(ArrayList<?> l) {
-		l.forEach((a) -> System.out.println(a));
+		if (Utilss.RACE_VIEW) {
+		if (Utilss.CONSOLE_PRINT_RACE_VIEW) {
+			l.forEach((a) -> System.out.println("\n" + a + "\n"));
+		} else {
+			l.forEach((a) -> Utilss.printONFile("\n" + a + "\n",
+					new File(Utilss.R_LOG + getCabecera() + getCabeceraT()+".txt")));
+		}
+		}
 	}
 
 	public void printList(ArrayList<?> l, String cabecera) {
-		l.forEach((a) -> System.out.println(cabecera + a));
+		if (Utilss.RACE_VIEW) {
+		if (Utilss.CONSOLE_PRINT_RACE_VIEW) {
+			l.forEach((a) -> System.out.println("\n" + cabecera + a + "\n"));
+		} else {
+			l.forEach((a) -> Utilss.printONFile("\n" + cabecera + a + "\n",
+					new File(Utilss.R_LOG + getCabecera() + getCabeceraT()+".txt")));
+		}
+		}
 	}
 
-	public void printResultGrupByGarage() throws Exception {
-		ArrayList<Car> listCarInGarage = new ArrayList<>();
+//	=	=	=	=	[PRINT ]RACE_RESULTS	=	=	=	=
+	public void printRes(String mnj) {
+		if (Utilss.RACE_RESULT) {
+		if (Utilss.CONSOLE_PRINT_RACE_RESULT) {
+			System.out.println(mnj);
+		} else {
+			Utilss.printONFile(mnj, new File(Utilss.R_RESULT + getCabecera() + getCabeceraT()+".txt"));
+		}
+		}
+	}
 
-		System.out.println("\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
+//	=	=	=	=	[PRINT ]END	=	=	=	=
+	
+	public void printResultGrupByGarage(int i) throws Exception {
+		ArrayList<Car> listCarInGarage = new ArrayList<>();
+		printRes("\n	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]"
+				+"\n	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]"
+				+"\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
 				+ "\n	!	!	RESULTADOS	GRUP BY GARAGE	!	!	!	!	!	"
 				+ "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	");
 		for (Garage g : ParticG) {
-			System.out.println("	=	=	=	GARAGE	[[	" + g.name + "	]]	=	=	=	=	=");
-
+			printRes("	=	=	=	GARAGE	[[	" + g.name + "	]]	=	=	=	=	=");
 			for (Car c : g.listGCar) {
 				if (c.getDistance() != 0) {
 					listCarInGarage.add(c);
@@ -104,44 +188,99 @@ public abstract class Race {
 			}
 			OrderCarAsPosition(listCarInGarage);
 			for (Car cInGarage : listCarInGarage) {
-				System.out.println("	=			" + g.name + "	[[ " + cInGarage + "]]");
+				printRes("\n	=			" + g.name + "	[[ " + cInGarage + "]]");
 			}
 			listCarInGarage.clear();
 		} // Fin Garage
 
 	}
 
-	public void printResultGrupByCar() throws Exception {
+	public void printResultGrupByCar(int i ) throws Exception {
 		ArrayList<Car> listCarInGarage = new ArrayList<>();
-		System.out.println("\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
+		printRes("\n	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]"
+				+"	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]	["+i+"]"
+				+"\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
 				+ "\n	!	!	RESULTADOS	GRUP BY CAR	!	!	!	!	!	"
 				+ "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	");
 		for (Garage g : ParticG) {
-
 			for (Car c : g.listGCar) {
 				if (c.getDistance() != 0) {
 					listCarInGarage.add(c);
 				}
 			}
-
 		} // Fin Garage
 		OrderCarAsPosition(listCarInGarage);
 		int cc = 0;
 		for (Car cInGarage : listCarInGarage) {
-			System.out.println("[" + (cc++) + "]	=	=	=	=	[[ " + cInGarage + "]]");
+			printRes("\n[" + (cc++) + "]	=	=	=	=	[[ " + cInGarage + "]]");
+		}
+		listCarInGarage.clear();
+	}
+	public void printResultGrupByCar( ) throws Exception {
+		ArrayList<Car> listCarInGarage = new ArrayList<>();
+		printRes("\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
+				+ "\n	!	!	RESULTADOS	GRUP BY CAR	!	!	!	!	!	"
+				+ "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	");
+		for (Garage g : ParticG) {
+			for (Car c : g.listGCar) {
+				if (c.getDistance() != 0) {
+					listCarInGarage.add(c);
+				}
+			}
+		} // Fin Garage
+		OrderCarAsPosition(listCarInGarage);
+		int cc = 0;
+		for (Car cInGarage : listCarInGarage) {
+			printRes("\n[" + (cc++) + "]	=	=	=	=	[[ " + cInGarage + "]]");
 		}
 		listCarInGarage.clear();
 	}
 
-	public boolean exportRace() {
-		File f = new File(".//export//race//");
-		if (!f.exists()) {
-			f.mkdirs();
+	public void exportRace(int i) {
+		try {
+			File f = new File(Utilss.PRIVATE_RACE);
+			if (!f.exists()) {
+				f.mkdirs();
+			}
+			Date date = new Date();
+			name = "race_" + this.name + date.getTime();
+			File fname = new File(Utilss.R_EXP + name);
+			JSON.WriteObjJsonInFile(fname, this);
+			System.out.println("se a exportado la carrea en ::" + fname);
+		} catch (Exception e) {
+			System.err.println("Error al exportar " + this.cabeceraR + e.getMessage());
 		}
-		Date date = new Date();
-		name = "race_" + this.name + date.getTime();
-		File fname = new File(".//export//race//" + name);
-		return JSON.WriteObjJsonInFile(fname, this);
+	}
+	public void exportRace() {
+		try {
+			File f = new File(Utilss.PRIVATE_RACE);
+			if (!f.exists()) {
+				f.mkdirs();
+			}
+			Date date = new Date();
+			name = "race_" + this.name + date.getTime();
+			File fname = new File(Utilss.R_EXP + name);
+			JSON.WriteObjJsonInFile(fname, this);
+			System.out.println("se a exportado la carrea en ::" + fname);
+		} catch (Exception e) {
+			System.err.println("Error al exportar " + this.cabeceraR + e.getMessage());
+		}
+	}
+
+	public void exportRace(String cabecera) {
+		try {
+			File f = new File(Utilss.PRIVATE_RACE);
+			if (!f.exists()) {
+				f.mkdirs();
+			}
+			Date date = new Date();
+			name = "race_" + this.name + cabecera + date.getTime();
+			File fname = new File(Utilss.R_EXP + name);
+			JSON.WriteObjJsonInFile(fname, this);
+			System.out.println("se a exportado la carrea en ::" + fname);
+		} catch (Exception e) {
+			System.err.println("Error al exportar " + this.cabeceraR + e.getMessage());
+		}
 	}
 
 	@Override
@@ -158,6 +297,18 @@ public abstract class Race {
 		this.name = name;
 	}
 
+	public String getCabecera() {
+		return this.cabeceraR;
+	}
+
+	public String getCabeceraT() {
+		return this.cabeceraT;
+	}
+
+	public String setCabeceraT(String cabeceraT) {
+		return this.cabeceraT;
+	}
+
 	public int getType() {
 		return type;
 	}
@@ -168,6 +319,15 @@ public abstract class Race {
 
 	public ArrayList<Garage> getParticG() {
 		ArrayList<Garage> listA = new ArrayList<>(ParticG);
+		return listA;
+	}
+
+	public List<Car> getParticC() throws Exception {
+		List<Car> listA = new ArrayList<>();
+		for (Garage g : ParticG) {
+			listA.addAll(g.listGCar);
+		}
+		listA = (ArrayList<Car>) OrderCarAsPosition(listA);
 		return listA;
 	}
 
