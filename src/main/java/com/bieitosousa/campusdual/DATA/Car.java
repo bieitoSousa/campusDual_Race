@@ -5,8 +5,6 @@
  */
 package com.bieitosousa.campusdual.DATA;
 
-import java.util.Objects;
-
 /**
  *
  * @author BIE_FIJO_PC
@@ -19,84 +17,92 @@ import java.util.Objects;
 // ===================================================//
 
 public class Car {
-    // max sped is 5 
-    private final int MAXSPEED = 5;
-    // String to identificate a car
-    static int sumid;
-    private int id;
-    // Company make the car
-    private String mark;
-    // name of the model of a car
-    private String model;
-    // quantity of units the car move 
-    private int speed;
-    // units the car move
-    private int distance;
+	// max sped is 5
+	private final int MAXSPEED = 5;
+	// String to identificate a car
+	static int sumid;
+	private int id;
+	// Company make the car
+	private String mark;
+	// name of the model of a car
+	private String model;
+	// quantity of units the car move
+	private int speed;
+	// units the car move
+	private int distance;
+	private int points;
 
-    public Car(String mark, String model) {
-        this.mark = mark;
-        this.model = model;
-        this.id = sumid++;
-    }
+	public Car(String mark, String model) {
+		this.mark = mark;
+		this.model = model;
+		this.id = sumid++;
+	}
 
-    public String getMark() {
-        return mark;
-    }
+	public String getMark() {
+		return mark;
+	}
 
-    public void setMark(String mark) {
-        this.mark = mark;
-    }
+	public void setMark(String mark) {
+		this.mark = mark;
+	}
 
-    public String getModel() {
-        return model;
-    }
+	public String getModel() {
+		return model;
+	}
 
-    public void setModel(String model) {
-        this.model = model;
-    }
+	public void setModel(String model) {
+		this.model = model;
+	}
 
-    public int getSpeed() {
-        return speed;
-    }
+	public int getSpeed() {
+		return speed;
+	}
 
-    public void setSpeed(int speed) {
-        this.speed = speed;
-    }
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
 
-    public int getDistance() {
-        return distance;
-    }
+	public int getDistance() {
+		return distance;
+	}
 
-    public void setDistance(int distance) {
-        this.distance = distance;
-    }
+	public void setDistance(int distance) {
+		this.distance = distance;
+	}
 
-    public  int getId() {
-        return id;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public  void setId(int id) {
-        this.id = id;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public int getMAXSPEED() {
-        return MAXSPEED;
-    }
+	public int getMAXSPEED() {
+		return MAXSPEED;
+	}
 
-    @Override
+	public int getPoints() {
+		return points;
+	}
+
+	public void setPoints(int points) {
+		this.points = points;
+	}
+
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + distance;
 		result = prime * result + id;
 		result = prime * result + ((mark == null) ? 0 : mark.hashCode());
 		result = prime * result + ((model == null) ? 0 : model.hashCode());
 		return result;
 	}
 
- 
+// equal mark, model, id
 
-    @Override
+	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -105,8 +111,6 @@ public class Car {
 		if (getClass() != obj.getClass())
 			return false;
 		Car other = (Car) obj;
-		if (distance != other.distance)
-			return false;
 		if (id != other.id)
 			return false;
 		if (mark == null) {
@@ -123,10 +127,8 @@ public class Car {
 	}
 
 	@Override
-    public String toString() {
-        return "Car_" + id +"_"+model+"_"+mark
-        		+ " { distance=" + distance +", speed = "+speed+ '}';
-    }
-
+	public String toString() {
+		return "Car_" + id + "_" + model + "_" + mark + "_Points_["+points +"]_:_{distance=" + distance + ",speed= " + speed + '}';
+	}
 
 }

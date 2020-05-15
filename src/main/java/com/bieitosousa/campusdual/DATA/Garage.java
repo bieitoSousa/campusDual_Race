@@ -10,6 +10,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.bieitosousa.campusdual.UTILS.Utilss;
+
 /**
  *
  * @author BIE_FIJO_PC
@@ -79,7 +81,7 @@ public class Garage {
 
 	// import a list of cars in a file
 	public void ImportCars() {
-		List<Car> importlistCar = CargarFileCar(new File(".//cars.json"));
+		List<Car> importlistCar = CargarFileCar(new File(Utilss.IMPORTCAR));
 		for (Car c : importlistCar) {
 			listGCar.add(c);
 		}

@@ -21,9 +21,11 @@ import com.bieitosousa.campusdual.UTILS.*;
 public class Main {
 
 	public static void main(String[] args) {
+		
+		
+		Utilss.CreatePath();
 		// ver los coches
 		ArrayList<Car> listC = (ArrayList<Car>) CargarFileCar(new File(".//cars.json"));
-
 		ArrayList<Garage> listG = new ArrayList<>();
 		listG.add(new Garage("Garage_01"));
 		listG.add(new Garage("Garage_02"));
@@ -36,13 +38,30 @@ public class Main {
 		}
 		
 		// PRUEBAS CONSTRUCTOR RACE STANDAR
-		Race_Standar rs_01_true = null;
-		Race_Standar rs_02_false = null;
+		Race_Standar rs_01_true = null; 
+		Race_Standar rs_02_true = null; 
+		Race_Standar rs_03_true = null; 
+		Race_Standar rs_04_true = null; 
+		Race_Standar rs_05_true = null; 
+		Race_Standar rs_01_false = null; 
+		Race_Standar rs_02_false = null; 
+		Race_Standar rs_03_false = null; 
+		Race_Standar rs_04_false = null; 
+		Race_Standar rs_05_false = null; 
 		
 		try {
 
-			rs_01_true = new Race_Standar("re_01_true", 0, listG,true);
-			rs_02_false = new Race_Standar("re_02_false", 0, listG,false);
+			rs_01_true = new Race_Standar("rs_01_true", 0, listG);
+			rs_02_true = new Race_Standar("rs_02_true", 0, listG);
+			rs_03_true = new Race_Standar("rs_03_true", 0, listG);
+			rs_04_true = new Race_Standar("rs_04_true", 0, listG);
+			rs_05_true = new Race_Standar("rs_05_true", 0, listG);
+			
+			rs_01_false = new Race_Standar("rs_01_false", 0, listG);
+			rs_02_false = new Race_Standar("rs_02_false", 0, listG);
+			rs_03_false = new Race_Standar("rs_03_false", 0, listG);
+			rs_04_false = new Race_Standar("rs_04_false", 0, listG);
+			rs_05_false = new Race_Standar("rs_05_false", 0, listG);
 			
 			System.out.println("[OK] : Race_Standar : rs_01_true : Constructor" + rs_01_true);
 			System.out.println("[OK] : Race_Standar : rs_01_true : Nº Participantes"+ rs_01_true.getListCarParticipe().size());
@@ -57,7 +76,7 @@ public class Main {
 
 		
 		try {
-			Race_Standar rs_01_fitro00 = new Race_Standar("rs_01_fitro00 ", 1, listG,true);
+			Race_Standar rs_01_fitro00 = new Race_Standar("rs_01_fitro00 ", 1, listG);
 
 		} catch (Exception e) {
 			System.out.println("[OK] Race_Standar:Constructor  -> Filtro00  bien definido");
@@ -66,7 +85,7 @@ public class Main {
 			ArrayList <Garage>listA = new ArrayList<>() ;
 			Collections.copy(listA,listG);
 			listA.clear();
-			Race_Standar rs_01_fitro01 = new Race_Standar("rs_01_fitro01 ", 0, listA, true);
+			Race_Standar rs_01_fitro01 = new Race_Standar("rs_01_fitro01 ", 0, listA);
 			
 		} catch (Exception e) {
 			System.out.println("[OK] Race_Standar:Constructor  -> Filtro01 bien definido");
@@ -76,12 +95,34 @@ public class Main {
 		
 		// PRUEBAS CONSTRUCTOR RACE ELIMINATION
 		Race_Elimination re_01_true = null; 
+		Race_Elimination re_02_true = null; 
+		Race_Elimination re_03_true = null; 
+		Race_Elimination re_04_true = null; 
+		Race_Elimination re_05_true = null; 
+		Race_Elimination re_01_false = null; 
 		Race_Elimination re_02_false = null; 
+		Race_Elimination re_03_false = null; 
+		Race_Elimination re_04_false = null; 
+		Race_Elimination re_05_false = null; 
+		
+		
+
 		
 		try {
 
-			re_01_true = new Race_Elimination("re_01_true", 1, listG,true);
-			re_02_false = new Race_Elimination("re_02_false", 1, listG, false);
+			re_01_true = new Race_Elimination("re_01_true", 1, listG);
+			re_02_true = new Race_Elimination("re_02_true", 1, listG);
+			re_03_true = new Race_Elimination("re_03_true", 1, listG);
+			re_04_true = new Race_Elimination("re_04_true", 1, listG);
+			re_05_true = new Race_Elimination("re_05_true", 1, listG);
+			
+			re_01_false = new Race_Elimination("re_01_false", 1, listG);
+			re_02_false = new Race_Elimination("re_02_false", 1, listG);
+			re_03_false = new Race_Elimination("re_03_false", 1, listG);
+			re_04_false = new Race_Elimination("re_04_false", 1, listG);
+			re_05_false = new Race_Elimination("re_05_false", 1, listG);
+			
+
 			
 			System.out.println("[OK] : Race_Elimination : Constructor"+re_01_true);
 			System.out.println("[OK] : Race_Elimination : N PARTICIPE "+re_01_true.getListCarParticipe().size());
@@ -96,7 +137,7 @@ public class Main {
 		}
 
 		try {
-			Race_Elimination re_01_fitro01  = new Race_Elimination("re_01_fitro01 ", 0, listG, true);
+			Race_Elimination re_01_fitro01  = new Race_Elimination("re_01_fitro01 ", 0, listG);
 
 		} catch (Exception e) {
 			System.out.println("[OK] Race_Elimination:Constructor -> Filtro00 para  bien definido");
@@ -105,7 +146,7 @@ public class Main {
 			ArrayList <Garage>listA = new ArrayList<>() ;
 			Collections.copy(listA,listG);
 			listA.clear();
-			Race_Elimination re_01_fitro01  = new Race_Elimination("re_01_fitro01 ", 1, listA,true);
+			Race_Elimination re_01_fitro01  = new Race_Elimination("re_01_fitro01 ", 1, listA);
 			
 		} catch (Exception e) {
 			System.out.println("[OK] Race_Elimination:Constructor -> Filtro01 para  bien definido");
@@ -114,6 +155,7 @@ public class Main {
 	
 		
 		try {
+//	=	=	=	 Carreras Standar	=	=	=	=
 		//Race_Standar rs_01_true;
 		//Race_Standar rs_02_false;
 //		rs_01_true.makeRace();
@@ -123,21 +165,74 @@ public class Main {
 //		rs_02_false.printResultGrupByGarage();
 //		rs_02_false.printResultGrupByCar();
 		
+			
+//			=	=	=	  Carreras eliminatorias	=	=	=	=			
 		//Race_Elimination re_01_true; 
 		//Race_Elimination re_02_false; 
-		re_01_true.makeRace();
-		re_01_true.printResultGrupByGarage();
-		re_01_true.printResultGrupByCar();
-		re_02_false.makeRace();
-		re_02_false.printResultGrupByGarage();
-		re_02_false.printResultGrupByCar();
+//		re_01_true.makeRace();
+//		re_01_true.printResultGrupByGarage();
+//		re_01_true.printResultGrupByCar();
+//		re_02_false.makeRace();
+//		re_02_false.printResultGrupByGarage();
+//		re_02_false.printResultGrupByCar();
 		
-		
+
+			
+			
+
+			
+			
+			
 //		System.out.println(listC);
-		System.out.println(listG);
+//		System.out.println(listG);
 
 		} catch (Exception e) {
 			System.out.println("fallo al realizara la carrera "+ e.getMessage());
+		}
+		
+		try {
+//			=	=	=	 Torneos Standar	=	=	=	=
+			ArrayList<Race> tornS= new ArrayList<>();
+			
+			tornS.add( rs_01_true); 
+			tornS.add( rs_02_true); 
+			tornS.add( rs_03_true); 
+			tornS.add( rs_04_true); 
+			tornS.add( rs_05_true); 
+			tornS.add( rs_01_false); 
+			tornS.add( rs_02_false); 
+			tornS.add( rs_03_false); 
+			tornS.add( rs_04_false); 
+			tornS.add( rs_05_false); 
+			
+			
+			Tornament tS = new Tornament ("Torneo_Standar",tornS); 
+			tS.start();
+			
+		} catch (Exception e) {
+			System.out.println("fallo al realizara El torneo"+ e.getMessage());
+		}
+		try {
+//			=	=	=	 Torneos eliminatorios	=	=	=	=
+			ArrayList<Race> tornE= new ArrayList<>();
+			
+			tornE.add( re_01_true); 
+			tornE.add( re_02_true); 
+			tornE.add( re_03_true); 
+			tornE.add( re_04_true); 
+			tornE.add( re_05_true); 
+			tornE.add( re_01_false); 
+			tornE.add( re_02_false); 
+			tornE.add( re_03_false); 
+			tornE.add( re_04_false); 
+			tornE.add( re_05_false); 
+			
+			
+			Tornament tE = new Tornament ("Torneo_Eliminatorio",tornE); 
+			tE.start();
+			
+		} catch (Exception e) {
+			System.out.println("fallo al realizara El torneo"+ e.getMessage());
 		}
 		
 	}
