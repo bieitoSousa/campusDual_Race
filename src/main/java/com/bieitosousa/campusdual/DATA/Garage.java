@@ -5,11 +5,12 @@
  */
 package com.bieitosousa.campusdual.DATA;
 
-import static com.bieitosousa.campusdual.UTILS.JSON.CargarFileCar;
+import static com.bieitosousa.campusdual.UTILS.JSON.*;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.bieitosousa.campusdual.UTILS.Controler;
 import com.bieitosousa.campusdual.UTILS.Utilss;
 
 /**
@@ -35,7 +36,7 @@ public class Garage {
 		try {
 			listGCar.add(c);
 		} catch (Exception e) {
-			System.err.println(" not add the car" + c.getId());
+			System.err.println(" not add the car"+c.getId());
 		}
 	}
 
@@ -81,7 +82,7 @@ public class Garage {
 
 	// import a list of cars in a file
 	public void ImportCars() {
-		List<Car> importlistCar = CargarFileCar(new File(Utilss.IMPORTCAR));
+		List<Car> importlistCar = CargarFileCar(new File(Controler.getIMPORTCAR()));
 		for (Car c : importlistCar) {
 			listGCar.add(c);
 		}

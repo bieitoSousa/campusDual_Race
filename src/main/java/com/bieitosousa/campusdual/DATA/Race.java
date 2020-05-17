@@ -5,6 +5,7 @@
  */
 package com.bieitosousa.campusdual.DATA;
 
+import com.bieitosousa.campusdual.UTILS.Controler;
 import com.bieitosousa.campusdual.UTILS.JSON;
 import com.bieitosousa.campusdual.UTILS.Utilss;
 
@@ -40,9 +41,20 @@ public abstract class Race {
 	public Race(String name, int type, ArrayList<Garage> listGarageG, String cabeceraR
 	// all Cars on the garage participate true
 	// one Car on the garage participate false
-	) {
+	) throws Exception {
 		this.name = name;
 		this.type = type;
+		if(listGarageG.size()>0) {
+			for (Garage g :listGarageG) {
+				if (g.getAllCar().size()>0) {
+					throw new Exception ("One or more Gargarages not content cars");
+					
+				}
+			}
+		}else {
+			throw new Exception ("ListGarage not contein garages" );
+			
+		}
 		this.ParticG = listGarageG;
 		this.cabeceraR = cabeceraR;
 
@@ -50,6 +62,22 @@ public abstract class Race {
 
 	abstract public void makeRace() throws Exception;// FinmakeRace
 
+	public void start() {
+		int cc= 0;
+			try {
+				this.makeRace();
+				if (Controler.isRACE_RESULT()) {
+					this.printResultGrupByCar();
+				}
+				if (Controler.isRACE_EXP()) {
+					this.exportRace();
+				}
+			} catch (Exception e) {
+				System.err.println("Error al ejecutar la carrera " + cabeceraR + e.getMessage());
+			}
+		}
+		
+	
 	public static List<Car> OrderCarAsPosition(List<Car> listCar) throws Exception {
 		int cuentaintercambios = 0;
 		Car[] arrayCars = new Car[listCar.size()];
@@ -96,17 +124,16 @@ public abstract class Race {
 		for (int i = 0; i < resRace.size(); i++) {
 			switch (i) {
 			case 0:
-				resRace.get(i).setPoints( Utilss.POINTS_FIRSTS);
+				resRace.get(i).setPoints( Controler.getPOINTS_FIRSTS());
 				break;
 			case 1:
-				resRace.get(i).setPoints( Utilss.POINTS_SECOND);
+				resRace.get(i).setPoints( Controler.getPOINTS_SECOND());
 				break;
 			case 2:
-				resRace.get(i).setPoints( Utilss.POINTS_THIRD);
+				resRace.get(i).setPoints( Controler.getPOINTS_THIRD());
 				break;
-
 			default:
-				resRace.get(i).setPoints(Utilss.POINTS_DEFAULT);
+				resRace.get(i).setPoints(Controler.getPOINTS_DEFAULT());
 
 			}
 		}
@@ -128,44 +155,44 @@ public abstract class Race {
 	// = = = = [PRINT ]RACE_VIEW = = = =
 
 	public void print(String mnj) {
-		if (Utilss.RACE_VIEW) {
-		if (Utilss.CONSOLE_PRINT_RACE_VIEW) {
+		if (Controler.isRACE_VIEW()) {
+		if (Controler.isCONSOLE_PRINT_RACE_VIEW()) {
 			System.out.println(mnj);
 		} else {
-			Utilss.printONFile(mnj, new File(Utilss.R_LOG + getCabecera() + getCabeceraT()+".txt"));
+			Utilss.printONFile(mnj, new File(Controler.getR_LOG() + getCabecera() + getCabeceraT()+".txt"));
 		}
 		}
 	}
 
 	public void printList(ArrayList<?> l) {
-		if (Utilss.RACE_VIEW) {
-		if (Utilss.CONSOLE_PRINT_RACE_VIEW) {
+		if (Controler.isRACE_VIEW()) {
+		if (Controler.isCONSOLE_PRINT_RACE_VIEW()) {
 			l.forEach((a) -> System.out.println("\n" + a + "\n"));
 		} else {
 			l.forEach((a) -> Utilss.printONFile("\n" + a + "\n",
-					new File(Utilss.R_LOG + getCabecera() + getCabeceraT()+".txt")));
+					new File(Controler.getR_LOG() + getCabecera() + getCabeceraT()+".txt")));
 		}
 		}
 	}
 
 	public void printList(ArrayList<?> l, String cabecera) {
-		if (Utilss.RACE_VIEW) {
-		if (Utilss.CONSOLE_PRINT_RACE_VIEW) {
+		if (Controler.isRACE_VIEW()) {
+		if (Controler.isCONSOLE_PRINT_RACE_VIEW()) {
 			l.forEach((a) -> System.out.println("\n" + cabecera + a + "\n"));
 		} else {
 			l.forEach((a) -> Utilss.printONFile("\n" + cabecera + a + "\n",
-					new File(Utilss.R_LOG + getCabecera() + getCabeceraT()+".txt")));
+					new File(Controler.getR_LOG() + getCabecera() + getCabeceraT()+".txt")));
 		}
 		}
 	}
 
 //	=	=	=	=	[PRINT ]RACE_RESULTS	=	=	=	=
 	public void printRes(String mnj) {
-		if (Utilss.RACE_RESULT) {
-		if (Utilss.CONSOLE_PRINT_RACE_RESULT) {
+		if (Controler.isRACE_RESULT()) {
+		if (Controler.isCONSOLE_PRINT_RACE_RESULT()) {
 			System.out.println(mnj);
 		} else {
-			Utilss.printONFile(mnj, new File(Utilss.R_RESULT + getCabecera() + getCabeceraT()+".txt"));
+			Utilss.printONFile(mnj, new File(Controler.getR_RESULT() + getCabecera() + getCabeceraT()+".txt"));
 		}
 		}
 	}
@@ -238,13 +265,13 @@ public abstract class Race {
 
 	public void exportRace(int i) {
 		try {
-			File f = new File(Utilss.PRIVATE_RACE);
+			File f = new File(Controler.getPRIVATE_RACE());
 			if (!f.exists()) {
 				f.mkdirs();
 			}
 			Date date = new Date();
 			name = "race_" + this.name + date.getTime();
-			File fname = new File(Utilss.R_EXP + name);
+			File fname = new File(Controler.getR_EXP() + name);
 			JSON.WriteObjJsonInFile(fname, this);
 			System.out.println("se a exportado la carrea en ::" + fname);
 		} catch (Exception e) {
@@ -253,13 +280,13 @@ public abstract class Race {
 	}
 	public void exportRace() {
 		try {
-			File f = new File(Utilss.PRIVATE_RACE);
+			File f = new File(Controler.getPRIVATE_RACE());
 			if (!f.exists()) {
 				f.mkdirs();
 			}
 			Date date = new Date();
 			name = "race_" + this.name + date.getTime();
-			File fname = new File(Utilss.R_EXP + name);
+			File fname = new File(Controler.getR_EXP() + name);
 			JSON.WriteObjJsonInFile(fname, this);
 			System.out.println("se a exportado la carrea en ::" + fname);
 		} catch (Exception e) {
@@ -269,13 +296,13 @@ public abstract class Race {
 
 	public void exportRace(String cabecera) {
 		try {
-			File f = new File(Utilss.PRIVATE_RACE);
+			File f = new File(Controler.getPRIVATE_RACE());
 			if (!f.exists()) {
 				f.mkdirs();
 			}
 			Date date = new Date();
 			name = "race_" + this.name + cabecera + date.getTime();
-			File fname = new File(Utilss.R_EXP + name);
+			File fname = new File(Controler.getR_EXP() + name);
 			JSON.WriteObjJsonInFile(fname, this);
 			System.out.println("se a exportado la carrea en ::" + fname);
 		} catch (Exception e) {

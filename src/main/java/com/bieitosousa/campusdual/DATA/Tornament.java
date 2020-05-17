@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 
+import com.bieitosousa.campusdual.UTILS.Controler;
 import com.bieitosousa.campusdual.UTILS.JSON;
 import com.bieitosousa.campusdual.UTILS.Utilss;
 
@@ -48,20 +49,20 @@ public class Tornament {
 			cc++;
 			try {
 				r.makeRace();
-				if (Utilss.RACE_RESULT) {
+				if (Controler.isRACE_RESULT()) {
 					r.printResultGrupByCar(cc);
 				}
-				if (Utilss.RACE_EXP) {
+				if (Controler.isRACE_EXP()) {
 					r.exportRace(cc);
 				}
 			} catch (Exception e) {
 				System.err.println("Error al ejecutar la carrera " + r.cabeceraR + this.cabeceraT + e.getMessage());
 			}
 		}
-		if (Utilss.TORN_RESULT) {
+		if (Controler.isTORN_RESULT()) {
 			this.printResultGrupByCar();
 		}
-		if (Utilss.TORN_EXP) {
+		if (Controler.isTORN_EXP()) {
 			this.exportTorn();
 			;
 		}
@@ -145,10 +146,10 @@ public class Tornament {
 
 //	=	=	=	=	[PRINT ]RACE_CLASIFICATION	=	=	=	=
 	public void printResT(String mnj) {
-		if (Utilss.CONSOLE_PRINT_TORNAMENT_CLASIFICATION) {
+		if (Controler.isCONSOLE_PRINT_TORNAMENT_CLASSIFICATION()) {
 			System.out.println(mnj);
 		} else {
-			Utilss.printONFile(mnj, new File(Utilss.T_RESULT + this.cabeceraT+".txt"));
+			Utilss.printONFile(mnj, new File(Controler.getT_RESULT() + this.cabeceraT+".txt"));
 		}
 	}
 
@@ -208,13 +209,13 @@ public class Tornament {
 
 	public void exportTorn() {
 		try {
-			File f = new File(Utilss.PRIVATE_TORNAMENT);
+			File f = new File(Controler.getPRIVATE_TORNAMENT());
 			if (!f.exists()) {
 				f.mkdirs();
 			}
 			Date date = new Date();
 			name = cabeceraT + date.getTime();
-			File fname = new File(Utilss.T_EXP + name);
+			File fname = new File(Controler.getT_EXP() + name);
 			JSON.WriteObjJsonInFile(fname, this);
 		} catch (Exception e) {
 			System.err.println("Error al exportar " + this.cabeceraT + e.getMessage());
@@ -223,13 +224,13 @@ public class Tornament {
 
 	public void exportTorn(String cabecera) {
 		try {
-			File f = new File(Utilss.PRIVATE_TORNAMENT);
+			File f = new File(Controler.getPRIVATE_TORNAMENT());
 			if (!f.exists()) {
 				f.mkdirs();
 			}
 			Date date = new Date();
 			name = cabeceraT + cabecera + date.getTime();
-			File fname = new File(Utilss.T_EXP + name);
+			File fname = new File(Controler.getT_EXP() + name);
 			JSON.WriteObjJsonInFile(fname, this);
 		} catch (Exception e) {
 			System.err.println("Error al exportar " + this.cabeceraT + e.getMessage());
