@@ -1,0 +1,75 @@
+
+  [
+        {
+            "mark" : "Audi",
+            "model" : "A4"
+        },
+        {
+            "mark" : "Audi",
+            "model" : "A3"
+        },
+        {
+            "mark" : "BMW",
+            "model" : "X2"
+        },
+        {
+            "mark" : "BMW",
+            "model" : "X3"
+        },
+        {
+            "mark" : "Ferrari",
+            "model" : "FF"
+        },
+        {
+            "mark" : "Ferrari",
+            "model" : "GTC4"
+        },
+                {
+            "mark" : "KIA",
+            "model" : "NIRO"
+        },
+        {
+            "mark" : "KIA",
+            "model" : "STONIC"
+        },
+        {
+            "mark" : "HONDA",
+            "model" : "JAZZ"
+        },
+                {
+            "mark" : "HONDA",
+            "model" : "CIVIC"
+        },
+        {
+            "mark" : "LAAMBORGHINI",
+            "model" : "AVENTADOR"
+        },
+        {
+            "mark" : "LAAMBORGHINI",
+            "model" : "GALLARDO"
+        },
+                {
+            "mark" : "LEXUS",
+            "model" : "NX"
+        },
+        {
+            "mark" : "LEXUS",
+            "model" : "GS"
+        },
+        {
+            "mark" : "MERCEDES",
+            "model" : "CLASE_S"
+        },
+                {
+            "mark" : "MERCEDES",
+            "model" : "CLASE_X"
+        },
+        {
+            "mark" : "PORSCHE",
+            "model" : "911"
+        },
+        {
+            "mark" : "PORSCHE",
+            "model" : "CAYENE"
+        }
+   ]
