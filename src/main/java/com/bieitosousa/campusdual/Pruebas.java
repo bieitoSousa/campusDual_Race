@@ -196,14 +196,14 @@ public class Pruebas {
 			
 			tornS.add( rs_01_true); 
 			tornS.add( rs_02_true); 
-			tornS.add( rs_03_true); 
-			tornS.add( rs_04_true); 
-			tornS.add( rs_05_true); 
-			tornS.add( rs_01_false); 
-			tornS.add( rs_02_false); 
-			tornS.add( rs_03_false); 
-			tornS.add( rs_04_false); 
-			tornS.add( rs_05_false); 
+//			tornS.add( rs_03_true); 
+//			tornS.add( rs_04_true); 
+//			tornS.add( rs_05_true); 
+//			tornS.add( rs_01_false); 
+//			tornS.add( rs_02_false); 
+//			tornS.add( rs_03_false); 
+//			tornS.add( rs_04_false); 
+//			tornS.add( rs_05_false); 
 			
 			
 			Tornament tS = new Tornament ("Torneo_Standar",tornS); 
@@ -212,28 +212,28 @@ public class Pruebas {
 		} catch (Exception e) {
 			System.out.println("fallo al realizara El torneo"+ e.getMessage());
 		}
-		try {
-//			=	=	=	 Torneos eliminatorios	=	=	=	=
-			ArrayList<Race> tornE= new ArrayList<>();
-			
-			tornE.add( re_01_true); 
-			tornE.add( re_02_true); 
-			tornE.add( re_03_true); 
-			tornE.add( re_04_true); 
-			tornE.add( re_05_true); 
-			tornE.add( re_01_false); 
-			tornE.add( re_02_false); 
-			tornE.add( re_03_false); 
-			tornE.add( re_04_false); 
-			tornE.add( re_05_false); 
-			
-			
-			Tornament tE = new Tornament ("Torneo_Eliminatorio",tornE); 
-			tE.start();
-			
-		} catch (Exception e) {
-			System.out.println("fallo al realizara El torneo"+ e.getMessage());
-		}
+//		try {
+////			=	=	=	 Torneos eliminatorios	=	=	=	=
+//			ArrayList<Race> tornE= new ArrayList<>();
+//			
+//			tornE.add( re_01_true); 
+//			tornE.add( re_02_true); 
+//			tornE.add( re_03_true); 
+//			tornE.add( re_04_true); 
+//			tornE.add( re_05_true); 
+//			tornE.add( re_01_false); 
+//			tornE.add( re_02_false); 
+//			tornE.add( re_03_false); 
+//			tornE.add( re_04_false); 
+//			tornE.add( re_05_false); 
+//		
+//			
+//			Tornament tE = new Tornament ("Torneo_Eliminatorio",tornE); 
+//			tE.start();
+//			
+//		} catch (Exception e) {
+//			System.out.println("fallo al realizara El torneo"+ e.getMessage());
+//		}
 		
 	}
 

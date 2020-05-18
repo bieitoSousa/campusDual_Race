@@ -62,7 +62,8 @@ public class JSON {
 		List<Car> laux = new ArrayList<>();
 		Gson gson = new Gson();
 		ArrayList<Car> objList = new ArrayList<>();
-		BufferedReader in;
+		BufferedReader in ;
+		
 		try (Reader reader = (in = new BufferedReader(new InputStreamReader(new FileInputStream(f), "utf-8")))) {
 			objList = gson.fromJson(reader, new TypeToken<ArrayList<Car>>() {
 			}.getType());

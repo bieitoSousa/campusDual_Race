@@ -31,7 +31,7 @@ static Controler c = Controler.instaceControler();
 			System.out.println("EXCEPCIÓN: " + e.getClass().getName());
 			System.out.println("Revise el registro de la aplicación");
 		} finally {
-			c.save();
+			//c.save();
 		}
 	}
 

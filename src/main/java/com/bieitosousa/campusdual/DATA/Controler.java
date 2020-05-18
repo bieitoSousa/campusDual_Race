@@ -1,12 +1,9 @@
-package com.bieitosousa.campusdual.UTILS;
+package com.bieitosousa.campusdual.DATA;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Date;
 
-import com.bieitosousa.campusdual.DATA.Garage;
-import com.bieitosousa.campusdual.DATA.Race;
-import com.bieitosousa.campusdual.DATA.Tornament;
+import com.bieitosousa.campusdual.UTILS.JSON;
 
 public class Controler {
 	// ____________PRINTS________[TRUE:CONSOL]______[FALSE:FILE]_______________________
@@ -15,12 +12,12 @@ public class Controler {
 		// print the result of the race when finish : [ true; console/false : in file]
 		private static boolean CONSOLE_PRINT_RACE_RESULT = false;
 		// print the classification of the tournament : [true; console/false : in file]
-		private static boolean CONSOLE_PRINT_TORNAMENT_CLASSIFICATION = true;
+		private static boolean CONSOLE_PRINT_TORNAMENT_CLASSIFICATION = false;
 
 		// ___________ACTIONS__________[TRUE:DO]________[FALSE:NOTDO]
 		// ______ RACE _________________________
 		// = view the simulation of the races
-		private static boolean RACE_VIEW = false;
+		private static boolean RACE_VIEW = true;
 		// = view the result of the races
 		private static boolean RACE_RESULT = true;
 		// = Export the list of participants, results of the races
@@ -50,6 +47,8 @@ public class Controler {
 
 		private static String PUBLIC_TORNAMENT = PUBLIC_PATH + "//tornament//";
 		private static String PRIVATE_TORNAMENT = PRIVATE_PATH + "//tornament//";
+		
+		private static String HELP = ".//public_data/HELP//help";
 
 		// _______________FILES_________________________________
 
@@ -72,15 +71,17 @@ public class Controler {
 		private  Tornament TORNAMENTSELECT;
 
 		private  ArrayList<Garage> LISTGARAGE;
-		private  ArrayList<Race> LISTRACE;
-		private  ArrayList<Tornament> LISTTORNAMENT;
+		private  ArrayList<Race> LISTRACE ;
+		private  ArrayList<Tornament> LISTTORNAMENT ;
 		
 		private static Controler c = null ;
 		
 		
 		
 		public Controler(){
-			
+			 this.LISTGARAGE = new ArrayList<Garage>();
+			this.LISTRACE = new ArrayList<Race>();
+			this.LISTTORNAMENT = new ArrayList<Tornament>();
 		}
 		
 		
@@ -95,8 +96,6 @@ public class Controler {
 								"the data file could not be recovered"
 								+e.getMessage()
 								);
-						
-						
 					}
 				}else {
 					c = new Controler();
@@ -322,6 +321,21 @@ public class Controler {
 			return PRIVATE_PATH;
 		}
 
+		public static String getHELP() {
+			return HELP;
+		}
+
+
+		public static void setHELP(String hELP) {
+			HELP = hELP;
+		}
+
+
+		public static String getBACKUP() {
+			return BACKUP;
+		}
+
+
 		public static void setPRIVATE_PATH(String pRIVATE_PATH) {
 			PRIVATE_PATH = pRIVATE_PATH;
 		}
@@ -426,8 +440,8 @@ public class Controler {
 			return BACKUP;
 		}
 
-		public static void setCONF(String cONF) {
-			BACKUP = BACKUP;
+		public static void setBACKUP(String bACKUP) {
+			BACKUP = bACKUP;
 		}
 
 		public static String getIMPORTCAR() {
@@ -447,6 +461,7 @@ public class Controler {
 			new File(PRIVATE_CAR).mkdirs();
 			new File(PUBLIC_TORNAMENT).mkdirs();
 			new File(PRIVATE_TORNAMENT).mkdirs();
+			new File(HELP).mkdirs();
 		}
 		
 		

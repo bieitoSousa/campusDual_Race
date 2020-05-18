@@ -1,0 +1,659 @@
+
+	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	RACE STANDAR_[rs_01_true]	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=
+
+#	lap [1]		#	#	#	Time [0 minutes]	#	duration [180 minutes]		#	#	
+
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_18_A4_Audi_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_20_X2_BMW_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_22_FF_Ferrari_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_24_NIRO_KIA_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_27_CIVIC_HONDA_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_28_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_30_NX_LEXUS_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_31_GS_LEXUS_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_32_CLASE_S_MERCEDES_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_34_911_PORSCHE_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_39_X3_BMW_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_40_FF_Ferrari_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_41_GTC4_Ferrari_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_46_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_47_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_49_GS_LEXUS_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_51_CLASE_X_MERCEDES_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_55_A3_Audi_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_56_X2_BMW_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_59_GTC4_Ferrari_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_60_NIRO_KIA_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_61_STONIC_KIA_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_64_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_65_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_66_NX_LEXUS_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_67_GS_LEXUS_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_70_911_PORSCHE_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_74_X2_BMW_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_77_GTC4_Ferrari_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_79_STONIC_KIA_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_81_CIVIC_HONDA_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_82_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_84_NX_LEXUS_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_86_CLASE_S_MERCEDES_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_87_CLASE_X_MERCEDES_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_88_911_PORSCHE_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_90_A4_Audi_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_91_A3_Audi_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_93_X3_BMW_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_97_STONIC_KIA_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_99_CIVIC_HONDA_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_100_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_101_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_103_GS_LEXUS_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_106_911_PORSCHE_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_108_A4_Audi_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_110_X2_BMW_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_112_FF_Ferrari_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_115_STONIC_KIA_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_117_CIVIC_HONDA_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_119_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_120_NX_LEXUS_Points_[0]_:_{distance=1,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_44_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_71_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_72_A4_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_73_A3_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_45_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_75_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_76_FF_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_25_STONIC_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_78_NIRO_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_26_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_80_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_48_NX_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_33_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_83_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_50_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_85_GS_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_19_A3_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_52_911_PORSCHE_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_53_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_89_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_54_A4_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_35_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_92_X2_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_36_A4_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_94_FF_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_95_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_96_NIRO_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_57_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_98_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_58_FF_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_37_A3_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_38_X2_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_102_NX_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_23_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_104_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_105_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_62_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_107_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_63_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_109_A3_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_29_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_111_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_21_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_113_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_114_NIRO_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_42_NIRO_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_116_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_43_STONIC_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_118_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_68_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_69_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_121_GS_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_122_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_123_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_124_911_PORSCHE_Points_[0]_:_{distance=0,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap1 Car =>>Car_125_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 0}
+
+#	lap [2]		#	#	#	Time [60 minutes]	#	duration [180 minutes]		#	#	
+
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_30_NX_LEXUS_Points_[0]_:_{distance=217,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_79_STONIC_KIA_Points_[0]_:_{distance=213,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_18_A4_Audi_Points_[0]_:_{distance=207,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_116_JAZZ_HONDA_Points_[0]_:_{distance=198,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_45_CIVIC_HONDA_Points_[0]_:_{distance=196,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_63_CIVIC_HONDA_Points_[0]_:_{distance=194,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_98_JAZZ_HONDA_Points_[0]_:_{distance=192,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_96_NIRO_KIA_Points_[0]_:_{distance=188,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_99_CIVIC_HONDA_Points_[0]_:_{distance=188,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_50_CLASE_S_MERCEDES_Points_[0]_:_{distance=188,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_22_FF_Ferrari_Points_[0]_:_{distance=186,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_60_NIRO_KIA_Points_[0]_:_{distance=185,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_114_NIRO_KIA_Points_[0]_:_{distance=184,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_109_A3_Audi_Points_[0]_:_{distance=183,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_49_GS_LEXUS_Points_[0]_:_{distance=182,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_20_X2_BMW_Points_[0]_:_{distance=180,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_88_911_PORSCHE_Points_[0]_:_{distance=178,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_39_X3_BMW_Points_[0]_:_{distance=173,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_44_JAZZ_HONDA_Points_[0]_:_{distance=173,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_83_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=170,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_64_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=169,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_34_911_PORSCHE_Points_[0]_:_{distance=164,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_68_CLASE_S_MERCEDES_Points_[0]_:_{distance=160,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_56_X2_BMW_Points_[0]_:_{distance=159,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_32_CLASE_S_MERCEDES_Points_[0]_:_{distance=158,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_104_CLASE_S_MERCEDES_Points_[0]_:_{distance=158,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_47_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=156,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_51_CLASE_X_MERCEDES_Points_[0]_:_{distance=154,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_33_CLASE_X_MERCEDES_Points_[0]_:_{distance=154,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_105_CLASE_X_MERCEDES_Points_[0]_:_{distance=150,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_97_STONIC_KIA_Points_[0]_:_{distance=148,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_84_NX_LEXUS_Points_[0]_:_{distance=147,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_74_X2_BMW_Points_[0]_:_{distance=146,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_25_STONIC_KIA_Points_[0]_:_{distance=144,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_102_NX_LEXUS_Points_[0]_:_{distance=143,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_38_X2_BMW_Points_[0]_:_{distance=142,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_19_A3_Audi_Points_[0]_:_{distance=140,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_66_NX_LEXUS_Points_[0]_:_{distance=140,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_69_CLASE_X_MERCEDES_Points_[0]_:_{distance=140,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_94_FF_Ferrari_Points_[0]_:_{distance=139,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_46_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=138,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_67_GS_LEXUS_Points_[0]_:_{distance=137,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_89_CAYENE_PORSCHE_Points_[0]_:_{distance=136,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_29_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=135,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_87_CLASE_X_MERCEDES_Points_[0]_:_{distance=134,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_40_FF_Ferrari_Points_[0]_:_{distance=133,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_54_A4_Audi_Points_[0]_:_{distance=131,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_75_X3_BMW_Points_[0]_:_{distance=131,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_107_CAYENE_PORSCHE_Points_[0]_:_{distance=130,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_108_A4_Audi_Points_[0]_:_{distance=128,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_117_CIVIC_HONDA_Points_[0]_:_{distance=127,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_91_A3_Audi_Points_[0]_:_{distance=126,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_82_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=126,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_27_CIVIC_HONDA_Points_[0]_:_{distance=126,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_77_GTC4_Ferrari_Points_[0]_:_{distance=124,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_113_GTC4_Ferrari_Points_[0]_:_{distance=122,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_95_GTC4_Ferrari_Points_[0]_:_{distance=120,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_121_GS_LEXUS_Points_[0]_:_{distance=120,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_80_JAZZ_HONDA_Points_[0]_:_{distance=117,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_110_X2_BMW_Points_[0]_:_{distance=116,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_100_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=115,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_58_FF_Ferrari_Points_[0]_:_{distance=113,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_70_911_PORSCHE_Points_[0]_:_{distance=113,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_72_A4_Audi_Points_[0]_:_{distance=112,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_111_X3_BMW_Points_[0]_:_{distance=112,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_21_X3_BMW_Points_[0]_:_{distance=111,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_43_STONIC_KIA_Points_[0]_:_{distance=109,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_59_GTC4_Ferrari_Points_[0]_:_{distance=108,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_37_A3_Audi_Points_[0]_:_{distance=108,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_35_CAYENE_PORSCHE_Points_[0]_:_{distance=106,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_122_CLASE_S_MERCEDES_Points_[0]_:_{distance=104,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_23_GTC4_Ferrari_Points_[0]_:_{distance=103,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_115_STONIC_KIA_Points_[0]_:_{distance=103,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_71_CAYENE_PORSCHE_Points_[0]_:_{distance=103,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_52_911_PORSCHE_Points_[0]_:_{distance=103,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_103_GS_LEXUS_Points_[0]_:_{distance=101,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_120_NX_LEXUS_Points_[0]_:_{distance=99,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_123_CLASE_X_MERCEDES_Points_[0]_:_{distance=98,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_118_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=96,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_86_CLASE_S_MERCEDES_Points_[0]_:_{distance=94,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_65_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=94,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_76_FF_Ferrari_Points_[0]_:_{distance=93,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_119_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=93,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_73_A3_Audi_Points_[0]_:_{distance=92,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_101_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=91,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_36_A4_Audi_Points_[0]_:_{distance=90,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_124_911_PORSCHE_Points_[0]_:_{distance=86,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_31_GS_LEXUS_Points_[0]_:_{distance=82,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_81_CIVIC_HONDA_Points_[0]_:_{distance=81,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_93_X3_BMW_Points_[0]_:_{distance=79,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_42_NIRO_KIA_Points_[0]_:_{distance=78,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_90_A4_Audi_Points_[0]_:_{distance=77,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_28_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=76,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_24_NIRO_KIA_Points_[0]_:_{distance=76,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_26_JAZZ_HONDA_Points_[0]_:_{distance=76,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_57_X3_BMW_Points_[0]_:_{distance=76,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_62_JAZZ_HONDA_Points_[0]_:_{distance=75,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_61_STONIC_KIA_Points_[0]_:_{distance=70,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_125_CAYENE_PORSCHE_Points_[0]_:_{distance=64,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_106_911_PORSCHE_Points_[0]_:_{distance=63,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_78_NIRO_KIA_Points_[0]_:_{distance=62,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_92_X2_BMW_Points_[0]_:_{distance=61,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_55_A3_Audi_Points_[0]_:_{distance=53,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_48_NX_LEXUS_Points_[0]_:_{distance=48,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_85_GS_LEXUS_Points_[0]_:_{distance=44,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_41_GTC4_Ferrari_Points_[0]_:_{distance=42,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_112_FF_Ferrari_Points_[0]_:_{distance=36,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap2 Car =>>Car_53_CAYENE_PORSCHE_Points_[0]_:_{distance=31,speed= 1}
+
+#	lap [3]		#	#	#	Time [120 minutes]	#	duration [180 minutes]		#	#	
+
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_88_911_PORSCHE_Points_[0]_:_{distance=376,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_79_STONIC_KIA_Points_[0]_:_{distance=375,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_32_CLASE_S_MERCEDES_Points_[0]_:_{distance=374,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_98_JAZZ_HONDA_Points_[0]_:_{distance=372,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_56_X2_BMW_Points_[0]_:_{distance=367,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_84_NX_LEXUS_Points_[0]_:_{distance=367,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_63_CIVIC_HONDA_Points_[0]_:_{distance=363,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_30_NX_LEXUS_Points_[0]_:_{distance=360,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_116_JAZZ_HONDA_Points_[0]_:_{distance=359,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_45_CIVIC_HONDA_Points_[0]_:_{distance=358,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_114_NIRO_KIA_Points_[0]_:_{distance=357,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_109_A3_Audi_Points_[0]_:_{distance=355,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_89_CAYENE_PORSCHE_Points_[0]_:_{distance=348,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_96_NIRO_KIA_Points_[0]_:_{distance=347,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_20_X2_BMW_Points_[0]_:_{distance=346,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_18_A4_Audi_Points_[0]_:_{distance=344,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_68_CLASE_S_MERCEDES_Points_[0]_:_{distance=342,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_59_GTC4_Ferrari_Points_[0]_:_{distance=342,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_29_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=331,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_50_CLASE_S_MERCEDES_Points_[0]_:_{distance=324,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_51_CLASE_X_MERCEDES_Points_[0]_:_{distance=320,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_47_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=320,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_111_X3_BMW_Points_[0]_:_{distance=319,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_117_CIVIC_HONDA_Points_[0]_:_{distance=313,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_102_NX_LEXUS_Points_[0]_:_{distance=313,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_82_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=311,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_22_FF_Ferrari_Points_[0]_:_{distance=310,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_19_A3_Audi_Points_[0]_:_{distance=310,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_64_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=306,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_23_GTC4_Ferrari_Points_[0]_:_{distance=303,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_35_CAYENE_PORSCHE_Points_[0]_:_{distance=301,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_95_GTC4_Ferrari_Points_[0]_:_{distance=300,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_49_GS_LEXUS_Points_[0]_:_{distance=296,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_121_GS_LEXUS_Points_[0]_:_{distance=296,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_83_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=291,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_91_A3_Audi_Points_[0]_:_{distance=290,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_113_GTC4_Ferrari_Points_[0]_:_{distance=290,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_99_CIVIC_HONDA_Points_[0]_:_{distance=286,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_115_STONIC_KIA_Points_[0]_:_{distance=281,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_66_NX_LEXUS_Points_[0]_:_{distance=279,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_54_A4_Audi_Points_[0]_:_{distance=277,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_33_CLASE_X_MERCEDES_Points_[0]_:_{distance=273,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_36_A4_Audi_Points_[0]_:_{distance=271,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_75_X3_BMW_Points_[0]_:_{distance=270,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_104_CLASE_S_MERCEDES_Points_[0]_:_{distance=268,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_97_STONIC_KIA_Points_[0]_:_{distance=267,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_39_X3_BMW_Points_[0]_:_{distance=266,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_52_911_PORSCHE_Points_[0]_:_{distance=265,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_25_STONIC_KIA_Points_[0]_:_{distance=265,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_70_911_PORSCHE_Points_[0]_:_{distance=264,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_58_FF_Ferrari_Points_[0]_:_{distance=264,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_122_CLASE_S_MERCEDES_Points_[0]_:_{distance=262,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_65_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=261,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_62_JAZZ_HONDA_Points_[0]_:_{distance=260,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_69_CLASE_X_MERCEDES_Points_[0]_:_{distance=258,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_94_FF_Ferrari_Points_[0]_:_{distance=258,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_107_CAYENE_PORSCHE_Points_[0]_:_{distance=256,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_34_911_PORSCHE_Points_[0]_:_{distance=254,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_77_GTC4_Ferrari_Points_[0]_:_{distance=254,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_57_X3_BMW_Points_[0]_:_{distance=253,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_60_NIRO_KIA_Points_[0]_:_{distance=252,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_87_CLASE_X_MERCEDES_Points_[0]_:_{distance=250,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_123_CLASE_X_MERCEDES_Points_[0]_:_{distance=248,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_43_STONIC_KIA_Points_[0]_:_{distance=246,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_44_JAZZ_HONDA_Points_[0]_:_{distance=246,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_37_A3_Audi_Points_[0]_:_{distance=242,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_67_GS_LEXUS_Points_[0]_:_{distance=239,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_31_GS_LEXUS_Points_[0]_:_{distance=238,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_72_A4_Audi_Points_[0]_:_{distance=237,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_108_A4_Audi_Points_[0]_:_{distance=234,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_105_CLASE_X_MERCEDES_Points_[0]_:_{distance=232,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_38_X2_BMW_Points_[0]_:_{distance=230,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_85_GS_LEXUS_Points_[0]_:_{distance=228,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_106_911_PORSCHE_Points_[0]_:_{distance=225,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_110_X2_BMW_Points_[0]_:_{distance=224,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_118_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=224,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_74_X2_BMW_Points_[0]_:_{distance=223,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_26_JAZZ_HONDA_Points_[0]_:_{distance=220,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_24_NIRO_KIA_Points_[0]_:_{distance=218,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_103_GS_LEXUS_Points_[0]_:_{distance=214,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_55_A3_Audi_Points_[0]_:_{distance=214,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_80_JAZZ_HONDA_Points_[0]_:_{distance=213,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_46_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=211,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_71_CAYENE_PORSCHE_Points_[0]_:_{distance=209,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_40_FF_Ferrari_Points_[0]_:_{distance=208,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_27_CIVIC_HONDA_Points_[0]_:_{distance=202,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_86_CLASE_S_MERCEDES_Points_[0]_:_{distance=200,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_112_FF_Ferrari_Points_[0]_:_{distance=199,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_73_A3_Audi_Points_[0]_:_{distance=198,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_124_911_PORSCHE_Points_[0]_:_{distance=197,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_100_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=192,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_48_NX_LEXUS_Points_[0]_:_{distance=187,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_120_NX_LEXUS_Points_[0]_:_{distance=185,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_42_NIRO_KIA_Points_[0]_:_{distance=181,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_78_NIRO_KIA_Points_[0]_:_{distance=180,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_92_X2_BMW_Points_[0]_:_{distance=179,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_119_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=178,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_21_X3_BMW_Points_[0]_:_{distance=176,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_61_STONIC_KIA_Points_[0]_:_{distance=175,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_101_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=174,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_81_CIVIC_HONDA_Points_[0]_:_{distance=166,speed= 5}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_90_A4_Audi_Points_[0]_:_{distance=162,speed= 0}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_53_CAYENE_PORSCHE_Points_[0]_:_{distance=160,speed= 4}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_93_X3_BMW_Points_[0]_:_{distance=156,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_28_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=152,speed= 2}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_41_GTC4_Ferrari_Points_[0]_:_{distance=147,speed= 3}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_76_FF_Ferrari_Points_[0]_:_{distance=141,speed= 1}
+
+RACE STANDAR_[rs_01_true]		= RA:rs_01_true Lap3 Car =>>Car_125_CAYENE_PORSCHE_Points_[0]_:_{distance=131,speed= 5}

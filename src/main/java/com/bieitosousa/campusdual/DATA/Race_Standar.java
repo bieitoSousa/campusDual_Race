@@ -97,6 +97,8 @@ public class Race_Standar extends Race {
 		// ================================================//
 		// C = = = TRAS Carrera = = = = = =
 		// ================================================//
+		// order and pass to take positions
+		listCarParticipe=(ArrayList<Car>) OrderCarAsPosition(listCarParticipe);
 		takePoints( this.listCarParticipe);
 		exportRace();
 	}// FinmakeRace
