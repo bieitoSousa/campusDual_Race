@@ -1,0 +1,74 @@
+
+	=	=	=	=	=	= Car_18_A4_Audi_Points_[0]_:_{distance=0,speed= 4}
+
+	=	=	=	=	=	= Car_19_A3_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+	=	=	=	=	=	= Car_20_X2_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+	=	=	=	=	=	= Car_21_X3_BMW_Points_[0]_:_{distance=0,speed= 5}
+
+	=	=	=	=	=	= Car_22_FF_Ferrari_Points_[0]_:_{distance=0,speed= 1}
+
+	=	=	=	=	=	= Car_23_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+	=	=	=	=	=	= Car_24_NIRO_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+	=	=	=	=	=	= Car_25_STONIC_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+	=	=	=	=	=	= Car_26_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 3}
+
+	=	=	=	=	=	= Car_27_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+	=	=	=	=	=	= Car_28_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 1}
+
+	=	=	=	=	=	= Car_29_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 2}
+
+	=	=	=	=	=	= Car_30_NX_LEXUS_Points_[0]_:_{distance=0,speed= 5}
+
+	=	=	=	=	=	= Car_31_GS_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+	=	=	=	=	=	= Car_32_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 2}
+
+	=	=	=	=	=	= Car_33_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 1}
+
+	=	=	=	=	=	= Car_34_911_PORSCHE_Points_[0]_:_{distance=0,speed= 0}
+
+	=	=	=	=	=	= Car_35_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+	=	=	=	=	=	= Car_36_A4_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+	=	=	=	=	=	= Car_37_A3_Audi_Points_[0]_:_{distance=0,speed= 5}
+
+	=	=	=	=	=	= Car_38_X2_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+	=	=	=	=	=	= Car_39_X3_BMW_Points_[0]_:_{distance=0,speed= 1}
+
+	=	=	=	=	=	= Car_40_FF_Ferrari_Points_[0]_:_{distance=0,speed= 1}
+
+	=	=	=	=	=	= Car_41_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+	=	=	=	=	=	= Car_42_NIRO_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+	=	=	=	=	=	= Car_43_STONIC_KIA_Points_[0]_:_{distance=0,speed= 4}
+
+	=	=	=	=	=	= Car_44_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+	=	=	=	=	=	= Car_45_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+	=	=	=	=	=	= Car_46_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+	=	=	=	=	=	= Car_47_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 2}
+
+	=	=	=	=	=	= Car_48_NX_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+	=	=	=	=	=	= Car_49_GS_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+	=	=	=	=	=	= Car_50_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+	=	=	=	=	=	= Car_51_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+	=	=	=	=	=	= Car_52_911_PORSCHE_Points_[0]_:_{distance=0,speed= 2}
+
+	=	=	=	=	=	= Car_53_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+	=	=	=	=	=	= Car_54_A4_Audi_Points_[0]_:_{distance=0,speed= 0}
