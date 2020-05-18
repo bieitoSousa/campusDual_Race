@@ -158,8 +158,13 @@ public class Pruebas {
 //	=	=	=	 Carreras Standar	=	=	=	=
 		//Race_Standar rs_01_true;
 		//Race_Standar rs_02_false;
-//		rs_01_true.makeRace();
-//		rs_01_true.printResultGrupByGarage();
+		rs_01_true.start();	
+		
+		List<Car> lc =rs_01_true.getParticC();
+		List<Car> lo =rs_01_true.getResultC();
+		lo.size();
+		lc.size();
+		
 //		rs_01_true.printResultGrupByCar();
 //		rs_02_false.makeRace();
 //		rs_02_false.printResultGrupByGarage();
@@ -208,6 +213,9 @@ public class Pruebas {
 			
 			Tornament tS = new Tornament ("Torneo_Standar",tornS); 
 			tS.start();
+			tS.getParticC();
+			tS.getResultC();
+			tS.getPodiumC();
 			
 		} catch (Exception e) {
 			System.out.println("fallo al realizara El torneo"+ e.getMessage());

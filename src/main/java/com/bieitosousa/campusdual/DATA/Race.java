@@ -67,9 +67,9 @@ public abstract class Race {
 				if (Controler.isRACE_RESULT()) {
 					this.printResultC();
 				}
-				if (Controler.isRACE_EXP()) {
-					this.exportRace();
-				}
+//				if (Controler.isRACE_EXP()) {
+//					this.exportRace();
+//				}
 			} catch (Exception e) {
 				System.err.println("Error al ejecutar la carrera " + cabeceraR + e.getMessage());
 			}
@@ -392,21 +392,22 @@ public abstract class Race {
 
 	public List<Car> getResultC() throws Exception {
 		List<Car> listA = new ArrayList<>();
-		List<Car> listACopy = new ArrayList<>();
 		for (Garage g : ParticG) {
 			listA.addAll(g.listGCar);
 		}
+		ArrayList<Car> listACopy = new ArrayList<>(listA);
 		listA = (ArrayList<Car>) OrderCarAsPosition(listA);
-		Collections.copy(listACopy,listA);
+		//Collections.copy(listACopy,listA);
 		return listACopy;
 	}
 	public List<Car> getParticC() throws Exception {
-		List<Car> listA = new ArrayList<>();
-		List<Car> listACopy = new ArrayList<>();
+		ArrayList<Car> listA = new ArrayList<>();
+//		ArrayList<Car> listACopy = new ArrayList<>();
 		for (Garage g : ParticG) {
 			listA.addAll(g.listGCar);
 		}
-		Collections.copy(listACopy,listA);
+		ArrayList<Car> listACopy = new ArrayList<>(listA);
+		//Collections.copy(listACopy,listA);
 		for(Car cc :listACopy) {
 			cc.setDistance(0);
 			cc.setPoints(0);
@@ -414,12 +415,14 @@ public abstract class Race {
 		return listACopy;
 	}
 	public List<Garage> getResultG() throws Exception {
-		List<Garage> listA = new ArrayList<>();
-		List<Garage> listACopy = new ArrayList<>();
+		ArrayList<Garage> listA = new ArrayList<>();
+		
+		
 		for (Garage g : ParticG) {
 			listA.add(g);
 		}
-		Collections.copy(listACopy,listA);
+		ArrayList<Garage> listACopy = new ArrayList<>(listA);
+		//Collections.copy(listACopy,listA);
 		return listACopy;
 	}
 
