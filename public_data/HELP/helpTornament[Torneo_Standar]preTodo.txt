@@ -1,0 +1,648 @@
+
+Tornament[Torneo_Standar]preTodoCar_18_A4_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_19_A3_Audi_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_20_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_21_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_22_FF_Ferrari_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_23_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_24_NIRO_KIA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_25_STONIC_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_26_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_27_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_28_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_29_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_30_NX_LEXUS_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_31_GS_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_32_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_33_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_34_911_PORSCHE_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_35_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_36_A4_Audi_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_37_A3_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_38_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_39_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_40_FF_Ferrari_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_41_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_42_NIRO_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_43_STONIC_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_44_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_45_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_46_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_47_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_48_NX_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_49_GS_LEXUS_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_50_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_51_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_52_911_PORSCHE_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_53_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_54_A4_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_55_A3_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_56_X2_BMW_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_57_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_58_FF_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_59_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_60_NIRO_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_61_STONIC_KIA_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_62_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_63_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_64_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_65_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_66_NX_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_67_GS_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_68_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_69_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_70_911_PORSCHE_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_71_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_72_A4_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_73_A3_Audi_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_74_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_75_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_76_FF_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_77_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_78_NIRO_KIA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_79_STONIC_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_80_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_81_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_82_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_83_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_84_NX_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_85_GS_LEXUS_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_86_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_87_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_88_911_PORSCHE_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_89_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_90_A4_Audi_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_91_A3_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_92_X2_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_93_X3_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_94_FF_Ferrari_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_95_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_96_NIRO_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_97_STONIC_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_98_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_99_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_100_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_101_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_102_NX_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_103_GS_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_104_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_105_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_106_911_PORSCHE_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_107_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_108_A4_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_109_A3_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_110_X2_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_111_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_112_FF_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_113_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_114_NIRO_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_115_STONIC_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_116_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_117_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_118_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_119_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_120_NX_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_121_GS_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_122_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_123_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_124_911_PORSCHE_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_125_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_18_A4_Audi_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_19_A3_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_20_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_21_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_22_FF_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_23_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_24_NIRO_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_25_STONIC_KIA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_26_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_27_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_28_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_29_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_30_NX_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_31_GS_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_32_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_33_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_34_911_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_35_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_36_A4_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_37_A3_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_38_X2_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_39_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_40_FF_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_41_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_42_NIRO_KIA_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_43_STONIC_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_44_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_45_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_46_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_47_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_48_NX_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_49_GS_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_50_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_51_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_52_911_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_53_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_54_A4_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_55_A3_Audi_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_56_X2_BMW_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_57_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_58_FF_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_59_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_60_NIRO_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_61_STONIC_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_62_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_63_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_64_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_65_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_66_NX_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_67_GS_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_68_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_69_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_70_911_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_71_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_72_A4_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_73_A3_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_74_X2_BMW_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_75_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_76_FF_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_77_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_78_NIRO_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_79_STONIC_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_80_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_81_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_82_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_83_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_84_NX_LEXUS_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_85_GS_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_86_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_87_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_88_911_PORSCHE_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_89_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_90_A4_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_91_A3_Audi_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_92_X2_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_93_X3_BMW_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_94_FF_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_95_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_96_NIRO_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_97_STONIC_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_98_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_99_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_100_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_101_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_102_NX_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_103_GS_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_104_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_105_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_106_911_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_107_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_108_A4_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_109_A3_Audi_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_110_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_111_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_112_FF_Ferrari_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_113_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_114_NIRO_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_115_STONIC_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_116_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_117_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_118_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_119_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_120_NX_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_121_GS_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_122_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_123_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_124_911_PORSCHE_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_125_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_18_A4_Audi_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_19_A3_Audi_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_20_X2_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_21_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_22_FF_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_23_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_24_NIRO_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_25_STONIC_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_26_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_27_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_28_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_29_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_30_NX_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_31_GS_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_32_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_33_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_34_911_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_35_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_36_A4_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_37_A3_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_38_X2_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_39_X3_BMW_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_40_FF_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_41_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_42_NIRO_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_43_STONIC_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_44_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_45_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_46_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_47_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_48_NX_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_49_GS_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_50_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_51_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_52_911_PORSCHE_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_53_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_54_A4_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_55_A3_Audi_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_56_X2_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_57_X3_BMW_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_58_FF_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_59_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_60_NIRO_KIA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_61_STONIC_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_62_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_63_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_64_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_65_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_66_NX_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_67_GS_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_68_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_69_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_70_911_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_71_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_72_A4_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_73_A3_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_74_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_75_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_76_FF_Ferrari_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_77_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_78_NIRO_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_79_STONIC_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_80_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_81_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_82_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_83_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_84_NX_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_85_GS_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_86_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_87_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_88_911_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_89_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_90_A4_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_91_A3_Audi_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_92_X2_BMW_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_93_X3_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_94_FF_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_95_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_96_NIRO_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_97_STONIC_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_98_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_99_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_100_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_101_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_102_NX_LEXUS_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_103_GS_LEXUS_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_104_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_105_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_106_911_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_107_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]preTodoCar_108_A4_Audi_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_109_A3_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_110_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_111_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_112_FF_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_113_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_114_NIRO_KIA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_115_STONIC_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_116_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]preTodoCar_117_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_118_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_119_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]preTodoCar_120_NX_LEXUS_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_121_GS_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_122_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]preTodoCar_123_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]preTodoCar_124_911_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]preTodoCar_125_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}

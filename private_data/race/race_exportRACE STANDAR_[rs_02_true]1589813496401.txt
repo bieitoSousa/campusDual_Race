@@ -1,0 +1,216 @@
+
+	=	=	=	=	=	= Car_110_X2_BMW_Points_[12]_:_{distance=569,speed= 3}
+
+	=	=	=	=	=	= Car_100_AVENTADOR_LAAMBORGHINI_Points_[6]_:_{distance=543,speed= 4}
+
+	=	=	=	=	=	= Car_51_CLASE_X_MERCEDES_Points_[3]_:_{distance=541,speed= 0}
+
+	=	=	=	=	=	= Car_38_X2_BMW_Points_[1]_:_{distance=537,speed= 4}
+
+	=	=	=	=	=	= Car_53_CAYENE_PORSCHE_Points_[1]_:_{distance=535,speed= 1}
+
+	=	=	=	=	=	= Car_74_X2_BMW_Points_[1]_:_{distance=519,speed= 3}
+
+	=	=	=	=	=	= Car_79_STONIC_KIA_Points_[1]_:_{distance=515,speed= 1}
+
+	=	=	=	=	=	= Car_104_CLASE_S_MERCEDES_Points_[1]_:_{distance=508,speed= 2}
+
+	=	=	=	=	=	= Car_101_GALLARDO_LAAMBORGHINI_Points_[1]_:_{distance=498,speed= 4}
+
+	=	=	=	=	=	= Car_48_NX_LEXUS_Points_[1]_:_{distance=493,speed= 4}
+
+	=	=	=	=	=	= Car_88_911_PORSCHE_Points_[1]_:_{distance=490,speed= 4}
+
+	=	=	=	=	=	= Car_36_A4_Audi_Points_[1]_:_{distance=488,speed= 3}
+
+	=	=	=	=	=	= Car_57_X3_BMW_Points_[1]_:_{distance=487,speed= 5}
+
+	=	=	=	=	=	= Car_56_X2_BMW_Points_[1]_:_{distance=487,speed= 4}
+
+	=	=	=	=	=	= Car_61_STONIC_KIA_Points_[1]_:_{distance=484,speed= 0}
+
+	=	=	=	=	=	= Car_39_X3_BMW_Points_[1]_:_{distance=481,speed= 1}
+
+	=	=	=	=	=	= Car_24_NIRO_KIA_Points_[1]_:_{distance=480,speed= 3}
+
+	=	=	=	=	=	= Car_81_CIVIC_HONDA_Points_[1]_:_{distance=469,speed= 2}
+
+	=	=	=	=	=	= Car_19_A3_Audi_Points_[1]_:_{distance=460,speed= 4}
+
+	=	=	=	=	=	= Car_59_GTC4_Ferrari_Points_[1]_:_{distance=459,speed= 0}
+
+	=	=	=	=	=	= Car_29_GALLARDO_LAAMBORGHINI_Points_[1]_:_{distance=459,speed= 0}
+
+	=	=	=	=	=	= Car_78_NIRO_KIA_Points_[1]_:_{distance=457,speed= 3}
+
+	=	=	=	=	=	= Car_102_NX_LEXUS_Points_[1]_:_{distance=457,speed= 3}
+
+	=	=	=	=	=	= Car_84_NX_LEXUS_Points_[1]_:_{distance=455,speed= 1}
+
+	=	=	=	=	=	= Car_34_911_PORSCHE_Points_[1]_:_{distance=450,speed= 1}
+
+	=	=	=	=	=	= Car_27_CIVIC_HONDA_Points_[1]_:_{distance=448,speed= 3}
+
+	=	=	=	=	=	= Car_64_AVENTADOR_LAAMBORGHINI_Points_[1]_:_{distance=447,speed= 3}
+
+	=	=	=	=	=	= Car_66_NX_LEXUS_Points_[1]_:_{distance=446,speed= 2}
+
+	=	=	=	=	=	= Car_125_CAYENE_PORSCHE_Points_[1]_:_{distance=443,speed= 1}
+
+	=	=	=	=	=	= Car_68_CLASE_S_MERCEDES_Points_[1]_:_{distance=441,speed= 3}
+
+	=	=	=	=	=	= Car_121_GS_LEXUS_Points_[1]_:_{distance=436,speed= 2}
+
+	=	=	=	=	=	= Car_41_GTC4_Ferrari_Points_[1]_:_{distance=436,speed= 1}
+
+	=	=	=	=	=	= Car_103_GS_LEXUS_Points_[1]_:_{distance=433,speed= 3}
+
+	=	=	=	=	=	= Car_42_NIRO_KIA_Points_[1]_:_{distance=432,speed= 3}
+
+	=	=	=	=	=	= Car_108_A4_Audi_Points_[1]_:_{distance=428,speed= 2}
+
+	=	=	=	=	=	= Car_54_A4_Audi_Points_[1]_:_{distance=425,speed= 0}
+
+	=	=	=	=	=	= Car_118_AVENTADOR_LAAMBORGHINI_Points_[1]_:_{distance=424,speed= 5}
+
+	=	=	=	=	=	= Car_114_NIRO_KIA_Points_[1]_:_{distance=423,speed= 4}
+
+	=	=	=	=	=	= Car_82_AVENTADOR_LAAMBORGHINI_Points_[1]_:_{distance=423,speed= 3}
+
+	=	=	=	=	=	= Car_94_FF_Ferrari_Points_[1]_:_{distance=418,speed= 0}
+
+	=	=	=	=	=	= Car_91_A3_Audi_Points_[1]_:_{distance=415,speed= 4}
+
+	=	=	=	=	=	= Car_50_CLASE_S_MERCEDES_Points_[1]_:_{distance=414,speed= 4}
+
+	=	=	=	=	=	= Car_75_X3_BMW_Points_[1]_:_{distance=410,speed= 4}
+
+	=	=	=	=	=	= Car_63_CIVIC_HONDA_Points_[1]_:_{distance=410,speed= 4}
+
+	=	=	=	=	=	= Car_83_GALLARDO_LAAMBORGHINI_Points_[1]_:_{distance=400,speed= 4}
+
+	=	=	=	=	=	= Car_107_CAYENE_PORSCHE_Points_[1]_:_{distance=400,speed= 1}
+
+	=	=	=	=	=	= Car_119_GALLARDO_LAAMBORGHINI_Points_[1]_:_{distance=398,speed= 3}
+
+	=	=	=	=	=	= Car_92_X2_BMW_Points_[1]_:_{distance=397,speed= 5}
+
+	=	=	=	=	=	= Car_43_STONIC_KIA_Points_[1]_:_{distance=396,speed= 2}
+
+	=	=	=	=	=	= Car_89_CAYENE_PORSCHE_Points_[1]_:_{distance=395,speed= 1}
+
+	=	=	=	=	=	= Car_120_NX_LEXUS_Points_[1]_:_{distance=395,speed= 5}
+
+	=	=	=	=	=	= Car_69_CLASE_X_MERCEDES_Points_[1]_:_{distance=394,speed= 4}
+
+	=	=	=	=	=	= Car_28_AVENTADOR_LAAMBORGHINI_Points_[1]_:_{distance=392,speed= 3}
+
+	=	=	=	=	=	= Car_23_GTC4_Ferrari_Points_[1]_:_{distance=389,speed= 3}
+
+	=	=	=	=	=	= Car_117_CIVIC_HONDA_Points_[1]_:_{distance=388,speed= 0}
+
+	=	=	=	=	=	= Car_25_STONIC_KIA_Points_[1]_:_{distance=388,speed= 3}
+
+	=	=	=	=	=	= Car_112_FF_Ferrari_Points_[1]_:_{distance=387,speed= 4}
+
+	=	=	=	=	=	= Car_32_CLASE_S_MERCEDES_Points_[1]_:_{distance=387,speed= 2}
+
+	=	=	=	=	=	= Car_97_STONIC_KIA_Points_[1]_:_{distance=384,speed= 1}
+
+	=	=	=	=	=	= Car_87_CLASE_X_MERCEDES_Points_[1]_:_{distance=383,speed= 4}
+
+	=	=	=	=	=	= Car_106_911_PORSCHE_Points_[1]_:_{distance=379,speed= 5}
+
+	=	=	=	=	=	= Car_47_GALLARDO_LAAMBORGHINI_Points_[1]_:_{distance=376,speed= 2}
+
+	=	=	=	=	=	= Car_111_X3_BMW_Points_[1]_:_{distance=376,speed= 0}
+
+	=	=	=	=	=	= Car_86_CLASE_S_MERCEDES_Points_[1]_:_{distance=375,speed= 4}
+
+	=	=	=	=	=	= Car_22_FF_Ferrari_Points_[1]_:_{distance=373,speed= 0}
+
+	=	=	=	=	=	= Car_31_GS_LEXUS_Points_[1]_:_{distance=370,speed= 0}
+
+	=	=	=	=	=	= Car_72_A4_Audi_Points_[1]_:_{distance=368,speed= 1}
+
+	=	=	=	=	=	= Car_71_CAYENE_PORSCHE_Points_[1]_:_{distance=367,speed= 2}
+
+	=	=	=	=	=	= Car_55_A3_Audi_Points_[1]_:_{distance=366,speed= 2}
+
+	=	=	=	=	=	= Car_124_911_PORSCHE_Points_[1]_:_{distance=365,speed= 5}
+
+	=	=	=	=	=	= Car_33_CLASE_X_MERCEDES_Points_[1]_:_{distance=362,speed= 5}
+
+	=	=	=	=	=	= Car_70_911_PORSCHE_Points_[1]_:_{distance=361,speed= 5}
+
+	=	=	=	=	=	= Car_73_A3_Audi_Points_[1]_:_{distance=357,speed= 0}
+
+	=	=	=	=	=	= Car_80_JAZZ_HONDA_Points_[1]_:_{distance=353,speed= 0}
+
+	=	=	=	=	=	= Car_46_AVENTADOR_LAAMBORGHINI_Points_[1]_:_{distance=351,speed= 4}
+
+	=	=	=	=	=	= Car_95_GTC4_Ferrari_Points_[1]_:_{distance=351,speed= 4}
+
+	=	=	=	=	=	= Car_62_JAZZ_HONDA_Points_[1]_:_{distance=350,speed= 1}
+
+	=	=	=	=	=	= Car_21_X3_BMW_Points_[1]_:_{distance=348,speed= 4}
+
+	=	=	=	=	=	= Car_45_CIVIC_HONDA_Points_[1]_:_{distance=346,speed= 1}
+
+	=	=	=	=	=	= Car_85_GS_LEXUS_Points_[1]_:_{distance=344,speed= 2}
+
+	=	=	=	=	=	= Car_113_GTC4_Ferrari_Points_[1]_:_{distance=344,speed= 2}
+
+	=	=	=	=	=	= Car_44_JAZZ_HONDA_Points_[1]_:_{distance=343,speed= 4}
+
+	=	=	=	=	=	= Car_99_CIVIC_HONDA_Points_[1]_:_{distance=338,speed= 5}
+
+	=	=	=	=	=	= Car_77_GTC4_Ferrari_Points_[1]_:_{distance=338,speed= 0}
+
+	=	=	=	=	=	= Car_98_JAZZ_HONDA_Points_[1]_:_{distance=338,speed= 2}
+
+	=	=	=	=	=	= Car_37_A3_Audi_Points_[1]_:_{distance=335,speed= 0}
+
+	=	=	=	=	=	= Car_30_NX_LEXUS_Points_[1]_:_{distance=333,speed= 0}
+
+	=	=	=	=	=	= Car_67_GS_LEXUS_Points_[1]_:_{distance=328,speed= 0}
+
+	=	=	=	=	=	= Car_26_JAZZ_HONDA_Points_[1]_:_{distance=322,speed= 1}
+
+	=	=	=	=	=	= Car_35_CAYENE_PORSCHE_Points_[1]_:_{distance=321,speed= 1}
+
+	=	=	=	=	=	= Car_76_FF_Ferrari_Points_[1]_:_{distance=319,speed= 5}
+
+	=	=	=	=	=	= Car_116_JAZZ_HONDA_Points_[1]_:_{distance=315,speed= 4}
+
+	=	=	=	=	=	= Car_49_GS_LEXUS_Points_[1]_:_{distance=308,speed= 4}
+
+	=	=	=	=	=	= Car_122_CLASE_S_MERCEDES_Points_[1]_:_{distance=308,speed= 0}
+
+	=	=	=	=	=	= Car_58_FF_Ferrari_Points_[1]_:_{distance=307,speed= 2}
+
+	=	=	=	=	=	= Car_109_A3_Audi_Points_[1]_:_{distance=303,speed= 0}
+
+	=	=	=	=	=	= Car_90_A4_Audi_Points_[1]_:_{distance=303,speed= 0}
+
+	=	=	=	=	=	= Car_115_STONIC_KIA_Points_[1]_:_{distance=303,speed= 2}
+
+	=	=	=	=	=	= Car_40_FF_Ferrari_Points_[1]_:_{distance=299,speed= 4}
+
+	=	=	=	=	=	= Car_93_X3_BMW_Points_[1]_:_{distance=298,speed= 3}
+
+	=	=	=	=	=	= Car_20_X2_BMW_Points_[1]_:_{distance=274,speed= 4}
+
+	=	=	=	=	=	= Car_52_911_PORSCHE_Points_[1]_:_{distance=270,speed= 3}
+
+	=	=	=	=	=	= Car_60_NIRO_KIA_Points_[1]_:_{distance=267,speed= 4}
+
+	=	=	=	=	=	= Car_96_NIRO_KIA_Points_[1]_:_{distance=261,speed= 1}
+
+	=	=	=	=	=	= Car_65_GALLARDO_LAAMBORGHINI_Points_[1]_:_{distance=251,speed= 0}
+
+	=	=	=	=	=	= Car_123_CLASE_X_MERCEDES_Points_[1]_:_{distance=240,speed= 2}
+
+	=	=	=	=	=	= Car_18_A4_Audi_Points_[1]_:_{distance=225,speed= 2}
+
+	=	=	=	=	=	= Car_105_CLASE_X_MERCEDES_Points_[1]_:_{distance=218,speed= 5}

@@ -1,0 +1,648 @@
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_18_A4_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_19_A3_Audi_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_20_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_21_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_22_FF_Ferrari_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_23_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_24_NIRO_KIA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_25_STONIC_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_26_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_27_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_28_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_29_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_30_NX_LEXUS_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_31_GS_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_32_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_33_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_34_911_PORSCHE_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_35_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_36_A4_Audi_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_37_A3_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_38_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_39_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_40_FF_Ferrari_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_41_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_42_NIRO_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_43_STONIC_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_44_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_45_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_46_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_47_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_48_NX_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_49_GS_LEXUS_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_50_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_51_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_52_911_PORSCHE_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_53_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_54_A4_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_55_A3_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_56_X2_BMW_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_57_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_58_FF_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_59_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_60_NIRO_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_61_STONIC_KIA_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_62_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_63_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_64_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_65_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_66_NX_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_67_GS_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_68_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_69_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_70_911_PORSCHE_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_71_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_72_A4_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_73_A3_Audi_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_74_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_75_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_76_FF_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_77_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_78_NIRO_KIA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_79_STONIC_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_80_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_81_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_82_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_83_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_84_NX_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_85_GS_LEXUS_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_86_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_87_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_88_911_PORSCHE_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_89_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_90_A4_Audi_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_91_A3_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_92_X2_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_93_X3_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_94_FF_Ferrari_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_95_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_96_NIRO_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_97_STONIC_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_98_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_99_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_100_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_101_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_102_NX_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_103_GS_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_104_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_105_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_106_911_PORSCHE_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_107_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_108_A4_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_109_A3_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_110_X2_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_111_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_112_FF_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_113_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_114_NIRO_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_115_STONIC_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_116_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_117_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_118_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_119_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_120_NX_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_121_GS_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_122_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_123_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_124_911_PORSCHE_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_125_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_18_A4_Audi_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_19_A3_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_20_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_21_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_22_FF_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_23_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_24_NIRO_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_25_STONIC_KIA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_26_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_27_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_28_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_29_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_30_NX_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_31_GS_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_32_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_33_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_34_911_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_35_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_36_A4_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_37_A3_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_38_X2_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_39_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_40_FF_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_41_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_42_NIRO_KIA_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_43_STONIC_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_44_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_45_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_46_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_47_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_48_NX_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_49_GS_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_50_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_51_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_52_911_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_53_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_54_A4_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_55_A3_Audi_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_56_X2_BMW_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_57_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_58_FF_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_59_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_60_NIRO_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_61_STONIC_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_62_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_63_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_64_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_65_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_66_NX_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_67_GS_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_68_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_69_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_70_911_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_71_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_72_A4_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_73_A3_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_74_X2_BMW_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_75_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_76_FF_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_77_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_78_NIRO_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_79_STONIC_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_80_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_81_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_82_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_83_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_84_NX_LEXUS_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_85_GS_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_86_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_87_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_88_911_PORSCHE_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_89_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_90_A4_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_91_A3_Audi_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_92_X2_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_93_X3_BMW_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_94_FF_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_95_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_96_NIRO_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_97_STONIC_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_98_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_99_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_100_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_101_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_102_NX_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_103_GS_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_104_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_105_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_106_911_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_107_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_108_A4_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_109_A3_Audi_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_110_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_111_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_112_FF_Ferrari_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_113_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_114_NIRO_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_115_STONIC_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_116_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_117_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_118_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_119_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_120_NX_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_121_GS_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_122_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_123_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_124_911_PORSCHE_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_125_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_18_A4_Audi_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_19_A3_Audi_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_20_X2_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_21_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_22_FF_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_23_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_24_NIRO_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_25_STONIC_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_26_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_27_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_28_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_29_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_30_NX_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_31_GS_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_32_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_33_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_34_911_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_35_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_36_A4_Audi_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_37_A3_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_38_X2_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_39_X3_BMW_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_40_FF_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_41_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_42_NIRO_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_43_STONIC_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_44_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_45_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_46_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_47_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_48_NX_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_49_GS_LEXUS_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_50_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_51_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_52_911_PORSCHE_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_53_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_54_A4_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_55_A3_Audi_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_56_X2_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_57_X3_BMW_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_58_FF_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_59_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_60_NIRO_KIA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_61_STONIC_KIA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_62_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_63_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_64_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_65_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_66_NX_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_67_GS_LEXUS_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_68_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_69_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_70_911_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_71_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_72_A4_Audi_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_73_A3_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_74_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_75_X3_BMW_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_76_FF_Ferrari_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_77_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_78_NIRO_KIA_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_79_STONIC_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_80_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_81_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_82_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_83_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_84_NX_LEXUS_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_85_GS_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_86_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_87_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_88_911_PORSCHE_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_89_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_90_A4_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_91_A3_Audi_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_92_X2_BMW_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_93_X3_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_94_FF_Ferrari_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_95_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_96_NIRO_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_97_STONIC_KIA_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_98_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_99_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_100_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_101_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_102_NX_LEXUS_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_103_GS_LEXUS_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_104_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_105_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_106_911_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_107_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_108_A4_Audi_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_109_A3_Audi_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_110_X2_BMW_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_111_X3_BMW_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_112_FF_Ferrari_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_113_GTC4_Ferrari_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_114_NIRO_KIA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_115_STONIC_KIA_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_116_JAZZ_HONDA_Points_[0]_:_{distance=0,speed= 4}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_117_CIVIC_HONDA_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_118_AVENTADOR_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_119_GALLARDO_LAAMBORGHINI_Points_[0]_:_{distance=0,speed= 3}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_120_NX_LEXUS_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_121_GS_LEXUS_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_122_CLASE_S_MERCEDES_Points_[0]_:_{distance=0,speed= 0}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_123_CLASE_X_MERCEDES_Points_[0]_:_{distance=0,speed= 2}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_124_911_PORSCHE_Points_[0]_:_{distance=0,speed= 5}
+
+Tornament[Torneo_Standar]ORDENPOSICIONCar_125_CAYENE_PORSCHE_Points_[0]_:_{distance=0,speed= 1}
