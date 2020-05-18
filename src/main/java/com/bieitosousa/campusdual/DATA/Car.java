@@ -16,7 +16,7 @@ package com.bieitosousa.campusdual.DATA;
 //  =   mark, model and autogenerate a id of them
 // ===================================================//
 
-public class Car {
+public class Car implements Cloneable {
 	// max sped is 5
 	private final int MAXSPEED = 5;
 	// String to identificate a car
@@ -125,6 +125,17 @@ public class Car {
 			return false;
 		return true;
 	}
+	
+	@Override
+    public Object clone(){
+        Object obj=null;
+        try{
+            obj=super.clone();
+        }catch(CloneNotSupportedException ex){
+            System.out.println(" no se puede duplicar");
+        }
+        return obj;
+    }
 
 	@Override
 	public String toString() {

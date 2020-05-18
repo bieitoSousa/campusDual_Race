@@ -21,7 +21,7 @@ import com.bieitosousa.campusdual.UTILS.*;
 //  =   Class to house cars 
 //  =   you can add, delete and selecct a car of him
 // ===================================================//
-public class Garage {
+public class Garage implements Cloneable {
 
 	String name; // name of the garage
 	// List of cars
@@ -88,6 +88,18 @@ public class Garage {
 		}
 	}
 
+	@Override
+    public Object clone(){
+        Object obj=null;
+        try{
+            obj=super.clone();
+        }catch(CloneNotSupportedException ex){
+            System.out.println(" no se puede duplicar");
+        }
+        return obj;
+    }
+	
+	
 	@Override
 	public String toString() {
 		return "Garage_" + name + " : {" + listGCar + "}";

@@ -23,12 +23,12 @@ public class Tornament {
 		int re = 0, rs = 0;
 		for (Race r : listTornRace) {
 			if (r instanceof Race_Standar) {
-				r.setCabeceraT("Tornament[" + this.name + "]");
+				r.setCabeceraT(getCabeceraT());
 				re++;
 			}
 
 			else if (r instanceof Race_Elimination) {
-				r.setCabeceraT("Tornament[" + this.name + "]");
+				r.setCabeceraT(getCabeceraT());
 				rs++;
 			}
 		}
@@ -93,7 +93,7 @@ public class Tornament {
 					r.exportRace(cc);
 				}
 			} catch (Exception e) {
-				System.err.println("Error al ejecutar la carrera " + r.cabeceraR + this.cabeceraT + e.getMessage());
+				System.err.println("Error al ejecutar la carrera " + r.getCabecera() + getCabeceraT() + e.getMessage());
 			}
 		}
 		if (Controler.isTORN_RESULT()) {
@@ -135,7 +135,6 @@ public class Tornament {
 
 	public List<Car> getParticC() throws Exception {
 		ArrayList<Car> resultC = new ArrayList<>();
-		ArrayList<Car> resultCCopy = new ArrayList<>();
 		for (Race r : getListTornRace()) {
 			for (Car car : r.getParticC()) {
 				if (resultC.contains(car)) {
@@ -144,8 +143,7 @@ public class Tornament {
 				}
 			}
 		}
-		Collections.copy(resultCCopy,resultC);
-		return resultCCopy;
+		return Race.cloneList(resultC);
 	}
 
 
@@ -155,7 +153,7 @@ public class Tornament {
 		ArrayList<Car> listTResult = new ArrayList<Car>();
 		
 		// limpio distance and points in hshCar
-		Collections.copy(ParticipantsCopy,getParticC());
+		ParticipantsCopy= (ArrayList<Car>) Race.cloneList(getParticC());
 		for(Car car : ParticipantsCopy ) {
 			car.setDistance(0);
 			car.setPoints(0);
@@ -174,7 +172,7 @@ public class Tornament {
 			}
 		}
 		//ArrayList<Car> list = new ArrayList<Car>(hashCar);
-		Race.printListHelp(ParticipantsCopy, this.cabeceraT + "hashSET");
+		Race.printListHelp(ParticipantsCopy, getCabeceraT() + "hashSET");
 		return ParticipantsCopy;
 	}
 	
@@ -221,7 +219,7 @@ public class Tornament {
 		if (Controler.isCONSOLE_PRINT_TORNAMENT_CLASSIFICATION()) {
 			System.out.println(mnj);
 		} else {
-			Utilss.printONFile(mnj, new File(Controler.getT_RESULT() + this.cabeceraT + ".txt"));
+			Utilss.printONFile(mnj, new File(Controler.getT_RESULT() + getCabeceraT() + ".txt"));
 		}
 	}
 
@@ -230,18 +228,18 @@ public class Tornament {
 	public void printResultC() {
 		ArrayList<Car> listCarInGarage = new ArrayList<>();
 		printResT("\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
-				+ "\n	!	!	RESULTADOS	GRUP BY CAR	!	!	!	!	!	" + "\n	!	!	" + this.cabeceraT
+				+ "\n	!	!	RESULTADOS	GRUP BY CAR	"+getCabeceraT()+"!	!	!	!	!	" + "\n	!	!	" 
 				+ "	!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	");
 		try {
 			listCarInGarage = (ArrayList<Car>) getParticC();
 		} catch (Exception e) {
 		}
-		Race.printListHelp(listCarInGarage, this.cabeceraT + "preTodo");
+		Race.printListHelp(listCarInGarage, getCabeceraT() + "preTodo");
 		try {
 			listCarInGarage = (ArrayList<Car>) Race.OrderCarAsPosition(listCarInGarage);
-			Race.printListHelp(listCarInGarage, this.cabeceraT + "ORDENPOSICION");
+			Race.printListHelp(listCarInGarage, getCabeceraT() + "ORDENPOSICION");
 			listCarInGarage = (ArrayList<Car>) OrderCarAsPoints(listCarInGarage);
-			Race.printListHelp(listCarInGarage, this.cabeceraT + "ORDENPOINTS");
+			Race.printListHelp(listCarInGarage, getCabeceraT() + "ORDENPOINTS");
 		} catch (Exception e) {
 			System.err.println("Error al ordenar los coches por posicion y distancia" + e.getMessage());
 
@@ -260,7 +258,7 @@ public class Tornament {
 				f.mkdirs();
 			}
 			Date date = new Date();
-			name = "race_" + this.name + this.cabeceraT + date.getTime() + ".txt";
+			name = getCabeceraT() + date.getTime() + ".txt";
 			File fname = new File(Controler.getT_EXP() + name);
 			Utilss.printONFile(cabecera, fname);
 			l.forEach((a) -> Utilss.printONFile("\n					= 	=	=	=	=	" + a + "\n", fname));
@@ -288,7 +286,7 @@ public class Tornament {
 			ExportList((ArrayList<Car>) getPodiumC().get("segundo"), cabeceraPodium);
 			ExportList((ArrayList<Car>) getPodiumC().get("tercero"), cabeceraPodium);
 		} catch (Exception e) {
-			System.err.println("Error al exportar " + this.cabeceraT + e.getMessage());
+			System.err.println("Error al exportar "+ getCabeceraT() + e.getMessage());
 		}
 	}
 

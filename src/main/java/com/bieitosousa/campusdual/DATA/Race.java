@@ -387,27 +387,28 @@ public abstract class Race {
 
 	public ArrayList<Garage> getParticG() {
 		ArrayList<Garage> listA = new ArrayList<>(ParticG);
-		return listA;
+		return (ArrayList<Garage>) cloneListG(listA);
 	}
 
 	public List<Car> getResultC() throws Exception {
 		List<Car> listA = new ArrayList<>();
+		ArrayList<Car> listACopy = new ArrayList<>();
 		for (Garage g : ParticG) {
 			listA.addAll(g.listGCar);
 		}
-		ArrayList<Car> listACopy = new ArrayList<>(listA);
-		listA = (ArrayList<Car>) OrderCarAsPosition(listA);
+		listACopy=(ArrayList<Car>) cloneList(listA);
+		listACopy = (ArrayList<Car>) OrderCarAsPosition(listACopy);
 		//Collections.copy(listACopy,listA);
 		return listACopy;
 	}
 	public List<Car> getParticC() throws Exception {
 		ArrayList<Car> listA = new ArrayList<>();
-//		ArrayList<Car> listACopy = new ArrayList<>();
+		ArrayList<Car> listACopy = new ArrayList<>();
 		for (Garage g : ParticG) {
 			listA.addAll(g.listGCar);
 		}
-		ArrayList<Car> listACopy = new ArrayList<>(listA);
-		//Collections.copy(listACopy,listA);
+		//ArrayList<Car> listACopy = new ArrayList<>(listA);
+		listACopy=(ArrayList<Car>) cloneList(listA);
 		for(Car cc :listACopy) {
 			cc.setDistance(0);
 			cc.setPoints(0);
@@ -421,9 +422,9 @@ public abstract class Race {
 		for (Garage g : ParticG) {
 			listA.add(g);
 		}
-		ArrayList<Garage> listACopy = new ArrayList<>(listA);
+		//ArrayList<Garage> listACopy = new ArrayList<>(listA);
 		//Collections.copy(listACopy,listA);
-		return listACopy;
+		return (ArrayList<Garage>) cloneListG(listA);
 	}
 
 	public void setResultG(List<Garage> partic) {
@@ -431,6 +432,17 @@ public abstract class Race {
 		for (Garage g : partic) {
 			this.ParticG.add(g);
 		}
+	}
+	
+	public static List<Car> cloneList(List<Car> list) {
+	    List<Car> clone = new ArrayList<Car>(list.size());
+	    for (Car item : list) clone.add((Car) item.clone());
+	    return clone;
+	}
+	public static List<Garage> cloneListG(List<Garage> list) {
+		List<Garage> clone = new ArrayList<Garage>(list.size());
+		for (Garage item : list) clone.add((Garage) item.clone());
+		return clone;
 	}
 
 }// End race.class
