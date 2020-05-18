@@ -123,6 +123,7 @@ public class Tornament {
 					arrayCars[j] = aux;
 				}
 			}
+			
 		}
 		for (Car car : arrayCars) {
 			listofCar.add(car);
