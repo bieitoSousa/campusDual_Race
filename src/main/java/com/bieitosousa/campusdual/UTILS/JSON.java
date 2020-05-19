@@ -59,6 +59,14 @@ public class JSON {
 	}
 
 	public static List<Car> CargarFileCar(File f) {
+		try {
+		File a = f.getParentFile();
+		if (!a.exists())
+			a.mkdir();
+		f.createNewFile();
+		} catch (Exception ex) {
+			System.err.println("Fallo GSON::ARCHIVO" +ex.getMessage() );
+		}
 		List<Car> laux = new ArrayList<>();
 		Gson gson = new Gson();
 		ArrayList<Car> objList = new ArrayList<>();
@@ -77,7 +85,8 @@ public class JSON {
 			}
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.err.println("Fallo GSON::DATOS" +e.getMessage() );
+			
 		}
 		return laux;
 	}

@@ -69,30 +69,31 @@ public class Controler {
 		private  Garage GARAGESELECT;
 		private  Race RACESELECT;
 		private  Tornament TORNAMENTSELECT;
+		private ArrayList<Garage> garageL;
+		private ArrayList<Race> raceL;
+		private ArrayList<Tornament>  tornamentL;
 
-		private  ArrayList<Garage> LISTGARAGE;
-		private  ArrayList<Race> LISTRACE ;
-		private  ArrayList<Tornament> LISTTORNAMENT ;
+
 		
 		private static Controler c = null ;
 		
 		
 		
 		public Controler(){
-			 this.LISTGARAGE = new ArrayList<Garage>();
-			this.LISTRACE = new ArrayList<Race>();
-			this.LISTTORNAMENT = new ArrayList<Tornament>();
+			this.garageL = new ArrayList<Garage>();
+			this.raceL = new ArrayList<Race>();
+			this.tornamentL = new ArrayList<Tornament>();
 		}
 		
 		
-		public static  Controler instaceControler() {
+		public static  Controler getTnstace() {
 			if (c == null) {
 				File f = new File(Controler.BACKUP );
 				if (f.exists()) {
 					try {
 					c= (Controler)JSON.ReadObjJsonInFile(f);
 					}catch(Exception e) {
-						System.out.println(
+						System.err.println(
 								"the data file could not be recovered"
 								+e.getMessage()
 								);
@@ -117,6 +118,43 @@ public class Controler {
 				System.err.println("Error al exportar " + e.getMessage());
 			}
 			
+		}
+		
+	
+
+		public void addTornament(Tornament t){
+			if(!(this.tornamentL.contains(t)))
+			this.tornamentL.add(t);
+			else System.out.println("error "+t.name+"is in the list");
+		}
+		public void delTornament(Tornament t){
+			if((this.tornamentL.contains(t)))
+				this.tornamentL.remove(t);
+			else System.out.println("error "+t.name+"not in the list");
+		}
+
+		public void addRace(Race r){
+			if(!(this.raceL.contains(r)))
+				this.raceL.add(r);
+				else System.out.println("error "+r.name+"is in the list");
+		}
+		public void delRace(Race r){
+			if((this.raceL.contains(r)))
+				this.raceL.remove(r);
+			else System.out.println("error "+r.name+"is not in the list");
+		}
+
+
+		public void addGarage(Garage g){
+			if(!(this.garageL.contains(g)))
+				this.garageL.add(g);
+				else System.out.println("error "+g.name+"is in the list");
+		}
+		
+		public void delGarage(Garage g){
+			if((this.garageL.contains(g)))
+				this.garageL.remove(g);
+			else System.out.println("error "+g.name+"is not in the list");
 		}
 		
 		public Garage getGARAGESELECT() {
@@ -149,33 +187,33 @@ public class Controler {
 		}
 
 
-		public ArrayList<Garage> getLISTGARAGE() {
-			return LISTGARAGE;
+		public ArrayList<Garage> getGarageL() {
+			return garageL;
 		}
 
 
-		public void setLISTGARAGE(ArrayList<Garage> lISTGARAGE) {
-			LISTGARAGE = lISTGARAGE;
+		public void setGarageL(ArrayList<Garage> garageL) {
+			this.garageL = garageL;
 		}
 
 
-		public ArrayList<Race> getLISTRACE() {
-			return LISTRACE;
+		public ArrayList<Race> getRaceL() {
+			return raceL;
 		}
 
 
-		public void setLISTRACE(ArrayList<Race> lISTRACE) {
-			LISTRACE = lISTRACE;
+		public void setRaceL(ArrayList<Race> raceL) {
+			this.raceL = raceL;
 		}
 
 
-		public ArrayList<Tornament> getLISTTORNAMENT() {
-			return LISTTORNAMENT;
+		public ArrayList<Tornament> getTornamentL() {
+			return tornamentL;
 		}
 
 
-		public void setLISTTORNAMENT(ArrayList<Tornament> lISTTORNAMENT) {
-			LISTTORNAMENT = lISTTORNAMENT;
+		public void setTornamentL(ArrayList<Tornament> tornamentL) {
+			this.tornamentL = tornamentL;
 		}
 
 

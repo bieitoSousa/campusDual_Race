@@ -5,7 +5,9 @@
  */
 package com.bieitosousa.campusdual.DATA;
 
+import java.io.Serializable;
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 
@@ -20,36 +22,57 @@ import java.util.*;
 //  =   win the car who get more distance in 3 hour
 // ===================================================//
 
-public class Race_Standar extends Race {
+public class Race_Standar extends Race implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private ArrayList<Car> listCarParticipe = new ArrayList<>();
 	private String msjCoche = "";
 	public Race_Standar(String name, int type, ArrayList<Garage> ListGCar
 
-	) throws Exception {
+	)  {
 		super(name, type, ListGCar,"RACE STANDAR_[" + name + "]");
+		//List<Garage>ListGCarCopy=ListGCar.stream().collect(Collectors.toList());
+		//Collections.copy(ListGCarCopy, ListGCar);
+		try {
+		ArrayList<Garage> ListGCarCopy =new ArrayList<>();
+		
+		for (Garage gc :ListGCar) {
+			ListGCarCopy.add((Garage)gc.clone());
+		}
+		
 		if (type != 0) {
 			throw new Exception(" Type tiene que ser 0. Error no se puede crear la clase Race_Standar");
 		}
-		if (ListGCar.size() == 0) {
+		if (ListGCarCopy.size() == 0) {
 			throw new Exception(
 					" La lista de garajes no contiene ningun valor, no se puede crear la clase Race_Standar");
 		}
 		// Definimos la lista de participantes
 		// Loop the gararges and take one the cart to participate
-		if (ListGCar.size() == 1) {
-			for (Garage g : ListGCar) {
-				for (Car ca : g.getOneCar()) {
-					this.listCarParticipe.add(ca);
-				}
-			}
-		} else {
-			for (Garage g : ListGCar) {
+		if (ListGCarCopy.size() == 1) {
+			for (Garage g : ListGCarCopy) {
 				for (Car ca : g.getAllCar()) {
 					this.listCarParticipe.add(ca);
 				}
 			}
+		} else {
+			for (Garage g : ListGCarCopy) {
+				for (Car ca : g.getOneCar()) {
+					this.listCarParticipe.add(ca);
+				}
+			}
 
+		}
+		ArrayList<Car> RaceStandarPart = new ArrayList<>();
+		for (Car cr: this.listCarParticipe) {
+			RaceStandarPart.add((Car) cr.clone());
+		}
+		setParticC(RaceStandarPart);
+		}catch(Exception e) {
+		System.err.println(	"ERRR::RACE_STANDAR::CONSTRUCTOR"+this.name+e.getMessage());
 		}
 	}
 
@@ -57,6 +80,7 @@ public class Race_Standar extends Race {
 	// generate a eliminate race cars
 	@Override
 	public void makeRace() throws Exception {
+		int error = listCarParticipe.size();
 
 		// ================================================//
 		// A = = = = Pre carrera = = = = = =
@@ -84,7 +108,7 @@ public class Race_Standar extends Race {
 			// coches frena o acelera , update distance y speed
 			runCar();
 			// [B3] = = = Ordenamos los coches por distancia = = = =
-			listCarParticipe = (ArrayList<Car>) OrderCarAsPosition(listCarParticipe);
+			 Collections.sort(listCarParticipe);
 			// [B4] = = = Actualizamos las vueltas , generamos ditancia de vuleta = = = =
 			if (time == lapTime) {// = Vueltas ; cada vuelta dura --> lap = 60 t
 				print("\n#	lap [" + (lapTime / 60 + 1) + "]	" + "	#	#	" + "#	Time [" + time
@@ -98,9 +122,16 @@ public class Race_Standar extends Race {
 		// C = = = TRAS Carrera = = = = = =
 		// ================================================//
 		// order and pass to take positions
-		listCarParticipe=(ArrayList<Car>) OrderCarAsPosition(listCarParticipe);
-		takePoints( this.listCarParticipe);
-		exportRace();
+		if(error!=listCarParticipe.size()) {
+
+				throw new Exception("Do_Race_Standar :: malformed list, size increments" + error + "-->" + listCarParticipe.size());
+	
+		}
+		ArrayList<Car> RaceEliminateResults = new ArrayList<>();
+		for (Car cr: this.listCarParticipe) {
+			RaceEliminateResults.add((Car) cr.clone());
+		}
+		takePoints(RaceEliminateResults);
 	}// FinmakeRace
 
 	private void runCar() {
@@ -128,22 +159,5 @@ public class Race_Standar extends Race {
 		return type;
 	}
 
-	public ArrayList<Car> getListCarParticipe() {
-		ArrayList<Car> a = new ArrayList<>();
-		try {
-			a = (ArrayList<Car>) getParticC();
-			if (!(a.size() > 0)) {
-				throw new Exception(" Lista mal creada");
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return a;
-
-	}
-
-	public void setListCarParticipe(ArrayList<Car> listCarParticipe) {
-		this.listCarParticipe = listCarParticipe;
-	}
 
 }

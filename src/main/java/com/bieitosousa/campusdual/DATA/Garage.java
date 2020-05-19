@@ -7,6 +7,7 @@ package com.bieitosousa.campusdual.DATA;
 
 import static com.bieitosousa.campusdual.UTILS.JSON.*;
 import java.io.File;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,8 +22,12 @@ import com.bieitosousa.campusdual.UTILS.*;
 //  =   Class to house cars 
 //  =   you can add, delete and selecct a car of him
 // ===================================================//
-public class Garage implements Cloneable {
+public class Garage implements Cloneable, Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String name; // name of the garage
 	// List of cars
 	ArrayList<Car> listGCar = new ArrayList<>();
@@ -92,7 +97,14 @@ public class Garage implements Cloneable {
     public Object clone(){
         Object obj=null;
         try{
-            obj=super.clone();
+           obj=super.clone();
+//           obj = (Garage) obj;
+//           ArrayList<Car> listGCarClone = new ArrayList<>();
+//           for(Car c : listGCar) {
+//        	   listGCarClone.add((Car)c.clone());
+//           }
+//           this.listGCar.clear();
+//           this.listGCar=listGCarClone;
         }catch(CloneNotSupportedException ex){
             System.out.println(" no se puede duplicar");
         }

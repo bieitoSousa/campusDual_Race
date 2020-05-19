@@ -5,6 +5,8 @@
  */
 package com.bieitosousa.campusdual.DATA;
 
+import java.io.Serializable;
+
 /**
  *
  * @author BIE_FIJO_PC
@@ -16,7 +18,11 @@ package com.bieitosousa.campusdual.DATA;
 //  =   mark, model and autogenerate a id of them
 // ===================================================//
 
-public class Car implements Cloneable {
+public class Car implements Cloneable, Comparable<Car>,Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	// max sped is 5
 	private final int MAXSPEED = 5;
 	// String to identificate a car
@@ -125,21 +131,45 @@ public class Car implements Cloneable {
 			return false;
 		return true;
 	}
-	
+
 	@Override
-    public Object clone(){
-        Object obj=null;
-        try{
-            obj=super.clone();
-        }catch(CloneNotSupportedException ex){
-            System.out.println(" no se puede duplicar");
-        }
-        return obj;
-    }
+	public Object clone() {
+		Object obj = null;
+		try {
+			obj = super.clone();
+		} catch (CloneNotSupportedException ex) {
+			System.out.println(" no se puede duplicar");
+		}
+		return obj;
+	}
+
+	@Override
+	public int compareTo(Car o) {
+		if (points > o.points) {
+			return -1;
+		} else if (points < o.points) {
+			return 1;
+		} else if (points == o.points) {
+			if (distance > o.distance) {
+				return -1;
+			} else if (distance < o.distance) {
+				return 1;
+			} else if (distance == o.distance) {
+				if (id < o.id) {
+					return -1;
+				} else if (id > o.id) {
+					return 1;
+
+				}
+			}
+		}
+		return 0;
+	}
 
 	@Override
 	public String toString() {
-		return "Car_" + id + "_" + model + "_" + mark + "_Points_["+points +"]_:_{distance=" + distance + ",speed= " + speed + '}';
+		return "Car_" + id + "_" + model + "_" + mark + "_Points_[" + points + "]_:_{distance=" + distance + ",speed= "
+				+ speed + '}';
 	}
 
 }

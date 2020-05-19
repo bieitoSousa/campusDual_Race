@@ -1,18 +1,33 @@
 package com.bieitosousa.campusdual.DATA;
 
 import java.io.File;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.bieitosousa.campusdual.UTILS.*;
 
-public class Tornament {
+public class Tornament implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * 
+	 */
+	
 	ArrayList<Race> listTornRace = new ArrayList<>();
+	ArrayList<Car>tornResultC = new ArrayList<>();
+	ArrayList<Car[]>tornPointsC = new ArrayList<>();
+	ArrayList<Car>tornPartiC = new ArrayList<>();
+	ArrayList<Car[]>tornRaceR = new ArrayList<>();
+	
 	String name;
 	String cabeceraT;
 
@@ -80,57 +95,78 @@ public class Tornament {
 
 
 
+	public ArrayList<Car> getTornResultC() {
+		return tornResultC;
+	}
+
+
+
+	public void setTornResultC(ArrayList<Car> tornResultC) {
+		this.tornResultC = tornResultC;
+	}
+
+
+
+	public ArrayList<Car[]> getTornPointsC() {
+		return tornPointsC;
+	}
+
+
+
+	public void setTornPointsC(ArrayList<Car[]> tornPointsC) {
+		this.tornPointsC = tornPointsC;
+	}
+
+
+
+	public ArrayList<Car> getTornPartiC() {
+		return tornPartiC;
+	}
+
+
+
+	public void setTornPartiC(ArrayList<Car> tornPartiC) {
+		this.tornPartiC = tornPartiC;
+	}
+
+
+
+	public ArrayList<Car[]> getTornRaceR() {
+		return tornRaceR;
+	}
+
+
+
+	public void setTornRaceR(ArrayList<Car[]> tornRaceR) {
+		this.tornRaceR = tornRaceR;
+	}
+
+
+
 	public void start() {
+		try {
 		int cc = 0;
 		for (Race r : listTornRace) {
-			cc++;
 			try {
 				r.makeRace();
-				if (Controler.isRACE_RESULT()) {
-					r.printResultC(cc);
-				}
-				if (Controler.isRACE_EXP()) {
-					r.exportRace(cc);
-				}
+				Car[] array= new Car[r.getPointsC().size()];
+						
+				this.tornRaceR.add(r.getPointsC().toArray(array));
+				
 			} catch (Exception e) {
 				System.err.println("Error al ejecutar la carrera " + r.getCabecera() + getCabeceraT() + e.getMessage());
 			}
 		}
-		if (Controler.isTORN_RESULT()) {
-			try {
-				this.printResultC();
-			} catch (Exception e) {
-				e.getMessage();
-			}
-		}
-		if (Controler.isTORN_EXP()) {
-			this.exporTorn();
-			;
-		}
-
-	}
-
-	public static List<Car> OrderCarAsPoints(List<Car> listofCar) { // this method sorts the lists of participants by
-																	// the traveled distance
-		Car[] arrayCars = new Car[listofCar.size()];
-		listofCar.toArray(arrayCars);
-		listofCar.clear();
-		for (int i = 0; i < arrayCars.length; i++) {
-			for (int j = i; j < arrayCars.length; j++) {
-				if (arrayCars[i].getPoints() < arrayCars[j].getPoints()) {
-					Car aux = arrayCars[i];
-					arrayCars[i] = arrayCars[j];
-					arrayCars[j] = aux;
-				}
-			}
+		
+		this.takePoints();
+		}catch(Exception e) {
+			System.err.println("ERROR::TORNAMENT::START"+e.getMessage());
 			
 		}
-		for (Car car : arrayCars) {
-			listofCar.add(car);
-		}
-		return listofCar;
+
 	}
 
+	
 
 
 	public List<Car> getParticC() throws Exception {
@@ -143,27 +179,45 @@ public class Tornament {
 				}
 			}
 		}
-		return Race.cloneList(resultC);
+		return resultC;
 	}
 
 
-	public List<Car> getResultC() throws Exception {
-		
-		ArrayList<Car> ParticipantsCopy = new ArrayList<Car>();
+	public void takePoints() throws Exception {
+		int ccnt=0;
+		ArrayList<Car> resHasH = new ArrayList<Car>();
 		ArrayList<Car> listTResult = new ArrayList<Car>();
-		
+		for(Race r : listTornRace) {
+			listTResult.addAll((ArrayList<Car>)r.getResultC());
+		}
+		for(Race r : listTornRace) {
+			for(Car c : r.getResultC()) {
+				if (resHasH.contains(c)) {
+					
+				}else {
+					resHasH.add(c);
+				}
+			}
+		}
+
 		// limpio distance and points in hshCar
-		ParticipantsCopy= (ArrayList<Car>) Race.cloneList(getParticC());
-		for(Car car : ParticipantsCopy ) {
+		
+		
+		ArrayList<Car> resHasHBlank = new ArrayList<>();
+		//Collections.copy(resHasHBlank, resHasH);
+		//List<Car>resHasHBlank=resHasH.stream().collect(Collectors.toList());
+		for(Car c : resHasH) {
+			resHasHBlank.add((Car)c.clone());
+		}
+		for(Car car : resHasHBlank ) {
 			car.setDistance(0);
 			car.setPoints(0);
+			this.tornPartiC.add((Car)car.clone());
 		}
-		for (Race rr : listTornRace) {
-				for (Car cc : rr.getResultC()) {
-					listTResult.add(cc);// all_Car
-				}
-		}
-		for (Car hc : ParticipantsCopy) {
+		Collections.sort(this.tornPartiC);
+		
+		
+		for (Car hc : resHasHBlank) {
 			for (Car cAll : listTResult) {
 				if (hc.equals(cAll)) {
 					hc.setDistance(hc.getDistance() + cAll.getDistance());
@@ -172,47 +226,28 @@ public class Tornament {
 			}
 		}
 		//ArrayList<Car> list = new ArrayList<Car>(hashCar);
-		Race.printListHelp(ParticipantsCopy, getCabeceraT() + "hashSET");
-		return ParticipantsCopy;
-	}
-	
-	
-	public HashMap<String, ArrayList<Car>> getPodiumC() throws Exception {
-		ArrayList<Car> primeroL = new ArrayList<>();
-		ArrayList<Car> segundoL = new ArrayList<>();
-		ArrayList<Car> terceroL = new ArrayList<>();
-		primeroL.add(getResultC().get(0));
-		int cnt = 1;
-		int maxcnt = 0;
-		for (Car car : getResultC()) {
-			if (primeroL.get(0).getPoints() == getResultC().get(cnt).getPoints()) {
-				primeroL.add(getResultC().get(cnt));
-				maxcnt = cnt;
-			}
-		}
-		segundoL.add(getResultC().get(maxcnt++));
-		int cnt2 = maxcnt++;
-		for (Car car : getResultC()) {
-			if (segundoL.get(0).getPoints() == getResultC().get(cnt2).getPoints()) {
-				segundoL.add(getResultC().get(cnt2));
-				maxcnt = cnt;
-			}
-		}
-		terceroL.add(getResultC().get(maxcnt++));
-		int cnt3 = maxcnt++;
-		for (Car car : getResultC()) {
-			if (segundoL.get(0).getPoints() == getResultC().get(cnt3).getPoints()) {
-				segundoL.add(getResultC().get(cnt3));
-				maxcnt = cnt;
-			}
-		}
+		 Collections.sort(resHasHBlank);
 
-		HashMap<String, ArrayList<Car>> podium = new HashMap<>();
-		podium.put("primero", primeroL);
-		podium.put("segundo", segundoL);
-		podium.put("tercero", terceroL);
-		return podium;
+		 for(Car car : resHasHBlank ) {
+				this.tornResultC.add((Car)car.clone());
+			}
+			Collections.sort(this.tornResultC);
+		 
+		
+			for(int i=0;i!=3;i++) {
+				ArrayList<Car> aux = new ArrayList<>();
+			 for(Car car : resHasHBlank ) {
+				 if (car.getPoints()== resHasHBlank.get(0).getPoints() ){
+					 aux.add((Car)car.clone());
+				 }
+				}
+			 resHasHBlank.removeAll(aux);
+			 Car[] acar = new Car [aux.size()];
+			 this.tornPointsC.add((Car[]) aux.toArray(acar));
+			}
 	}
+	
+	
 
 //	=	=	=	=	[PRINT ]RACE_CLASIFICATION	=	=	=	=
 	public void printResT(String mnj) {
@@ -231,15 +266,11 @@ public class Tornament {
 				+ "\n	!	!	RESULTADOS	GRUP BY CAR	"+getCabeceraT()+"!	!	!	!	!	" + "\n	!	!	" 
 				+ "	!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	");
 		try {
-			listCarInGarage = (ArrayList<Car>) getParticC();
+			listCarInGarage = (ArrayList<Car>) getTornResultC();
 		} catch (Exception e) {
 		}
-		Race.printListHelp(listCarInGarage, getCabeceraT() + "preTodo");
 		try {
-			listCarInGarage = (ArrayList<Car>) Race.OrderCarAsPosition(listCarInGarage);
-			Race.printListHelp(listCarInGarage, getCabeceraT() + "ORDENPOSICION");
-			listCarInGarage = (ArrayList<Car>) OrderCarAsPoints(listCarInGarage);
-			Race.printListHelp(listCarInGarage, getCabeceraT() + "ORDENPOINTS");
+			 Collections.sort(listCarInGarage);
 		} catch (Exception e) {
 			System.err.println("Error al ordenar los coches por posicion y distancia" + e.getMessage());
 
@@ -251,71 +282,6 @@ public class Tornament {
 		
 	}
 
-	public void ExportList(ArrayList<?> l, String cabecera) {
-		try {
-			File f = new File(Controler.getPRIVATE_TORNAMENT());
-			if (!f.exists()) {
-				f.mkdirs();
-			}
-			Date date = new Date();
-			name = getCabeceraT() + date.getTime() + ".txt";
-			File fname = new File(Controler.getT_EXP() + name);
-			Utilss.printONFile(cabecera, fname);
-			l.forEach((a) -> Utilss.printONFile("\n					= 	=	=	=	=	" + a + "\n", fname));
-			System.out.println("is export the race in ::" + fname);
-		} catch (Exception e) {
-			System.err.println("Error al exportar " + this.cabeceraT + e.getMessage());
-		}
-	}
 
-	public void exporTorn() {
-		String cabeceraPart = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
-				+ "\n	!	!	PARTICIPANTES 	!	!	!	!	!	"
-				+ "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
-		String cabeceraResult = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
-				+ "\n	!	!	RESULTADOS 	!	!	!	!	!	"
-				+ "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
-		String cabeceraPodium = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
-				+ "\n	!	!	PODIUM 	!	!	!	!	!	"
-				+ "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
-
-		try {
-			ExportList((ArrayList<Car>) getParticC(), cabeceraPart);
-			ExportList((ArrayList<Car>) getResultC(), cabeceraResult);
-			ExportList((ArrayList<Car>) getPodiumC().get("primero"), cabeceraPodium);
-			ExportList((ArrayList<Car>) getPodiumC().get("segundo"), cabeceraPodium);
-			ExportList((ArrayList<Car>) getPodiumC().get("tercero"), cabeceraPodium);
-		} catch (Exception e) {
-			System.err.println("Error al exportar "+ getCabeceraT() + e.getMessage());
-		}
-	}
-
-	public void exportTorn(int i) {
-		String cabeceraPart = "\n	[" + i + "][" + i + "][" + i + "][" + i + "][" + i + "][" + i + "][" + i + "][" + i
-				+ "][" + i + "][" + i + "][" + i + "][" + i + "][" + i + "]"
-				+ "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
-				+ "\n	!	!	PARTICIPANTES 	!	!	!	!	!	"
-				+ "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
-		String cabeceraResult = "\n	[" + i + "][" + i + "][" + i + "][" + i + "][" + i + "][" + i + "][" + i + "][" + i
-				+ "][" + i + "][" + i + "][" + i + "][" + i + "][" + i + "]"
-				+ "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
-				+ "\n	!	!	RESULTADOS 	!	!	!	!	!	"
-				+ "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
-		String cabeceraPodium = "\n	[" + i + "][" + i + "][" + i + "][" + i + "][" + i + "][" + i + "][" + i + "][" + i
-				+ "][" + i + "][" + i + "][" + i + "][" + i + "][" + i + "]"
-				+ "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
-				+ "\n	!	!	PODIUM 	!	!	!	!	!	"
-				+ "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
-
-		try {
-			ExportList((ArrayList<Car>) getParticC(), cabeceraPart);
-			ExportList((ArrayList<Car>) getResultC(), cabeceraResult);
-			ExportList((ArrayList<Car>) getPodiumC().get("primero"), cabeceraPodium);
-			ExportList((ArrayList<Car>) getPodiumC().get("segundo"), cabeceraPodium);
-			ExportList((ArrayList<Car>) getPodiumC().get("tercero"), cabeceraPodium);
-		} catch (Exception e) {
-			System.err.println("Error al exportar " + this.cabeceraT + e.getMessage());
-		}
-	}
 
 }

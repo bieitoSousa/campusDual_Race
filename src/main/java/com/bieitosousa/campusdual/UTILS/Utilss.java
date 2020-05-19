@@ -53,6 +53,7 @@ public class Utilss {
 			File a = f.getParentFile();
 			if (!a.exists())
 				a.mkdir();
+			f.createNewFile();
 			writer = new FileWriter(f, true);
 			bw = new BufferedWriter(writer);
 			bw.write(mnj);

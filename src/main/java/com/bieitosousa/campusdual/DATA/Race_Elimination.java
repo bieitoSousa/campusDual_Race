@@ -6,6 +6,7 @@
 package com.bieitosousa.campusdual.DATA;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -23,31 +24,47 @@ public class Race_Elimination extends Race {
 
 	public Race_Elimination(String name, int type, ArrayList<Garage> ListGCar) throws Exception {
 		super(name, type, ListGCar, "RACE_ELIMINATE_[" + name + "]");
+		try {
+		ArrayList<Garage> ListGCarCopy =new ArrayList<>();
+		
+		for (Garage gc :ListGCar) {
+			ListGCarCopy.add((Garage)gc.clone());
+		}
+		//Collections.copy(ListGCarCopy, ListGCar);
 		// Filtramos
 		if (type != 1) {
 			throw new Exception(" Type erroneo no se puede crear la clase Race_Elimination");
 		}
-		if (ListGCar.size() == 0) {
+		if (ListGCarCopy.size() == 0) {
 			throw new Exception(
 					" La lista de garajes no contiene ningun valor, no se puede crear la clase Race_Elimination");
 		}
 		// Definimos la lista de participantes
 		// Loop the gararges and take one the cart to participate
-		if (ListGCar.size() == 1) {
-			for (Garage g : ListGCar) {
-				for (Car ca : g.getOneCar()) {
+		if (ListGCarCopy.size() == 1) {
+			for (Garage g : ListGCarCopy) {
+				for (Car ca : g.getAllCar()) {
 					this.listCarParticipe.add(ca);
 				}
 			}
 		} else {
-			for (Garage g : ListGCar) {
-				for (Car ca : g.getAllCar()) {
+			for (Garage g : ListGCarCopy) {
+				for (Car ca : g.getOneCar()) {
 					this.listCarParticipe.add(ca);
 				}
 			}
 
 		}
+		ArrayList<Car> RaceEliminatePart = new ArrayList<>();
+		for (Car cr: this.listCarParticipe) {
+			RaceEliminatePart.add((Car) cr.clone());
+		}
+		setParticC(RaceEliminatePart);
 
+	}catch(Exception e) {
+		System.err.println(	"ERRR::RACE_ELIMINATE::CONSTRUCTOR "+this.name+e.getMessage());
+		}
+		
 	}
 
 	// generate a eliminate race cars
@@ -85,7 +102,7 @@ public class Race_Elimination extends Race {
 			// coches frena o acelera , update distance y speed
 			listRace = runCar(listRace);
 			// [B3] = = = Ordenamos los coches por distancia = = = =
-			listRace = (ArrayList<Car>) OrderCarAsPosition(listRace);
+			  Collections.sort(listRace);
 			// [B4] = = = Actualizamos las vueltas , generamos ditancia de vuleta = = = =
 			if (time == lapTime) {// = Vueltas ; cada vuelta dura --> lap = 60 t
 				// Ditancia de vulta es la distancia que recorrio el 1 al pasar 60 t
@@ -109,8 +126,11 @@ public class Race_Elimination extends Race {
 		listResult.add(p);
 		// metemos la lista de resultados en la de participantes
 		this.listCarParticipe = listResult;
-		takePoints(this.listCarParticipe);
-		exportRace();
+		ArrayList<Car> RaceEliminateResults = new ArrayList<>();
+		for (Car cr: listResult) {
+			RaceEliminateResults.add((Car) cr.clone());
+		}
+		takePoints(RaceEliminateResults);
 	}// FinmakeRace
 
 	private int deleteCar(ArrayList<Car> listRace, ArrayList<Car> listResult, int[] lapDistances, int lapActive,
