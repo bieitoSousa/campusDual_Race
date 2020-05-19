@@ -6,28 +6,7 @@ import java.util.ArrayList;
 import com.bieitosousa.campusdual.UTILS.JSON;
 
 public class Controler {
-	// ____________PRINTS________[TRUE:CONSOL]______[FALSE:FILE]_______________________
-		// print a simulation of the races: [ true; console/false : in file ]
-		private static boolean CONSOLE_PRINT_RACE_VIEW = false;
-		// print the result of the race when finish : [ true; console/false : in file]
-		private static boolean CONSOLE_PRINT_RACE_RESULT = false;
-		// print the classification of the tournament : [true; console/false : in file]
-		private static boolean CONSOLE_PRINT_TORNAMENT_CLASSIFICATION = false;
-
-		// ___________ACTIONS__________[TRUE:DO]________[FALSE:NOTDO]
-		// ______ RACE _________________________
-		// = view the simulation of the races
-		private static boolean RACE_VIEW = true;
-		// = view the result of the races
-		private static boolean RACE_RESULT = true;
-		// = Export the list of participants, results of the races
-		private static boolean RACE_EXP = true;
-
-		// ______ TORN _________________________
-		// = view the classification of the tournament
-		private static boolean TORN_RESULT = true;
-		// = Export the list of participants, results and classification of the race
-		private static boolean TORN_EXP = true;
+	
 
 		// ______POINTS_____________________________________________
 		private static int POINTS_FIRSTS = 12;
@@ -86,6 +65,8 @@ public class Controler {
 		}
 		
 		
+		//----------------- RECOVER -------------------------------------------//
+		
 		public static  Controler getTnstace() {
 			if (c == null) {
 				File f = new File(Controler.BACKUP );
@@ -120,6 +101,8 @@ public class Controler {
 			
 		}
 		
+		
+		//------------------------- ADD DELETE LIST -> ATRIBUTES ------------------------//
 	
 
 		public void addTornament(Tornament t){
@@ -156,6 +139,10 @@ public class Controler {
 				this.garageL.remove(g);
 			else System.out.println("error "+g.name+"is not in the list");
 		}
+		
+		
+		//------------------------- GET/SET -> ATRIBUTES ------------------------//
+		
 		
 		public Garage getGARAGESELECT() {
 			return GARAGESELECT;
@@ -217,103 +204,6 @@ public class Controler {
 		}
 
 
-		public static boolean isCONSOLE_PRINT_RACE_VIEW() {
-			return CONSOLE_PRINT_RACE_VIEW;
-		}
-		public static void setCONSOLE_PRINT_RACE_VIEW(boolean cONSOLE_PRINT_RACE_VIEW) {
-			CONSOLE_PRINT_RACE_VIEW = cONSOLE_PRINT_RACE_VIEW;
-		}
-		public static void changeCONSOLE_PRINT_RACE_VIEW() {
-			CONSOLE_PRINT_RACE_VIEW = !CONSOLE_PRINT_RACE_VIEW;
-		}
-
-		
-		public static boolean isCONSOLE_PRINT_RACE_RESULT() {
-			return CONSOLE_PRINT_RACE_RESULT;
-		}
-		public static void setCONSOLE_PRINT_RACE_RESULT(boolean cONSOLE_PRINT_RACE_RESULT) {
-			CONSOLE_PRINT_RACE_RESULT = cONSOLE_PRINT_RACE_RESULT;
-		}
-		public static void changeCONSOLE_PRINT_RACE_RESULT() {
-			CONSOLE_PRINT_RACE_RESULT = !CONSOLE_PRINT_RACE_RESULT;
-		}
-
-		
-		public static boolean isCONSOLE_PRINT_TORNAMENT_CLASSIFICATION() {
-			return CONSOLE_PRINT_TORNAMENT_CLASSIFICATION;
-		}
-		public static void setCONSOLE_PRINT_TORNAMENT_CLASSIFICATION(boolean cONSOLE_PRINT_TORNAMENT_CLASSIFICATION) {
-			CONSOLE_PRINT_TORNAMENT_CLASSIFICATION = cONSOLE_PRINT_TORNAMENT_CLASSIFICATION;
-		}
-		public static void changeCONSOLE_PRINT_TORNAMENT_CLASSIFICATION() {
-			CONSOLE_PRINT_TORNAMENT_CLASSIFICATION = !CONSOLE_PRINT_TORNAMENT_CLASSIFICATION;
-		}
-
-		
-		public static boolean isRACE_VIEW() {
-			return RACE_VIEW;
-		}
-		public static void setRACE_VIEW(boolean rACE_VIEW) {
-			RACE_VIEW = rACE_VIEW;
-		}
-		public static void changeRACE_VIEW() {
-			RACE_VIEW = !RACE_VIEW;
-		}
-
-		
-		
-		public static boolean isRACE_RESULT() {
-			return RACE_RESULT;
-		}
-		public static void setRACE_RESULT(boolean rACE_RESULT) {
-			RACE_RESULT = rACE_RESULT;
-			
-		}
-		public static void changeRACE_RESULT() {
-			RACE_RESULT = !RACE_RESULT;
-			
-		}
-		
-		
-		
-		public static boolean isRACE_EXP() {
-			return RACE_EXP;
-		}
-		public static void setRACE_EXP(boolean rACE_EXP) {
-			RACE_EXP = rACE_EXP;
-		}
-		public static void changeRACE_EXP() {
-			RACE_EXP = !RACE_EXP;
-		}
-		
-		
-
-		public static boolean isTORN_RESULT() {
-			return TORN_RESULT;
-		}
-
-		public static void setTORN_RESULT(boolean tORN_RESULT) {
-			TORN_RESULT = tORN_RESULT;
-		}
-		public static void changeTORN_RESULT() {
-			TORN_RESULT = !TORN_RESULT;
-		}
-
-		
-		
-		public static boolean isTORN_EXP() {
-			return TORN_EXP;
-		}
-
-		public static void setTORN_EXP(boolean tORN_EXP) {
-			TORN_EXP = tORN_EXP;
-		}
-		
-		public static void changeTORN_EXP() {
-			TORN_EXP = !TORN_EXP;
-		}
-		
-		
 
 		public static int getPOINTS_FIRSTS() {
 			return POINTS_FIRSTS;
@@ -490,6 +380,8 @@ public class Controler {
 			IMPORTCAR = iMPORTCAR;
 		}
 
+		// ------------ PATH -----------------//
+		
 		public static void CreatePath() {
 			new File(PUBLIC_PATH).mkdirs();
 			new File(PRIVATE_PATH).mkdirs();

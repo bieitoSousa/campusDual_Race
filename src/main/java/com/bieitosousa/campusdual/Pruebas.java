@@ -344,9 +344,9 @@ public class Pruebas {
 
 				 tS = new Tornament("Torneo_Standar", tornS);
 				tS.start();
-				tS.getParticC();
-				Pruebas.printListHelp((ArrayList<Car>) tS.getParticC(), "Torneo_Standar_Participantes_____00");
-				System.out.println(tS.getCabeceraT() + "Participantes" + tS.getParticC().size());
+				tS.getTornPartiC();
+				Pruebas.printListHelp((ArrayList<Car>) tS.getTornPartiC(), "Torneo_Standar_Participantes_____00");
+				System.out.println(tS.getCabeceraT() + "Participantes" + tS.getTornPartiC().size());
 				int cnnt = 0;
 				for (Car[] a : tS.getTornRaceR()) {
 					Pruebas.printListHelp(a, "Torneo_Standar_RACE[[" + (cnnt++) + "]]_____00");
@@ -382,9 +382,9 @@ public class Pruebas {
 
 				 tE = new Tornament("Torneo_Elimination", tornE);
 				tE.start();
-				tE.getParticC();
-				Pruebas.printListHelp((ArrayList<Car>) tE.getParticC(), "Torneo_Elimination_Participantes_____00");
-				System.out.println(tE.getCabeceraT() + "Participantes" + tE.getParticC().size());
+				tE.getTornPartiC();
+				Pruebas.printListHelp((ArrayList<Car>) tE.getTornPartiC(), "Torneo_Elimination_Participantes_____00");
+				System.out.println(tE.getCabeceraT() + "Participantes" + tE.getTornPartiC().size());
 				tE.getTornResultC();
 				Pruebas.printListHelp((ArrayList<Car>) tE.getTornResultC(), "Torneo_Elimination_Resultados_____00");
 				System.out.println(tE.getCabeceraT() + "resultados" + tE.getTornResultC().size());
@@ -473,10 +473,10 @@ public class Pruebas {
 
 				 tornOneStandar = new Tornament("Torneo_Standar_ONE_GARAGE", tornS);
 				tornOneStandar.start();
-				tornOneStandar.getParticC();
-				Pruebas.printListHelp((ArrayList<Car>) tornOneStandar.getParticC(),
+				tornOneStandar.getTornPartiC();
+				Pruebas.printListHelp((ArrayList<Car>) tornOneStandar.getTornPartiC(),
 						"Torneo_Standar_ONE_GARAGE_Participantes_____00");
-				System.out.println(tornOneStandar.getCabeceraT() + "Participantes" + tornOneStandar.getParticC().size());
+				System.out.println(tornOneStandar.getCabeceraT() + "Participantes" + tornOneStandar.getTornPartiC().size());
 				int cnnt = 0;
 				for (Car[] a : tornOneStandar.getTornRaceR()) {
 					Pruebas.printListHelp(a, "Torneo_Standar_ONE_GARAGE_RACE[[" + (cnnt++) + "]]_____00");
@@ -513,10 +513,10 @@ public class Pruebas {
 //tornS.add( rs_05_false); 
  tornEOneG = new Tornament("TORNEO_ELIMINATE_ONE_GARAGE_", rOneG);
 				tornEOneG.start();
-				tornEOneG.getParticC();
-				Pruebas.printListHelp((ArrayList<Car>) tornEOneG.getParticC(),
+				tornEOneG.getTornPartiC();
+				Pruebas.printListHelp((ArrayList<Car>) tornEOneG.getTornPartiC(),
 						"TORNEO_ELIMINATE_ONE_GARAGE_ParticipantornEOneGs_____00");
-				System.out.println(tornEOneG.getCabeceraT() + "ParticipantornEOneGs" + tornEOneG.getParticC().size());
+				System.out.println(tornEOneG.getCabeceraT() + "ParticipantornEOneGs" + tornEOneG.getTornPartiC().size());
 				tornEOneG.getTornResultC();
 				Pruebas.printListHelp((ArrayList<Car>) tornEOneG.getTornResultC(),
 						"TORNEO_ELIMINATE_ONE_GARAGE_Resultados_____00");

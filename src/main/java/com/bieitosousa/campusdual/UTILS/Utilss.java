@@ -5,20 +5,27 @@
  */
 package com.bieitosousa.campusdual.UTILS;
 
-import com.bieitosousa.campusdual.DATA.Car;
+
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
+
 
 /**
  *
  * @author BIE_FIJO_PC
  */
 public class Utilss {
-
+	
+	public static boolean  pConsole = false;
+	public static boolean printInConsole() {
+		return pConsole;
+	}
+	public static void changePrintInConsole() {
+		pConsole=!pConsole ;
+	}
 	
 	public static void printONFile(String mnj) {
 		FileWriter writer = null;
@@ -71,5 +78,12 @@ public class Utilss {
 		}
 
 	}
+	
+	
+
+
+	
+	
+	
 
 }

@@ -10,7 +10,7 @@ import com.bieitosousa.campusdual.UTILS.*;
 import java.io.File;
 import java.io.Serializable;
 import java.util.*;
-import java.util.stream.Collectors;
+
 
 /**
  *
@@ -42,7 +42,7 @@ public abstract class Race implements Serializable {
 
 	protected String cabeceraR = "";
 	protected String cabeceraT = "";
-	private ArrayList<Garage> pointsG;
+
 
 // ===================================================//
 //  =   Class to create Race
@@ -77,7 +77,7 @@ public abstract class Race implements Serializable {
 			}
 	}
 
-	// ----------- PUBLIC ------------------------------------------------------//
+	// ------------------	OPERATIONS -------------------------------------//
 
 	abstract public void makeRace() throws Exception;// FinmakeRace
 
@@ -90,8 +90,8 @@ public abstract class Race implements Serializable {
 		}
 	}
 
-	// ----------------- MODIFIQUE objects CAR
-	// -----------------------------------------//
+	// ----------------- 	PROCCES DATA  CAR LIST --------------------//
+	// ------------------------------------------------------------//
 
 	protected void takePoints(ArrayList<Car> resRace) throws Exception {
 		// ORDENO
@@ -160,12 +160,13 @@ public abstract class Race implements Serializable {
 
 	}
 
-	// -------------------- PRINT
+
+	// -------------------- PRINT-------------------------------//
 	// ------------------------------------------------------- //
 
 	public void print(String mnj) {
-		if (Controler.isRACE_VIEW()) {
-			if (Controler.isCONSOLE_PRINT_RACE_VIEW()) {
+		if (Utilss.printInConsole()) {
+			if (Utilss.printInConsole()) {
 				System.out.println(mnj);
 			} else {
 				Utilss.printONFile(mnj, new File(Controler.getR_LOG() + getCabecera() + getCabeceraT() + ".txt"));
@@ -174,8 +175,8 @@ public abstract class Race implements Serializable {
 	}
 
 	public void printList(ArrayList<?> l) {
-		if (Controler.isRACE_VIEW()) {
-			if (Controler.isCONSOLE_PRINT_RACE_VIEW()) {
+		if (Utilss.printInConsole()) {
+			if (Utilss.printInConsole()) {
 				l.forEach((a) -> System.out.println("\n" + a + "\n"));
 			} else {
 				l.forEach((a) -> Utilss.printONFile("\n" + a + "\n",
@@ -185,106 +186,37 @@ public abstract class Race implements Serializable {
 	}
 
 	public void printList(ArrayList<?> l, String cabecera) {
-		if (Controler.isRACE_VIEW()) {
-			if (Controler.isCONSOLE_PRINT_RACE_VIEW()) {
-				l.forEach((a) -> System.out.println("\n" + cabecera + a + "\n"));
+		if (Utilss.printInConsole()) {
+			if (Utilss.printInConsole()) {
+				System.out.println(cabecera);
+				l.forEach((a) -> System.out.println("\n			" + getCabecera() + getCabeceraT()+  a + "\n"));
 			} else {
-				l.forEach((a) -> Utilss.printONFile("\n" + cabecera + a + "\n",
+				Utilss.printONFile(cabecera,
+						new File(Controler.getR_LOG() + getCabecera() + getCabeceraT() + ".txt"));
+				l.forEach((a) -> Utilss.printONFile("\n			" + getCabecera() + getCabeceraT()+  a + "\n",
 						new File(Controler.getR_LOG() + getCabecera() + getCabeceraT() + ".txt")));
 			}
 		}
 	}
 
-//	public static void printListHelp(ArrayList<?> l, String cabecera) {
-//		l.forEach((a) -> Utilss.printONFile("\n" + cabecera + a + "\n",
-//				new File(Controler.getHELP() + cabecera + ".txt")));
-//	}
-//	public static void printListHelp(Car[] o, String cabecera) {
-//		for(Car c : o) {
-//		Utilss.printONFile("\n" + cabecera + c + "\n",
-//				new File(Controler.getHELP() + cabecera + ".txt"));
-//		}
-//	}
 
-	
-	
-	
-	
 	
 //	=	=	=	=	[PRINT ]RACE_RESULTS	=	=	=	=
-	public void printRes(String mnj) {
-		if (Controler.isRACE_RESULT()) {
-			if (Controler.isCONSOLE_PRINT_RACE_RESULT()) {
-				System.out.println(mnj);
-			} else {
-				Utilss.printONFile(mnj, new File(Controler.getR_RESULT() + getCabecera() + getCabeceraT() + ".txt"));
-			}
-		}
-	}
-
-	public void printResultC(int i) throws Exception {
-		String fname = this.cabeceraT + this.cabeceraR;
-		printRes("\n	[" + i + "]	[" + i + "]	[" + i + "]	[" + i + "]	[" + i + "]	[" + i + "]	[" + i + "]	[" + i + "]"
-				+ "	[" + i + "]	[" + i + "]	[" + i + "]	[" + i + "]	[" + i + "]	[" + i + "]	[" + i + "]	[" + i + "]"
-				+ "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
-				+ "\n	!	!	RESULTADOS	GRUP BY CAR	!	!	!	!	!	" + "\n	!	!	[" + fname
-				+ "]!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	");
-		int cc = 0;
-		for (Car car : getResultC()) {
-			printRes("\n[" + (cc++) + "]	=	=	=	=	[[ " + car + "]]");
-		}
-	}
+	
 
 	public void printResultC() throws Exception {
-		String fname = getCabecera() + getCabeceraT();
-		printRes("\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
-				+ "\n	!	!	RESULTADOS	GRUP BY CAR	!	!	!	!	!	" + "\n	!	!	[" + fname
-				+ "]!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	");
-		int cc = 0;
-		for (Car car : getResultC()) {
-			printRes("\n[" + (cc++) + "]	=	=	=	=	[[ " + car + "]]");
-		}
+		
+		String a ="\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"	
+				+ "\n	!	!	RESULTADOS	+ getCabecera() + getCabeceraT() +	!	!	!	!	!	"	
+				+ "\\n!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
+		printList((ArrayList<Car>)getResultC(),a);
 	}
 
 	
 	
 	
 
-	// ------------------ BASICS ------------------------------//
-
-	@Override
-	public String toString() {
-		return "Race{" + "name=" + name + ", type=" + ((type == 1) ? "Eliminacion" : "Estandar") + ", ParticG="
-				+ particG + '}';
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getCabecera() {
-		return this.cabeceraR;
-	}
-
-	public String getCabeceraT() {
-		return this.cabeceraT;
-	}
-
-	public String setCabeceraT(String cabeceraT) {
-		return this.cabeceraT;
-	}
-
-	public int getType() {
-		return type;
-	}
-
-	public void setType(int type) {
-		this.type = type;
-	}
+	
 
 	// ------ GET/SET [PARTICIPE,RESULT,POINTS] --> {C CAR G GARAGE}
 
@@ -333,10 +265,6 @@ public abstract class Race implements Serializable {
 		return resultG;
 	}
 
-	private void setResultG(List<Garage> list) {
-		this.resultG.clear();
-		resultG = (ArrayList<Garage>) list;
-	}
 
 	private void setPointsC(List<Car> list) {
 		this.pointsC.clear();
@@ -348,14 +276,43 @@ public abstract class Race implements Serializable {
 		return pointsC;
 	}
 
-	private void setPointsG(ArrayList<Garage> superListG) {
-		this.pointsG = superListG;
-	}
-
-	private ArrayList<Car> getPodiumC() throws Exception {
-		return (ArrayList<Car>) getResultC();
-	}
 
 
+
+	// ------------------ BASICS ------------------------------//
+
+		@Override
+		public String toString() {
+			return "Race{" + "name=" + name + ", type=" + ((type == 1) ? "Eliminacion" : "Estandar") + ", ParticG="
+					+ particG + '}';
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		public String getCabecera() {
+			return this.cabeceraR;
+		}
+
+		public String getCabeceraT() {
+			return this.cabeceraT;
+		}
+
+		public String setCabeceraT(String cabeceraT) {
+			return this.cabeceraT;
+		}
+
+		public int getType() {
+			return type;
+		}
+
+		public void setType(int type) {
+			this.type = type;
+		}
 
 }// End race.class
