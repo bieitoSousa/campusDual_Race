@@ -21,7 +21,6 @@ public class Tornament implements Serializable {
 	ArrayList<Car[]> tornPointsC = new ArrayList<>();
 	ArrayList<Car> tornPartiC = new ArrayList<>();
 	ArrayList<Car[]> tornRaceR = new ArrayList<>();
-
 	String name;
 	String cabeceraT;
 
@@ -51,17 +50,82 @@ public class Tornament implements Serializable {
 		}
 	}
 
-
 	// ------------------------------------ BASIC OPERATIONS ADD / DELETE --> G Garage R Race
 	// ----------------------------------------------------------------------//
 	
-	public void addG(){}
-	public void delG(){}
+	public void addRE(Race r){
+		try {
+		if (r.getType()!=1) {
+			throw new Exception("Error only add Race Eliminator type");			
+		}else if(getTornResultC().size()>0) {
+			throw new Exception("you can only add races if the tournament is not started");		
+		}else {
+		this.listTornRace.add(r);
+		}
+		}catch(Exception e) {
+			System.err.println(
+					"ERROR::TORNAMENT::ADD_RACE_ELIMINATION"
+					+e.getMessage()
+					);
+		}
+	}
 	
-	public void addR(){}
-	public void delR(){}
+	public void addRS(Race r){
+		try {
+			if (r.getType()!=0) {
+				throw new Exception("Error only add Race Eliminator type");			
+			}else if(getTornResultC().size()>0) {
+				throw new Exception("you can only add races if the tournament is not started");
+			}else if((listTornRace.contains(r))) {
+				throw new Exception("you can only add races if the tournament is not started");		
+			}else {
+			this.listTornRace.add(r);
+			}
+			}catch(Exception e) {
+				System.err.println(
+						"ERROR::TORNAMENT::ADD_RACE_STANDAR"
+						+e.getMessage()
+						);
+			}
+	}
 	
+	public void delRS(Race r){
+		try {
+			if (r.getType()!=0) {
+				throw new Exception("Error only add Race Eliminator type");			
+			}else if(getTornResultC().size()>0) {
+				throw new Exception("you can only add races if the tournament is not started");
+			}else if(!(listTornRace.contains(r))) {
+				throw new Exception("you can only del races if the tournament  not content this");		
+			}else {
+			this.listTornRace.remove(r);
+			}
+			}catch(Exception e) {
+				System.err.println(
+						"ERROR::TORNAMENT::ADD_RACE_STANDAR"
+						+e.getMessage()
+						);
+			}
+	}
 	
+	public void delRE(Race r){
+		try {
+			if (r.getType()!=0) {
+				throw new Exception("Error only add Race Eliminator type");			
+			}else if(getTornResultC().size()>0) {
+				throw new Exception("you can only add races if the tournament is not started");
+			}else if(!(listTornRace.contains(r))) {
+				throw new Exception("you can only del races if the tournament  not content this");		
+			}else {
+			this.listTornRace.remove(r);
+			}
+			}catch(Exception e) {
+				System.err.println(
+						"ERROR::TORNAMENT::ADD_RACE_STANDAR"
+						+e.getMessage()
+						);
+			}
+	}
 	
 	public void start() {
 		try {
@@ -226,9 +290,6 @@ public class Tornament implements Serializable {
 		
 	}
 	
-	
-	
-	
 	private void printList(ArrayList<?> l, String cabecera,String operation ,String destination ) {
 
 			if (Utilss.printInConsole()) {
@@ -262,7 +323,6 @@ public class Tornament implements Serializable {
 		}
 
 	}
-	
 	
 	private void printParticT() {
 		String a = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
@@ -298,7 +358,6 @@ public class Tornament implements Serializable {
 		printARRAY(getTornPointsC().get(0), first,"PODIUM_FIRST_PLACE",Controler.getT_PODIUM());
 		printARRAY(getTornPointsC().get(1), second,"PODIUM_SECOND_PLACE",Controler.getT_PODIUM());
 		printARRAY(getTornPointsC().get(2), third,"PODIUM_THIRD_PLACE",Controler.getT_PODIUM());
-
 	}
 
 }// END

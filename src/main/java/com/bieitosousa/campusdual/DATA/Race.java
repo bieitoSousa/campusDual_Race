@@ -68,12 +68,20 @@ public abstract class Race implements Serializable {
 			if (this.particG.containsAll(listGarageG)) {
 				throw new Exception("List Garage content this garage");
 			}
-			if (listGarageG.size() > 0) {
+			else if (listGarageG.size() > 0) {
 				for (Garage g : listGarageG) {
 					if (g.getAllCar().size() == 0) {
 						throw new Exception("One or more Gargarages not content cars");
 					}
 				}
+				if (getParticC().size()>0) {
+					throw new Exception("you can only add garages  if the race  is not started");		
+				}
+				for (Garage g :listGarageG) {
+					this.particG.add( (Garage)g.clone());
+				}
+				
+				
 			} else {
 				throw new Exception("ListGarage not contein garages");
 			}
@@ -89,11 +97,17 @@ public abstract class Race implements Serializable {
 				throw new Exception("List Garage content this garage");
 			}
 
-			if (GarageG.getAllCar().size() == 0) {
+			else if (GarageG.getAllCar().size() == 0) {
 				throw new Exception("One or more Gargarages not content cars");
 			}
+			else if (getParticC().size()>0) {
+				throw new Exception("you can only add garages  if the race  is not started");		
+			}
+			
+			else {
+				this.particG.add((Garage) GarageG.clone());
+				}
 
-			this.particG.add((Garage) GarageG.clone());
 
 		} catch (Exception e) {
 			System.err.println("ERRR::RACE::ADD" + getCabecera() + e.getMessage());
@@ -112,6 +126,13 @@ public abstract class Race implements Serializable {
 						throw new Exception("One or more Gargarages not content cars");
 					}
 				}
+				if (getParticC().size()>0) {
+					throw new Exception("you can only delete garages  if the race  is not started");		
+				}else {
+					this.particG.removeAll(listGarageG);
+					}
+				
+				
 			} else {
 				throw new Exception("ListGarage not contein garages");
 
@@ -128,13 +149,14 @@ public abstract class Race implements Serializable {
 		try {
 			if (!(this.particG.contains(GarageG))) {
 				throw new Exception("List Garage content this garage");
-			}
-
-			if (GarageG.getAllCar().size() == 0) {
+			}else if (GarageG.getAllCar().size() == 0) {
 				throw new Exception("One or more Gargarages not content cars");
-			}
+			}else if (getParticC().size()>0) {
+				throw new Exception("you can only delete garages  if the race  is not started");		
+			}else {
 
 			this.particG.remove(GarageG);
+			}
 
 		} catch (Exception e) {
 			System.err.println("ERRR::RACE::ADD" + getCabecera() + e.getMessage());

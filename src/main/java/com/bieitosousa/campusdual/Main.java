@@ -6,10 +6,9 @@ import java.util.*;
 
 public class Main {
 
-static Controler c = Controler.getTnstace();
+Controler c = Controler.getTnstace();
 
 	public static void main(String[] args) {
-		Controler.CreatePath();
 		menu();
 	}
 
