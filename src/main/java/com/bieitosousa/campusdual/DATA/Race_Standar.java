@@ -28,12 +28,12 @@ public class Race_Standar extends Race implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private ArrayList<Car> listCarParticipe = new ArrayList<>();
+	private ArrayList<Car> listCarParticipe = null;
 	private String msjCoche = "";
 	public Race_Standar(String name, int type, ArrayList<Garage> ListGCar
 
 	)  {
-		super(name, type, ListGCar,"RACE STANDAR_[" + name + "]");
+		super(name, type,"RACE STANDAR_[" + name + "]");
 		//List<Garage>ListGCarCopy=ListGCar.stream().collect(Collectors.toList());
 		//Collections.copy(ListGCarCopy, ListGCar);
 		try {
@@ -46,31 +46,7 @@ public class Race_Standar extends Race implements Serializable {
 		if (type != 0) {
 			throw new Exception(" Type tiene que ser 0. Error no se puede crear la clase Race_Standar");
 		}
-		if (ListGCarCopy.size() == 0) {
-			throw new Exception(
-					" La lista de garajes no contiene ningun valor, no se puede crear la clase Race_Standar");
-		}
-		// Definimos la lista de participantes
-		// Loop the gararges and take one the cart to participate
-		if (ListGCarCopy.size() == 1) {
-			for (Garage g : ListGCarCopy) {
-				for (Car ca : g.getAllCar()) {
-					this.listCarParticipe.add(ca);
-				}
-			}
-		} else {
-			for (Garage g : ListGCarCopy) {
-				for (Car ca : g.getOneCar()) {
-					this.listCarParticipe.add(ca);
-				}
-			}
-
-		}
-		ArrayList<Car> RaceStandarPart = new ArrayList<>();
-		for (Car cr: this.listCarParticipe) {
-			RaceStandarPart.add((Car) cr.clone());
-		}
-		setParticC(RaceStandarPart);
+		listCarParticipe = new ArrayList<>();
 		}catch(Exception e) {
 		System.err.println(	"ERRR::RACE_STANDAR::CONSTRUCTOR"+this.name+e.getMessage());
 		}
@@ -80,6 +56,16 @@ public class Race_Standar extends Race implements Serializable {
 	// generate a eliminate race cars
 	@Override
 	public void makeRace() throws Exception {
+		try {
+		for(Car c: takePartC()) {
+			this.listCarParticipe.add((Car)c.clone());
+		}
+		}catch (Exception e) {
+			System.err.println(
+					" EEROR::RACE_ELIMINA::MAKE_RACE unloaded participants"+e.getMessage()
+					);
+		}
+		
 		int error = listCarParticipe.size();
 
 		// ================================================//

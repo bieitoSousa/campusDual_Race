@@ -5,7 +5,7 @@
  */
 package com.bieitosousa.campusdual.DATA;
 
-import com.bieitosousa.campusdual.Pruebas;
+
 import com.bieitosousa.campusdual.UTILS.*;
 
 import java.io.File;
@@ -68,7 +68,6 @@ public abstract class Race implements Serializable {
 			if (this.particG.containsAll(listGarageG)) {
 				throw new Exception("List Garage content this garage");
 			}
-
 			if (listGarageG.size() > 0) {
 				for (Garage g : listGarageG) {
 					if (g.getAllCar().size() == 0) {
@@ -77,11 +76,8 @@ public abstract class Race implements Serializable {
 				}
 			} else {
 				throw new Exception("ListGarage not contein garages");
+			}
 
-			}
-			for (Garage gc : listGarageG) {
-				this.particG.add((Garage) gc.clone());
-			}
 		} catch (Exception e) {
 			System.err.println("ERRR::RACE::ADD" + getCabecera() + e.getMessage());
 		}
@@ -161,6 +157,39 @@ public abstract class Race implements Serializable {
 
 	// ----------------------------------------- PROCCES DATA CAR LIST
 	// ----------------------------------------------------------------------//
+	protected List<Car> takePartC() throws Exception {
+		// Loop the gararges and take one the cart to participate
+		try {
+		if (getParticC().size()==0) {
+		if (getParticG().size() == 1) {
+			for (Garage g : getParticG()) {
+				for (Car gc : g.getAllCar()) {
+					this.particC.add((Car) gc.clone());
+				}
+			}
+		} else {
+			for (Garage g : getParticG()) {
+				for (Car gc : g.getOneCar()) {
+					this.particC.add((Car) gc.clone());
+				}
+			}
+
+		}
+		}else {
+			throw new Exception("Error Participants is define");
+			
+		}
+		
+		} catch (Exception e) {
+			System.err.println("ERRR::RACE::TAKEPARTC" + getCabecera() + e.getMessage());
+		}
+		
+			return getParticC();
+		
+		
+	}
+	
+	
 	protected void takePoints(ArrayList<Car> resRace) {
 		try {
 			// ORDENO
@@ -232,7 +261,7 @@ public abstract class Race implements Serializable {
 	// ------------------------------------------------ PRINT
 	// ----------------------------------------------------------------------//
 
-	private void print(String mnj) {
+	protected void print(String mnj) {
 		if (Utilss.printInConsole()) {
 			if (Utilss.printInConsole()) {
 				System.out.println(mnj);
@@ -242,7 +271,7 @@ public abstract class Race implements Serializable {
 		}
 	}
 
-	private void printList(ArrayList<?> l) {
+	protected void printList(ArrayList<?> l) {
 		if (Utilss.printInConsole()) {
 			if (Utilss.printInConsole()) {
 				l.forEach((a) -> System.out.println("\n" + a + "\n"));
@@ -252,20 +281,32 @@ public abstract class Race implements Serializable {
 			}
 		}
 	}
-
-	private void printList(ArrayList<?> l, String cabecera,String operation) {
+	protected void printList(ArrayList<?> l,String cabecera) {
 		if (Utilss.printInConsole()) {
 			if (Utilss.printInConsole()) {
-				System.out.println("[[[[[	=	=	=	"+operation+"	=	=	=	]]]]");
-				System.out.println(cabecera);
-				l.forEach((a) -> System.out.println("\n			" + getCabecera() + getCabeceraT() + a + "\n"));
+				l.forEach((a) -> System.out.println("\n"+cabecera + a + "\n"));
 			} else {
-				Utilss.printONFile(cabecera, new File(Controler.getR_LOG() + getCabecera() + getCabeceraT() + ".txt"));
-				l.forEach((a) -> Utilss.printONFile("\n			" + getCabecera() + getCabeceraT() + a + "\n",
-						new File(Controler.getR_LOG() + getCabecera() + getCabeceraT() +operation +".txt")));
+				l.forEach((a) -> Utilss.printONFile("\n" +cabecera+ a + "\n",
+						new File(Controler.getR_LOG() + getCabecera() + getCabeceraT() + ".txt")));
 			}
 		}
 	}
+
+	private void printList(ArrayList<?> l, String cabecera,String operation ,String destination ) {
+
+		if (Utilss.printInConsole()) {
+			System.out.println("[[[[[	=	=	=	"+operation+"	=	=	=	]]]]");
+			System.out.println(cabecera);
+			l.forEach((a) -> System.out.println("\n			"  +getCabecera()+ getCabeceraT() + a + "\n"));
+		} else {
+			File fname= new File(destination + getCabecera()+ getCabeceraT() +operation +".txt");
+			Utilss.printONFile("[[[[[	=	=	=	"+operation+"	=	=	=	]]]]",fname);
+			Utilss.printONFile(cabecera, fname);
+			l.forEach((a) -> Utilss.printONFile("\n			"  +getCabecera()+ getCabeceraT() + a + "\n",
+					fname));
+		}
+	
+}
 
 //	--------------------------------------------[PRINT ]RACE_RESULTS	
 // ----------------------------------------------------------------------//
@@ -291,14 +332,14 @@ public abstract class Race implements Serializable {
 		String a = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
 				+ "\n	!	!	PARTICIPANTS	+ getCabecera() + getCabeceraT() +	!	!	!	!	!	"
 				+ "\\n!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
-		printList((ArrayList<Car>) getResultC(), a,"PRINT_RACE_PARTICIPANTS");
+		printList((ArrayList<Car>) getResultC(), a,"PRINT_RACE_PARTICIPANTS",Controler.getR_PARTIC());
 	}
 	private void printResultC() throws Exception {
 		
 		String a = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
 				+ "\n	!	!	RESULTS	+ getCabecera() + getCabeceraT() +	!	!	!	!	!	"
 				+ "\\n!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
-		printList((ArrayList<Car>) getResultC(), a,"PRINT_RACE_RESULTS");
+		printList((ArrayList<Car>) getResultC(), a,"PRINT_RACE_RESULTS",Controler.getR_PARTIC());
 	}
 
 
@@ -322,14 +363,7 @@ public abstract class Race implements Serializable {
 		return (particC);
 	}
 
-	protected void setParticC(List<Car> list) {
-		if (this.particC.size() > 0) {
-			particC = (ArrayList<Car>) list;
-		} else {
-			particC.clear();
-			particC = (ArrayList<Car>) list;
-		}
-	}
+
 
 	public List<Car> getResultC() throws Exception {
 		return resultC;

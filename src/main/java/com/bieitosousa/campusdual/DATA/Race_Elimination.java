@@ -6,7 +6,6 @@
 package com.bieitosousa.campusdual.DATA;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  *
@@ -19,17 +18,19 @@ import java.util.stream.Collectors;
 // ===================================================//
 
 public class Race_Elimination extends Race {
-	private ArrayList<Car> listCarParticipe = new ArrayList<>();
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private ArrayList<Car> listCarParticipe =null;
 	private String msjCoche = "";
 
-	public Race_Elimination(String name, int type, ArrayList<Garage> ListGCar) throws Exception {
-		super(name, type, ListGCar, "RACE_ELIMINATE_[" + name + "]");
+	public Race_Elimination(String name, int type) throws Exception {
+		super(name, type, "RACE_ELIMINATE_[" + name + "]");
 		try {
 		ArrayList<Garage> ListGCarCopy =new ArrayList<>();
 		
-		for (Garage gc :ListGCar) {
-			ListGCarCopy.add((Garage)gc.clone());
-		}
+		
 		//Collections.copy(ListGCarCopy, ListGCar);
 		// Filtramos
 		if (type != 1) {
@@ -39,27 +40,7 @@ public class Race_Elimination extends Race {
 			throw new Exception(
 					" La lista de garajes no contiene ningun valor, no se puede crear la clase Race_Elimination");
 		}
-		// Definimos la lista de participantes
-		// Loop the gararges and take one the cart to participate
-		if (ListGCarCopy.size() == 1) {
-			for (Garage g : ListGCarCopy) {
-				for (Car ca : g.getAllCar()) {
-					this.listCarParticipe.add(ca);
-				}
-			}
-		} else {
-			for (Garage g : ListGCarCopy) {
-				for (Car ca : g.getOneCar()) {
-					this.listCarParticipe.add(ca);
-				}
-			}
-
-		}
-		ArrayList<Car> RaceEliminatePart = new ArrayList<>();
-		for (Car cr: this.listCarParticipe) {
-			RaceEliminatePart.add((Car) cr.clone());
-		}
-		setParticC(RaceEliminatePart);
+		this.listCarParticipe = new ArrayList<>();
 
 	}catch(Exception e) {
 		System.err.println(	"ERRR::RACE_ELIMINATE::CONSTRUCTOR "+this.name+e.getMessage());
@@ -70,6 +51,15 @@ public class Race_Elimination extends Race {
 	// generate a eliminate race cars
 	@Override
 	public void makeRace() throws Exception {
+		try {
+		for(Car c: takePartC()) {
+			this.listCarParticipe.add((Car)c.clone());
+		}
+		}catch (Exception e) {
+			System.err.println(
+					" EEROR::RACE_ELIMINA::MAKE_RACE unloaded participants"+e.getMessage()
+					);
+		}
 
 		// ================================================//
 		// A = = = = Pre carrera = = = = = =

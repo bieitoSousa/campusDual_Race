@@ -51,6 +51,18 @@ public class Tornament implements Serializable {
 		}
 	}
 
+
+	// ------------------------------------ BASIC OPERATIONS ADD / DELETE --> G Garage R Race
+	// ----------------------------------------------------------------------//
+	
+	public void addG(){}
+	public void delG(){}
+	
+	public void addR(){}
+	public void delR(){}
+	
+	
+	
 	public void start() {
 		try {
 			for (Race r : listTornRace) {
@@ -217,31 +229,35 @@ public class Tornament implements Serializable {
 	
 	
 	
-	private void printList(ArrayList<?> l, String cabecera) {
-		if (Utilss.printInConsole()) {
+	private void printList(ArrayList<?> l, String cabecera,String operation ,String destination ) {
+
 			if (Utilss.printInConsole()) {
+				System.out.println("[[[[[	=	=	=	"+operation+"	=	=	=	]]]]");
 				System.out.println(cabecera);
-				l.forEach((a) -> System.out.println("\n			" + getCabeceraT() + a + "\n"));
+				l.forEach((a) -> System.out.println("\n			"  + getCabeceraT() + a + "\n"));
 			} else {
-				Utilss.printONFile(cabecera, new File(Controler.getR_LOG() + getCabeceraT() + ".txt"));
-				l.forEach((a) -> Utilss.printONFile("\n			" + getCabeceraT() + a + "\n",
-						new File(Controler.getR_LOG() + getCabeceraT() + ".txt")));
+				File fname= new File(destination  + getCabeceraT() +operation +".txt");
+				Utilss.printONFile("[[[[[	=	=	=	"+operation+"	=	=	=	]]]]",fname);
+				Utilss.printONFile(cabecera, fname);
+				l.forEach((a) -> Utilss.printONFile("\n			"  + getCabeceraT() + a + "\n",
+						fname));
 			}
-		}
+		
 	}
 
-	private void printARRAY(Car[] o, String cabecera) {
+	private void printARRAY(Car[] o, String cabecera,String operation ,String destination) {
 		if (Utilss.printInConsole()) {
+			System.out.println("[[[[[	=	=	=	"+operation+"	=	=	=	]]]]");
 			System.out.println(cabecera);
 			for (Car c : o) {
 				System.out.println("\n			" + getCabeceraT() + c + "\n");
 			}
 		} else {
-
-			Utilss.printONFile(cabecera, new File(Controler.getR_LOG() + getCabeceraT() + ".txt"));
+			File fname= new File(destination  + getCabeceraT() +operation +".txt");
+			Utilss.printONFile("[[[[[	=	=	=	"+operation+"	=	=	=	]]]]", fname);
+			Utilss.printONFile(cabecera, fname);
 			for (Car c : o) {
-				Utilss.printONFile("\n			" + getCabeceraT() + c + "\n",
-						new File(Controler.getR_LOG() + getCabeceraT() + ".txt"));
+				Utilss.printONFile("\n			" + getCabeceraT() + c + "\n",fname	);
 			}
 		}
 
@@ -249,23 +265,39 @@ public class Tornament implements Serializable {
 	
 	
 	private void printParticT() {
+		String a = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
+				+ "\n	!	!	TORNAMENT_PARTICIPANTS	" + getCabeceraT() + "!	!	!	!	!	" + "\n	!	!	"
+				+ "	!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
+
+		printList(getTornResultC(), a,"TORNAMENT_PARTICIPANTS",Controler.getT_PARTIC());
 		
 	}
 
 	private void printResultT() {
 
 		String a = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
-				+ "\n	!	!	RESULTADOS	GRUP BY CAR	" + getCabeceraT() + "!	!	!	!	!	" + "\n	!	!	"
+				+ "\n	!	!	TORNAMENT_RESULTS	" + getCabeceraT() + "!	!	!	!	!	" + "\n	!	!	"
 				+ "	!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
 
-		printList(getTornResultC(), a);
+		printList(getTornResultC(), a,"TORNAMENT_RESULTS",Controler.getT_RESULT());
 
 	}
 
 	private void printPodiumT() {
-		printARRAY(getTornPointsC().get(0), "TORNEO_ELIMINATE_ONE_GARAGE_Podium_____[1]");
-		printARRAY(getTornPointsC().get(1), "TORNEO_ELIMINATE_ONE_GARAGE_Podium_____[2]");
-		printARRAY(getTornPointsC().get(2), "TORNEO_ELIMINATE_ONE_GARAGE_Podium_____[3]");
+
+		String first = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
+				+ "\n	!	!	PODIUM_FIRST_PLACE !	!	!	!	!	" + "\n	!	!	"
+				+ "	!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
+		String second = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
+				+ "\n	!	!	PODIUM_SECOND_PLACE !	!	!	!	!	" + "\n	!	!	"
+				+ "	!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
+		String third = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
+				+ "\n	!	!	PODIUM_THIRD_PLACE !	!	!	!	!	" + "\n	!	!	"
+				+ "	!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
+		
+		printARRAY(getTornPointsC().get(0), first,"PODIUM_FIRST_PLACE",Controler.getT_PODIUM());
+		printARRAY(getTornPointsC().get(1), second,"PODIUM_SECOND_PLACE",Controler.getT_PODIUM());
+		printARRAY(getTornPointsC().get(2), third,"PODIUM_THIRD_PLACE",Controler.getT_PODIUM());
 
 	}
 

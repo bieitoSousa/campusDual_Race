@@ -39,18 +39,22 @@ public class Controler {
 	
 	
 	// ______ GARAGE _____________________________________________________________________
-	private static String G_RESULT = PUBLIC_GARAGE + "//garage_results"+Utilss.getTime()+"//"+"GARAGE_RESULTS__";
-	private static String G_EXP = PRIVATE_GARAGE + "garage_export";
+	
+	private static String G_PARTIC = PUBLIC_GARAGE + "//garage_partic_"+Utilss.getTime()+"//"+"GARAGE_PARTIC__";
+	private static String G_RESULT = PUBLIC_GARAGE + "//garage_results_"+Utilss.getTime()+"//"+"GARAGE_RESULTS__";
+	private static String G_EXP = PRIVATE_GARAGE + "garage_export_";
 	// ______ RACE _______________________________________________________________________
-	private  static String R_LOG = PUBLIC_RACE + "//race_log"+Utilss.getTime()+"//"+"RACE_LOG_";
-	private  static String R_RESULT = PUBLIC_RACE + "//race_results"+Utilss.getTime()+"//"+"RACE_RESULTS__";
-	private  static String R_EXP = PRIVATE_RACE + "race_export";
+	private  static String R_PARTIC = PUBLIC_RACE + "//race_partic_"+Utilss.getTime()+"//"+"RACE_PARTIC__";
+	private  static String R_LOG = PUBLIC_RACE + "//race_log_"+Utilss.getTime()+"//"+"RACE_LOG__";
+	private  static String R_RESULT = PUBLIC_RACE + "//race_results_"+Utilss.getTime()+"//"+"RACE_RESULTS__";
+	private  static String R_EXP = PRIVATE_RACE + "race_export_";
 	
 
 	// ______ TORN _______________________________________________________________________
-	private  static String T_LOG = PUBLIC_TORNAMENT +  "//torn_log"+Utilss.getTime()+"//"+"TORN_LOG_";
+	private  static String T_PARTIC = PUBLIC_TORNAMENT +  "//torn_partic"+Utilss.getTime()+"//"+"TORN_PARTIC__";
+	private  static String T_PODIUM = PUBLIC_TORNAMENT +  "//torn_podium"+Utilss.getTime()+"//"+"TORN_PODIUM__";
 	private  static String T_RESULT = PUBLIC_TORNAMENT+ "//torn_results"+Utilss.getTime()+"//"+"TORN_RESULTS__";
-	private  static String T_EXP = PRIVATE_TORNAMENT + "tornament_export";
+	private  static String T_EXP = PRIVATE_TORNAMENT + "tornament_export_";
 	// ______ CONTROL ____________________________________________________________________
 	private  static String BACKUP = CONF + "backup.json";
 	private  static String IMPORTCAR = CONF + "car.json";
@@ -303,12 +307,12 @@ public class Controler {
 		T_EXP = t_EXP;
 	}
 
-	public static String getT_LOG() {
-		return T_LOG;
+	public static String getT_PODIUM() {
+		return T_PODIUM;
 	}
 
-	public static void setT_LOG(String t_LOG) {
-		T_LOG = t_LOG;
+	public static void setT_PODIUM(String t_LOG) {
+		T_PODIUM = t_LOG;
 	}
 
 	public static String getT_RESULT() {
@@ -334,6 +338,48 @@ public class Controler {
 	public static void setIMPORTCAR(String iMPORTCAR) {
 		IMPORTCAR = iMPORTCAR;
 	}
+
+	public static String getG_PARTIC() {
+		return G_PARTIC;
+	}
+
+	public static void setG_PARTIC(String g_PARTIC) {
+		G_PARTIC = g_PARTIC;
+	}
+
+	public static String getG_RESULT() {
+		return G_RESULT;
+	}
+
+	public static void setG_RESULT(String g_RESULT) {
+		G_RESULT = g_RESULT;
+	}
+
+	public static String getG_EXP() {
+		return G_EXP;
+	}
+
+	public static void setG_EXP(String g_EXP) {
+		G_EXP = g_EXP;
+	}
+
+	public static String getR_PARTIC() {
+		return R_PARTIC;
+	}
+
+	public static void setR_PARTIC(String r_PARTIC) {
+		R_PARTIC = r_PARTIC;
+	}
+
+	public static String getT_PARTIC() {
+		return T_PARTIC;
+	}
+
+	public static void setT_PARTIC(String t_PARTIC) {
+		T_PARTIC = t_PARTIC;
+	}
+	
+	
 
 	// ------------ PATH -----------------//
 //
