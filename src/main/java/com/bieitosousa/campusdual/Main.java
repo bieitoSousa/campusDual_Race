@@ -211,6 +211,10 @@ static Controler c = Controler.getTnstace();
 					.withMethod(Main::addLISTGARAGE),
 					Command.withName("11").withDescription("Delete the GARAGE_SELECT of c.getGarageL")
 					.withMethod(Main::delLISTGARAGE),
+					Command.withName("12").withDescription("view GARAGE_SELECT ")
+					.withMethod(Main::viewGARAGESELECT),
+					Command.withName("13").withDescription("view the  getGarageL")
+					.withMethod(Main::viewGARAGESELECT),
 					
 					Command.withName("0").withDescription("Atras").withMethod(Main::menu))
 			.withPrompt("[Menu_Action] >> ").run();

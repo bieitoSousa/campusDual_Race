@@ -11,6 +11,8 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Date;
+import java.util.List;
 
 
 /**
@@ -20,6 +22,15 @@ import java.io.IOException;
 public class Utilss {
 	
 	public static boolean  pConsole = false;
+//------------------------------------------- TIME ------------------------------------------------------//	
+	
+	public static String getTime() {
+		return Long.toString( new Date().getTime());
+	}
+	
+	
+	
+//------------------------------------------- PRINT ------------------------------------------------------//	
 	public static boolean printInConsole() {
 		return pConsole;
 	}
@@ -78,6 +89,82 @@ public class Utilss {
 		}
 
 	}
+	
+	// ------------------------------------------------[GENERIC ] EXPORT/IMPORT ------------------------------------//
+
+//	[EXAMPLE TO  PASS TO A GENERIC METH]
+//	public void exportGarageL() {
+//		try {
+//			File f = new File(G_EXP);
+//			if (!f.exists()) {
+//				f.mkdirs();
+//			}
+//			File fname = new File(Controler.BACKUP);
+//			JSON.WriteObjJsonInFile(fname, this);
+//		} catch (Exception e) {
+//			System.err.println("Error al exportar " + e.getMessage());
+//		}
+//	}
+	
+	public static <T>  void expList(List<T> list, String path) {
+		try {
+			File f = new File(path);
+			File fPath= f.getParentFile();
+			if(!fPath.exists()) {
+				fPath.mkdirs();
+			}
+			if (!f.exists()) {
+				f.createNewFile();
+			}else {
+			JSON.WriteObjJsonInFile(f, list);
+			}
+		} catch (Exception e) {
+			System.err.println("Error al exportar " + e.getMessage());
+		}
+	}
+//	[EXAMPLE TO  PASS TO A GENERIC METH]
+//	public void importGarageL() {
+//		garageL.clear();
+//		try {
+//			File f = new File(G_EXP);
+//			File fPath= f.getParentFile();
+//			if(!fPath.exists()) {
+//				fPath.mkdirs();
+//			}
+//			if (!f.exists()) {
+//				f.createNewFile();
+//			}else {
+//
+//				garageL = (ArrayList<Garage>) JSON.ReadObjJsonInFile(f);
+//				System.out.println(" List of Garage data has been exported to " + f);
+//			}
+//		} catch (Exception e) {
+//			System.err.println("the data file could not be recovered" + e.getMessage());
+//		}
+//
+//	}
+	
+	public static <T> void importList(List<T> list, String path) {
+		list.clear();
+		try {
+			File f = new File(path);
+			File fPath= f.getParentFile();
+			if(!fPath.exists()) {
+				fPath.mkdirs();
+			}
+			if (!f.exists()) {
+				f.createNewFile();
+			}else {
+				
+				list =  (List<T>) JSON.ReadObjJsonInFile(f);
+				System.out.println(" List of Garage data has been exported to " + f);
+			}
+		} catch (Exception e) {
+			System.err.println("the data file could not be recovered" + e.getMessage());
+		}
+		
+	}
+
 	
 	
 

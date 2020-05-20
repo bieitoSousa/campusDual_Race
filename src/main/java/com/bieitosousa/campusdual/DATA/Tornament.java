@@ -192,7 +192,31 @@ public class Tornament implements Serializable {
 		this.tornRaceR = tornRaceR;
 	}
 
-//	=	=	=	=	[PRINT ]RACE_CLASIFICATION	=	=	=	=
+//	--------------------------------------------[PRINT ]RACE_RESULTS	
+// ----------------------------------------------------------------------//
+	
+	public void printINFO()  {
+		try {
+		if(getTornPartiC().size()>0) {
+			printParticT();
+		}
+		
+		if(getTornResultC().size()>0) {
+			printResultT();
+		}
+		if(getTornPointsC().get(0).length>0) {
+			printPodiumT();
+		}
+
+		} catch (Exception e) {
+			System.err.println("ERRR::RACE::PRINTINFO" + getCabeceraT() + e.getMessage());
+		}
+		
+	}
+	
+	
+	
+	
 	private void printList(ArrayList<?> l, String cabecera) {
 		if (Utilss.printInConsole()) {
 			if (Utilss.printInConsole()) {
@@ -222,8 +246,13 @@ public class Tornament implements Serializable {
 		}
 
 	}
+	
+	
+	private void printParticT() {
+		
+	}
 
-	public void printResultT() {
+	private void printResultT() {
 
 		String a = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
 				+ "\n	!	!	RESULTADOS	GRUP BY CAR	" + getCabeceraT() + "!	!	!	!	!	" + "\n	!	!	"
@@ -233,7 +262,7 @@ public class Tornament implements Serializable {
 
 	}
 
-	public void printPointT() {
+	private void printPodiumT() {
 		printARRAY(getTornPointsC().get(0), "TORNEO_ELIMINATE_ONE_GARAGE_Podium_____[1]");
 		printARRAY(getTornPointsC().get(1), "TORNEO_ELIMINATE_ONE_GARAGE_Podium_____[2]");
 		printARRAY(getTornPointsC().get(2), "TORNEO_ELIMINATE_ONE_GARAGE_Podium_____[3]");

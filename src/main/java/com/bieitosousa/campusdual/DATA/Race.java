@@ -5,12 +5,12 @@
  */
 package com.bieitosousa.campusdual.DATA;
 
+import com.bieitosousa.campusdual.Pruebas;
 import com.bieitosousa.campusdual.UTILS.*;
 
 import java.io.File;
 import java.io.Serializable;
 import java.util.*;
-
 
 /**
  *
@@ -43,128 +43,196 @@ public abstract class Race implements Serializable {
 	protected String cabeceraR = "";
 	protected String cabeceraT = "";
 
-
 // ===================================================//
 //  =   Class to create Race
 //  =   you can add Garages , makeRace and printResult
 // ===================================================//
-	public Race(String name, int type, ArrayList<Garage> listGarageG, String cabeceraR
+	public Race(String name, int type, String cabeceraR
 	// all Cars on the garage participate true
 	// one Car on the garage participate false
 	) {
 		try {
-		this.name = name;
-		this.type = type;
-		//List<Garage>ListGCarCopy=listGarageG.stream().collect(Collectors.toList());
-		
-		if (listGarageG.size() > 0) {
-			for (Garage g : listGarageG) {
-				if (g.getAllCar().size() == 0) {
-					throw new Exception("One or more Gargarages not content cars");
-
-				}
-			}
-		} else {
-			throw new Exception("ListGarage not contein garages");
-
+			this.name = name;
+			this.type = type;
+			this.cabeceraR = cabeceraR;
+		} catch (Exception e) {
+			System.err.println("ERRR::RACE::CONSTRUCTOR" + getCabecera() + e.getMessage());
 		}
-		for (Garage gc :listGarageG) {
-			this.particG.add((Garage)gc.clone());
-		}
-		this.cabeceraR = cabeceraR;
-		}catch(Exception e) {
-			System.err.println(	"ERRR::RACE::CONSTRUCTOR"+e.getMessage());
-			}
 	}
 
-	// ------------------	OPERATIONS -------------------------------------//
+	// ------------------------------------ BASIC OPERATIONS ADD / DELETE
+	// ----------------------------------------------------------------------//
 
-	abstract public void makeRace() throws Exception;// FinmakeRace
+	public void addG(ArrayList<Garage> listGarageG) {
+		try {
+			if (this.particG.containsAll(listGarageG)) {
+				throw new Exception("List Garage content this garage");
+			}
+
+			if (listGarageG.size() > 0) {
+				for (Garage g : listGarageG) {
+					if (g.getAllCar().size() == 0) {
+						throw new Exception("One or more Gargarages not content cars");
+					}
+				}
+			} else {
+				throw new Exception("ListGarage not contein garages");
+
+			}
+			for (Garage gc : listGarageG) {
+				this.particG.add((Garage) gc.clone());
+			}
+		} catch (Exception e) {
+			System.err.println("ERRR::RACE::ADD" + getCabecera() + e.getMessage());
+		}
+	}
+
+	public void addG(Garage GarageG) {
+		try {
+			if (this.particG.contains(GarageG)) {
+				throw new Exception("List Garage content this garage");
+			}
+
+			if (GarageG.getAllCar().size() == 0) {
+				throw new Exception("One or more Gargarages not content cars");
+			}
+
+			this.particG.add((Garage) GarageG.clone());
+
+		} catch (Exception e) {
+			System.err.println("ERRR::RACE::ADD" + getCabecera() + e.getMessage());
+		}
+	}
+
+	public void delG(ArrayList<Garage> listGarageG) {
+		try {
+			if (!(this.particG.containsAll(listGarageG))) {
+				throw new Exception("List Garage not content this garage");
+			}
+
+			if (listGarageG.size() > 0) {
+				for (Garage g : listGarageG) {
+					if (g.getAllCar().size() == 0) {
+						throw new Exception("One or more Gargarages not content cars");
+					}
+				}
+			} else {
+				throw new Exception("ListGarage not contein garages");
+
+			}
+
+			this.particG.removeAll(listGarageG);
+
+		} catch (Exception e) {
+			System.err.println("ERRR::RACE::ADD" + getCabecera() + e.getMessage());
+		}
+	}
+
+	public void delG(Garage GarageG) {
+		try {
+			if (!(this.particG.contains(GarageG))) {
+				throw new Exception("List Garage content this garage");
+			}
+
+			if (GarageG.getAllCar().size() == 0) {
+				throw new Exception("One or more Gargarages not content cars");
+			}
+
+			this.particG.remove(GarageG);
+
+		} catch (Exception e) {
+			System.err.println("ERRR::RACE::ADD" + getCabecera() + e.getMessage());
+		}
+	}
+
+	// --------------------------------------- INTERNAL OPERATIONS
+	// ----------------------------------------------------------------------//
+
+	abstract public void makeRace() throws Exception;
 
 	public void start() {
 		try {
 			this.makeRace();
-			
+
 		} catch (Exception e) {
-			System.err.println("Error al ejecutar la carrera " + cabeceraR + e.getMessage());
+			System.err.println("ERRR::RACE::MAKE" + getCabecera() + e.getMessage());
 		}
 	}
 
-	// ----------------- 	PROCCES DATA  CAR LIST --------------------//
-	// ------------------------------------------------------------//
-
-	protected void takePoints(ArrayList<Car> resRace) throws Exception {
-		// ORDENO
-		int error = resRace.size(); // control for not duplications
+	// ----------------------------------------- PROCCES DATA CAR LIST
+	// ----------------------------------------------------------------------//
+	protected void takePoints(ArrayList<Car> resRace) {
 		try {
-		 Collections.sort(resRace);
-		 ArrayList<Car> listTBlank = new ArrayList<Car>();
-		 for(Car c : resRace) {
-				if(c.getDistance()>0) {
-					
-				}else {
-					listTBlank.add((Car) c.clone());
+			// ORDENO
+			int error = resRace.size(); // control for not duplications
+			try {
+				Collections.sort(resRace);
+				ArrayList<Car> listTBlank = new ArrayList<Car>();
+				for (Car c : resRace) {
+					if (c.getDistance() > 0) {
+
+					} else {
+						listTBlank.add((Car) c.clone());
+					}
+				}
+				for (Car cblank : listTBlank) {
+					cblank.setDistance(0);
+					cblank.setPoints(0);
+				}
+				Collections.sort(listTBlank);
+				this.particC = listTBlank;
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			// PUNTUO
+			for (int i = 0; i < resRace.size(); i++) {
+				switch (i) {
+				case 0:
+					resRace.get(i).setPoints(Controler.POINTS_FIRSTS);
+					break;
+				case 1:
+					resRace.get(i).setPoints(Controler.POINTS_SECOND);
+					break;
+				case 2:
+					resRace.get(i).setPoints(Controler.POINTS_THIRD);
+					break;
+				default:
+					resRace.get(i).setPoints(Controler.POINTS_DEFAULT);
+
 				}
 			}
-		 for(Car cblank : listTBlank) {
-			 cblank.setDistance(0);
-			 cblank.setPoints(0);
-		 }
-		 Collections.sort(listTBlank);
-		 this.particC=listTBlank;
-		 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 
-		
-		// PUNTUO
-		for (int i = 0; i < resRace.size(); i++) {
-			switch (i) {
-			case 0:
-				resRace.get(i).setPoints(Controler.getPOINTS_FIRSTS());
-				break;
-			case 1:
-				resRace.get(i).setPoints(Controler.getPOINTS_SECOND());
-				break;
-			case 2:
-				resRace.get(i).setPoints(Controler.getPOINTS_THIRD());
-				break;
-			default:
-				resRace.get(i).setPoints(Controler.getPOINTS_DEFAULT());
-
-			}
-		}
-
-
-		ArrayList<Car> superListC = getParticC();
+			ArrayList<Car> superListC = getParticC();
 			for (Car car : resRace) {
-				if (superListC.contains(car)){
-					
-				}else {
-					if (car.getDistance()!=0) {
-				superListC.add(car);
+				if (superListC.contains(car)) {
+
+				} else {
+					if (car.getDistance() != 0) {
+						superListC.add(car);
 					}
 				}
 			}
-			
+
 			if (superListC.size() != error) {
-				throw new Exception("takePoints :: malformed list, size increments" + error + "-->" + superListC.size());
-			}	
-		 Collections.sort(superListC);
+				throw new Exception(
+						"takePoints :: malformed list, size increments" + error + "-->" + superListC.size());
+			}
+			Collections.sort(superListC);
 
-		setResultC(superListC);
-		
-		setPointsC(superListC);
+			setResultC(superListC);
 
-
+			setPointsC(superListC);
+		} catch (Exception e) {
+			System.err.println("ERRR::RACE::TAKEPOINTS" + getCabecera() + e.getMessage());
+		}
 	}
 
+	// ------------------------------------------------ PRINT
+	// ----------------------------------------------------------------------//
 
-	// -------------------- PRINT-------------------------------//
-	// ------------------------------------------------------- //
-
-	public void print(String mnj) {
+	private void print(String mnj) {
 		if (Utilss.printInConsole()) {
 			if (Utilss.printInConsole()) {
 				System.out.println(mnj);
@@ -174,7 +242,7 @@ public abstract class Race implements Serializable {
 		}
 	}
 
-	public void printList(ArrayList<?> l) {
+	private void printList(ArrayList<?> l) {
 		if (Utilss.printInConsole()) {
 			if (Utilss.printInConsole()) {
 				l.forEach((a) -> System.out.println("\n" + a + "\n"));
@@ -185,38 +253,54 @@ public abstract class Race implements Serializable {
 		}
 	}
 
-	public void printList(ArrayList<?> l, String cabecera) {
+	private void printList(ArrayList<?> l, String cabecera,String operation) {
 		if (Utilss.printInConsole()) {
 			if (Utilss.printInConsole()) {
+				System.out.println("[[[[[	=	=	=	"+operation+"	=	=	=	]]]]");
 				System.out.println(cabecera);
-				l.forEach((a) -> System.out.println("\n			" + getCabecera() + getCabeceraT()+  a + "\n"));
+				l.forEach((a) -> System.out.println("\n			" + getCabecera() + getCabeceraT() + a + "\n"));
 			} else {
-				Utilss.printONFile(cabecera,
-						new File(Controler.getR_LOG() + getCabecera() + getCabeceraT() + ".txt"));
-				l.forEach((a) -> Utilss.printONFile("\n			" + getCabecera() + getCabeceraT()+  a + "\n",
-						new File(Controler.getR_LOG() + getCabecera() + getCabeceraT() + ".txt")));
+				Utilss.printONFile(cabecera, new File(Controler.getR_LOG() + getCabecera() + getCabeceraT() + ".txt"));
+				l.forEach((a) -> Utilss.printONFile("\n			" + getCabecera() + getCabeceraT() + a + "\n",
+						new File(Controler.getR_LOG() + getCabecera() + getCabeceraT() +operation +".txt")));
 			}
 		}
 	}
 
+//	--------------------------------------------[PRINT ]RACE_RESULTS	
+// ----------------------------------------------------------------------//
 
-	
-//	=	=	=	=	[PRINT ]RACE_RESULTS	=	=	=	=
-	
-
-	public void printResultC() throws Exception {
+	public void printINFO()  {
+		try {
+		if(getParticC().size()>0) {
+			printParticC();
+		}
 		
-		String a ="\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"	
-				+ "\n	!	!	RESULTADOS	+ getCabecera() + getCabeceraT() +	!	!	!	!	!	"	
+		if(getResultC().size()>0) {
+			printResultC();
+		}
+
+		} catch (Exception e) {
+			System.err.println("ERRR::RACE::PRINTINFO" + getCabecera() + e.getMessage());
+		}
+		
+	}
+	
+	private void printParticC() throws Exception {
+
+		String a = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
+				+ "\n	!	!	PARTICIPANTS	+ getCabecera() + getCabeceraT() +	!	!	!	!	!	"
 				+ "\\n!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
-		printList((ArrayList<Car>)getResultC(),a);
+		printList((ArrayList<Car>) getResultC(), a,"PRINT_RACE_PARTICIPANTS");
+	}
+	private void printResultC() throws Exception {
+		
+		String a = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
+				+ "\n	!	!	RESULTS	+ getCabecera() + getCabeceraT() +	!	!	!	!	!	"
+				+ "\\n!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
+		printList((ArrayList<Car>) getResultC(), a,"PRINT_RACE_RESULTS");
 	}
 
-	
-	
-	
-
-	
 
 	// ------ GET/SET [PARTICIPE,RESULT,POINTS] --> {C CAR G GARAGE}
 
@@ -224,7 +308,7 @@ public abstract class Race implements Serializable {
 		return particG;
 	}
 
-	public void setParticG(List<Garage> list) {
+	protected void setParticG(List<Garage> list) {
 		if (this.particG.size() > 0) {
 			this.particG = (ArrayList<Garage>) list;
 		} else {
@@ -238,7 +322,7 @@ public abstract class Race implements Serializable {
 		return (particC);
 	}
 
-	public void setParticC(List<Car> list) {
+	protected void setParticC(List<Car> list) {
 		if (this.particC.size() > 0) {
 			particC = (ArrayList<Car>) list;
 		} else {
@@ -261,10 +345,8 @@ public abstract class Race implements Serializable {
 	}
 
 	public List<Garage> getResultG() throws Exception {
-
 		return resultG;
 	}
-
 
 	private void setPointsC(List<Car> list) {
 		this.pointsC.clear();
@@ -272,47 +354,44 @@ public abstract class Race implements Serializable {
 	}
 
 	public List<Car> getPointsC() {
-
 		return pointsC;
 	}
 
+	// ----------------------------------------------------BASICS 
+	// ----------------------------------------------------------------------//
 
+	@Override
+	public String toString() {
+		return "Race{" + "name=" + name + ", type=" + ((type == 1) ? "Eliminacion" : "Estandar") + ", ParticG="
+				+ particG + '}';
+	}
 
+	public String getName() {
+		return name;
+	}
 
-	// ------------------ BASICS ------------------------------//
+	public void setName(String name) {
+		this.name = name;
+	}
 
-		@Override
-		public String toString() {
-			return "Race{" + "name=" + name + ", type=" + ((type == 1) ? "Eliminacion" : "Estandar") + ", ParticG="
-					+ particG + '}';
-		}
+	public String getCabecera() {
+		return this.cabeceraR;
+	}
 
-		public String getName() {
-			return name;
-		}
+	public String getCabeceraT() {
+		return this.cabeceraT;
+	}
 
-		public void setName(String name) {
-			this.name = name;
-		}
+	public String setCabeceraT(String cabeceraT) {
+		return this.cabeceraT;
+	}
 
-		public String getCabecera() {
-			return this.cabeceraR;
-		}
+	public int getType() {
+		return type;
+	}
 
-		public String getCabeceraT() {
-			return this.cabeceraT;
-		}
-
-		public String setCabeceraT(String cabeceraT) {
-			return this.cabeceraT;
-		}
-
-		public int getType() {
-			return type;
-		}
-
-		public void setType(int type) {
-			this.type = type;
-		}
+	public void setType(int type) {
+		this.type = type;
+	}
 
 }// End race.class
