@@ -424,6 +424,36 @@ public class Controler {
 
 		}
 	}
+	// G[0] AUXILIAR
+	private void selectCAR(List<Car> list) { 
+		try {
+			if (list.size() > 0) {
+				int id = -2;
+				do {
+					System.out.println("selected one car");
+					System.out.println("[-1] exit ");
+					int cn = 0;
+					for (Car c : list) {
+						System.out.println("[" + (cn++) + "]" + c);
+						id = KeyboardReader.readInt("put  the number of the garage  (-1 to exit): ", "Error");
+						try {
+							
+							if (id > -1) {
+								CARSELECT = list.get(id);
+							}
+						} catch (Exception e) {
+							System.err.println();
+						}
+					}
+				} while (id > c.getGarageL().size() || id < -1);
+			} else {
+				System.out.println("Firts create one garage");
+			}
+		} catch (Exception e) {
+			System.err.println("ERROR::AUXILIAR::SELECT_GARAGE_CAR::" + e.getMessage());
+			
+		}
+	}
 
 	private void addCAR() {
 		try {
@@ -918,10 +948,10 @@ public class Controler {
 				throw new Exception("Firts select a RACE");
 			}
 
-			if (!(RACESELECT.getResultG().contains(GARAGESELECT))) {
+			if (!(RACESELECT.particG.contains(GARAGESELECT))) {
 				throw new Exception("Firts select a RACE then a Garage");
 			}
-			RACESELECT.getResultG().remove(GARAGESELECT);
+			RACESELECT.particG.remove(GARAGESELECT);
 
 		} catch (Exception e) {
 			System.err.println(" RROR::RACE::DEL_RACE:: " + e.getMessage());
@@ -1204,7 +1234,7 @@ public class Controler {
 				throw new Exception("Firts select a TORNAMENT");
 			}
 			RACESELECT=null;
-			selectRace(TORNAMENTSELECT.listTornRace);
+			selectRACE(TORNAMENTSELECT.listTornRace);
 			if (RACESELECT == null) {
 				throw new Exception("Firts select a RACE");
 			}
@@ -1232,7 +1262,7 @@ public class Controler {
 				throw new Exception("Firts select a TORNAMENT");
 			}
 			RACESELECT=null;
-			selectRace(TORNAMENTSELECT.listTornRace);
+			selectRACE(TORNAMENTSELECT.listTornRace);
 			if (RACESELECT == null) {
 				throw new Exception("Firts select a RACE");
 			}

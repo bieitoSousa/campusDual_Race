@@ -35,7 +35,7 @@ public abstract class Race implements Serializable {
 	// store of the race result
 	// store of the race participants
 	protected ArrayList<Garage> particG = new ArrayList<>();
-	protected ArrayList<Garage> resultG = new ArrayList<>();
+	//protected ArrayList<Garage> resultG = new ArrayList<>();
 	protected ArrayList<Car> particC = new ArrayList<>();
 	protected ArrayList<Car> resultC = new ArrayList<>();
 	protected ArrayList<Car> pointsC = new ArrayList<>();
@@ -170,7 +170,8 @@ public abstract class Race implements Serializable {
 
 	public void start() {
 		try {
-			this.makeRace();
+			this.makeRace();  // extends <<--- [	get the cars from  --> getParticG]
+			//extrends -->>  update RACE with takePoints
 
 		} catch (Exception e) {
 			System.err.println("ERRR::RACE::MAKE" + getCabecera() + e.getMessage());
@@ -211,7 +212,7 @@ public abstract class Race implements Serializable {
 		
 		
 	}
-	
+	// update RACE [ resultC , pointsC ]
 	
 	protected void takePoints(ArrayList<Car> resRace) {
 		try {
@@ -401,9 +402,9 @@ public abstract class Race implements Serializable {
 		}
 	}
 
-	public List<Garage> getResultG() throws Exception {
-		return resultG;
-	}
+//	public List<Garage> getResultG() throws Exception {
+//		return resultG;
+//	}
 
 	private void setPointsC(List<Car> list) {
 		this.pointsC.clear();
