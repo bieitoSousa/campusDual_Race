@@ -41,7 +41,7 @@ public class Garage implements Cloneable, Serializable {
 		try {
 			listGCar.add(c);
 		} catch (Exception e) {
-			System.err.println(" not add the car"+c.getId());
+			System.err.println(" not add the car");
 		}
 	}
 
@@ -52,7 +52,7 @@ public class Garage implements Cloneable, Serializable {
 			}
 		} catch (Exception e) {
 			for (Car c : listc) {
-				System.err.println(" not add the car" + c.getId());
+				System.err.println(" not add the car" );
 			}
 		}
 	}
@@ -62,7 +62,7 @@ public class Garage implements Cloneable, Serializable {
 		try {
 			listGCar.remove(c);
 		} catch (Exception e) {
-			System.err.println(" not remove the car" + c.getId());
+			System.err.println(" not remove the car" );
 		}
 
 	}

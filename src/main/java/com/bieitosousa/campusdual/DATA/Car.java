@@ -26,8 +26,7 @@ public class Car implements Cloneable, Comparable<Car>,Serializable{
 	// max sped is 5
 	private final int MAXSPEED = 5;
 	// String to identificate a car
-	static int sumid;
-	private int id;
+	//private int id;
 	// Company make the car
 	private String mark;
 	// name of the model of a car
@@ -41,7 +40,6 @@ public class Car implements Cloneable, Comparable<Car>,Serializable{
 	public Car(String mark, String model) {
 		this.mark = mark;
 		this.model = model;
-		this.id = sumid++;
 	}
 
 	public String getMark() {
@@ -76,14 +74,6 @@ public class Car implements Cloneable, Comparable<Car>,Serializable{
 		this.distance = distance;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	public int getMAXSPEED() {
 		return MAXSPEED;
 	}
@@ -100,7 +90,6 @@ public class Car implements Cloneable, Comparable<Car>,Serializable{
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + id;
 		result = prime * result + ((mark == null) ? 0 : mark.hashCode());
 		result = prime * result + ((model == null) ? 0 : model.hashCode());
 		return result;
@@ -117,8 +106,6 @@ public class Car implements Cloneable, Comparable<Car>,Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Car other = (Car) obj;
-		if (id != other.id)
-			return false;
 		if (mark == null) {
 			if (other.mark != null)
 				return false;
@@ -154,21 +141,14 @@ public class Car implements Cloneable, Comparable<Car>,Serializable{
 				return -1;
 			} else if (distance < o.distance) {
 				return 1;
-			} else if (distance == o.distance) {
-				if (id < o.id) {
-					return -1;
-				} else if (id > o.id) {
-					return 1;
-
-				}
-			}
+			} 
 		}
 		return 0;
 	}
 
 	@Override
 	public String toString() {
-		return "Car_" + id + "_" + model + "_" + mark + "_Points_[" + points + "]_:_{distance=" + distance + ",speed= "
+		return "Car_" + model + "_" + mark + "_Points_[" + points + "]_:_{distance=" + distance + ",speed= "
 				+ speed + '}';
 	}
 

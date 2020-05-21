@@ -30,18 +30,16 @@ public class Race_Standar extends Race implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private ArrayList<Car> listCarParticipe = null;
 	private String msjCoche = "";
-	public Race_Standar(String name, int type, ArrayList<Garage> ListGCar
+	public Race_Standar(String name, int type
 
 	)  {
 		super(name, type,"RACE STANDAR_[" + name + "]");
 		//List<Garage>ListGCarCopy=ListGCar.stream().collect(Collectors.toList());
 		//Collections.copy(ListGCarCopy, ListGCar);
 		try {
-		ArrayList<Garage> ListGCarCopy =new ArrayList<>();
 		
-		for (Garage gc :ListGCar) {
-			ListGCarCopy.add((Garage)gc.clone());
-		}
+		
+		
 		
 		if (type != 0) {
 			throw new Exception(" Type tiene que ser 0. Error no se puede crear la clase Race_Standar");

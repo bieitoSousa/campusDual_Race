@@ -179,10 +179,14 @@ public abstract class Race implements Serializable {
 
 	// ----------------------------------------- PROCCES DATA CAR LIST
 	// ----------------------------------------------------------------------//
+	//[	get the cars from  --> getParticG]
+	
 	protected List<Car> takePartC() throws Exception {
 		// Loop the gararges and take one the cart to participate
 		try {
-		if (getParticC().size()==0) {
+		if (getParticC().size()!=0) {
+			throw new Exception("Error Participants is define");
+		}
 		if (getParticG().size() == 1) {
 			for (Garage g : getParticG()) {
 				for (Car gc : g.getAllCar()) {
@@ -197,10 +201,7 @@ public abstract class Race implements Serializable {
 			}
 
 		}
-		}else {
-			throw new Exception("Error Participants is define");
-			
-		}
+		
 		
 		} catch (Exception e) {
 			System.err.println("ERRR::RACE::TAKEPARTC" + getCabecera() + e.getMessage());

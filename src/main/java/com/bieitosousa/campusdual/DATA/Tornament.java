@@ -16,38 +16,24 @@ public class Tornament implements Serializable {
 	 * 
 	 */
 
-	ArrayList<Race> listTornRace = new ArrayList<>();
-	ArrayList<Car> tornResultC = new ArrayList<>();
-	ArrayList<Car[]> tornPointsC = new ArrayList<>();
-	ArrayList<Car> tornPartiC = new ArrayList<>();
-	ArrayList<Car[]> tornRaceR = new ArrayList<>();
+	ArrayList<Race> listTornRace = null;
+	ArrayList<Car> tornResultC =null;
+	ArrayList<Car[]> tornPointsC = null;
+	ArrayList<Car> tornPartiC = null;
+	ArrayList<Garage> tornPartiG = null;
+	ArrayList<Car[]> tornRaceR = null;
 	String name;
 	String cabeceraT;
 
-	public Tornament(String name, ArrayList<Race> listTornRace) throws Exception {
-		this.listTornRace = listTornRace;
+	public Tornament(String name) throws Exception {
+		
 		this.name = name;
 		this.cabeceraT = "Tornament[" + this.name + "]";
-		int re = 0, rs = 0;
-		for (Race r : listTornRace) {
-			if (r instanceof Race_Standar) {
-				r.setCabeceraT(getCabeceraT());
-				re++;
-			}
-
-			else if (r instanceof Race_Elimination) {
-				r.setCabeceraT(getCabeceraT());
-				rs++;
-			}
-		}
-		if (re != listTornRace.size() && rs != listTornRace.size()) {
-			throw new Exception("Error al instanciar el torneo los elementos deben de pertenecer"
-					+ " a Race_Elimination o Race_Standar");
-		}
-		if (listTornRace.size() > 10) {
-			throw new Exception(
-					"Error al instanciar el torneo : " + "no se pueden crear torneos de mas de 10 carreras");
-		}
+		 listTornRace = new ArrayList<>();
+		tornResultC = new ArrayList<>();
+		 tornPointsC = new ArrayList<>();
+		tornPartiC = new ArrayList<>();
+		tornRaceR = new ArrayList<>();
 	}
 
 	// ------------------------------------ BASIC OPERATIONS ADD / DELETE --> G Garage R Race
@@ -61,6 +47,16 @@ public class Tornament implements Serializable {
 			throw new Exception("you can only add races if the tournament is not started");		
 		}else {
 		this.listTornRace.add(r);
+		for(Car c : r.particC) {
+			if (!(tornPartiC.contains(c)) ) {
+				tornPartiC.add(c);
+			}
+		}
+		for(Garage g : r.particG) {
+			if (!(tornPartiG.contains(g)) ) {
+				tornPartiG.add(g);
+			}
+		}
 		}
 		}catch(Exception e) {
 			System.err.println(
@@ -80,6 +76,16 @@ public class Tornament implements Serializable {
 				throw new Exception("you can only add races if the tournament is not started");		
 			}else {
 			this.listTornRace.add(r);
+			for(Car c : r.particC) {
+				if (!(tornPartiC.contains(c)) ) {
+					tornPartiC.add(c);
+				}
+			}
+			for(Garage g : r.particG) {
+				if (!(tornPartiG.contains(g)) ) {
+					tornPartiG.add(g);
+				}
+			}
 			}
 			}catch(Exception e) {
 				System.err.println(
