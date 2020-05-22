@@ -370,35 +370,48 @@ public class Controler {
 		try {
 			int op = -1;
 			do {
-				System.out.println("\nMENU PRINCIPAL" + "\n===================" + "\n	1.- Gestionar garajes"
-						+ "\n	2.- Gestionar carreras" + "\n	3.- Gestionar torneos" + "\n	4.- export ALL"
-						+ "\n	5.- Import ALL" + "\n	0.- Salir"
+				System.out.println(
+						"\nMENU PRINCIPAL" + "\n==================="
+						+ "\n ----	Configuracion Actual : imprimr en Consola  ["+Utilss.printInConsole()+"]"	
+					    + "\n ---------------------------------------------------------------------"
+						+ "\n	1.- Configuracion : imprimir resultados por Pantalla"
+						+ "\n	2.- Configuracion : imprimir resultados en Fichero"
+						+ "\n	3.- Gestionar garajes"
+						+ "\n	4.- Gestionar carreras" + "\n	5.- Gestionar torneos" + "\n	4.- export ALL"
+						+ "\n	6.- Import ALL" + "\n	0.- Salir"
 
 				);
 
 				op = KeyboardReader.readInt("put  the number of option  (0 to exit): ", "Error");
 				switch (op) {
-				case 0:
+				case 0: 
 					break;
 				case 1:
-					menu_GARAGE();
+					Utilss.pConsole=true;
 					break;
-				case 2:
-					menu_RACE();
+				case 2:	
+					 Utilss.pConsole=false;
 					break;
 				case 3:
-					menu_TORNAMENT();
+					menu_GARAGE();
 					break;
 				case 4:
+					menu_RACE();
+					break;
+				case 5:
+					menu_TORNAMENT();
+					break;
+				case 6:
 					exportGARAGE();
 					expRACE();
 					expTORNAMENT();
 					break;
-				case 5:
+				case 7:
 					importGARAGE();
 					importRACE();
 					importTORNAMENT();
 					break;
+				
 				}
 			} while (op != 0);
 		} catch (Exception e) {
