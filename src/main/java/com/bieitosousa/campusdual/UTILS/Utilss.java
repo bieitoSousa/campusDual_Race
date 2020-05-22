@@ -11,6 +11,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -70,7 +71,7 @@ public class Utilss {
 		try {
 			File a = f.getParentFile();
 			if (!a.exists())
-				a.mkdir();
+				a.mkdirs();
 			f.createNewFile();
 			writer = new FileWriter(f, true);
 			bw = new BufferedWriter(writer);
@@ -78,6 +79,7 @@ public class Utilss {
 		} catch (IOException e) {
 			System.err.format("IOException: %s%n", e);
 		} catch (Exception e) {
+			System.err.println(f+e.getMessage());
 			e.printStackTrace();
 		} finally {
 			try {
@@ -106,7 +108,7 @@ public class Utilss {
 //		}
 //	}
 	
-	public static <T>  void expList(List<T> list, String path) {
+	public static <T>  void expList(ArrayList<T> list, String path) {
 		try {
 			File f = new File(path);
 			File fPath= f.getParentFile();
@@ -143,8 +145,8 @@ public class Utilss {
 //		}
 //
 //	}
-	
-	public static <T> void importList(List<T> list, String path) {
+//	
+	public static <T> ArrayList<T> importList(ArrayList<T> list, String path) {
 		list.clear();
 		try {
 			File f = new File(path);
@@ -156,13 +158,14 @@ public class Utilss {
 				f.createNewFile();
 			}else {
 				
-				list =  (List<T>) JSON.ReadObjJsonInFile(f);
+				list =    (ArrayList<T>) JSON.ReadObjJsonInFile(f);
+				
 				System.out.println(" List of Garage data has been exported to " + f);
 			}
 		} catch (Exception e) {
 			System.err.println("the data file could not be recovered" + e.getMessage());
 		}
-		
+		return list;
 	}
 
 	

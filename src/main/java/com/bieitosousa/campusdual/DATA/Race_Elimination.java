@@ -28,7 +28,6 @@ public class Race_Elimination extends Race {
 	public Race_Elimination(String name, int type) throws Exception {
 		super(name, type, "RACE_ELIMINATE_[" + name + "]");
 		try {
-		ArrayList<Garage> ListGCarCopy =new ArrayList<>();
 		
 		
 		//Collections.copy(ListGCarCopy, ListGCar);
@@ -36,10 +35,7 @@ public class Race_Elimination extends Race {
 		if (type != 1) {
 			throw new Exception(" Type erroneo no se puede crear la clase Race_Elimination");
 		}
-		if (ListGCarCopy.size() == 0) {
-			throw new Exception(
-					" La lista de garajes no contiene ningun valor, no se puede crear la clase Race_Elimination");
-		}
+		
 		this.listCarParticipe = new ArrayList<>();
 
 	}catch(Exception e) {
@@ -48,6 +44,18 @@ public class Race_Elimination extends Race {
 		
 	}
 
+
+	// ------------------------------------- GSON CONSTRUCTOR
+	
+	public Race_Elimination(String name, int type, ArrayList<Garage> particG, ArrayList<Car> particC,
+			ArrayList<Car> resultC, ArrayList<Car> pointsC, String cabeceraR) {
+		super(name, type, particG, particC, resultC, pointsC, cabeceraR);
+
+		// name, type,particG, particC, resultC, pointsC, cabeceraR)
+		this.listCarParticipe = new ArrayList<>();
+	}
+	
+	
 	// generate a eliminate race cars
 	@Override
 	public void makeRace() throws Exception {

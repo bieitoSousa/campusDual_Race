@@ -146,6 +146,9 @@ public class Car implements Cloneable, Comparable<Car>,Serializable{
 		return 0;
 	}
 
+	public String getName() {
+		return "Car_" + model + "_" + mark ;
+	}
 	@Override
 	public String toString() {
 		return "Car_" + model + "_" + mark + "_Points_[" + points + "]_:_{distance=" + distance + ",speed= "

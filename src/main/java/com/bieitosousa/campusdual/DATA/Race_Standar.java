@@ -8,9 +8,6 @@ package com.bieitosousa.campusdual.DATA;
 import java.io.Serializable;
 import java.util.*;
 
-
-
-
 /**
  *
  * @author BIE_FIJO_PC
@@ -30,40 +27,46 @@ public class Race_Standar extends Race implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private ArrayList<Car> listCarParticipe = null;
 	private String msjCoche = "";
+
 	public Race_Standar(String name, int type
 
-	)  {
-		super(name, type,"RACE STANDAR_[" + name + "]");
-		//List<Garage>ListGCarCopy=ListGCar.stream().collect(Collectors.toList());
-		//Collections.copy(ListGCarCopy, ListGCar);
+	) {
+		super(name, type, "RACE STANDAR_[" + name + "]");
+		// List<Garage>ListGCarCopy=ListGCar.stream().collect(Collectors.toList());
+		// Collections.copy(ListGCarCopy, ListGCar);
 		try {
-		
-		
-		
-		
-		if (type != 0) {
-			throw new Exception(" Type tiene que ser 0. Error no se puede crear la clase Race_Standar");
-		}
-		listCarParticipe = new ArrayList<>();
-		}catch(Exception e) {
-		System.err.println(	"ERRR::RACE_STANDAR::CONSTRUCTOR"+this.name+e.getMessage());
+
+			if (type != 0) {
+				throw new Exception(" Type tiene que ser 0. Error no se puede crear la clase Race_Standar");
+			}
+			listCarParticipe = new ArrayList<>();
+		} catch (Exception e) {
+			System.err.println("ERRR::RACE_STANDAR::CONSTRUCTOR" + this.name + e.getMessage());
 		}
 	}
 
-// generate a standar race cars
+	// ------------------------------------- GSON CONSTRUCTOR
+	
+	public Race_Standar(String name, int type, ArrayList<Garage> particG, ArrayList<Car> particC,
+			ArrayList<Car> resultC, ArrayList<Car> pointsC, String cabeceraR) {
+		super(name, type, particG, particC, resultC, pointsC, cabeceraR);
+
+		// name, type,particG, particC, resultC, pointsC, cabeceraR)
+		listCarParticipe = new ArrayList<>();
+	}
+
+	// generate a standar race cars
 	// generate a eliminate race cars
 	@Override
 	public void makeRace() throws Exception {
 		try {
-		for(Car c: takePartC()) {
-			this.listCarParticipe.add((Car)c.clone());
+			for (Car c : takePartC()) {
+				this.listCarParticipe.add((Car) c.clone());
+			}
+		} catch (Exception e) {
+			System.err.println(" EEROR::RACE_ELIMINA::MAKE_RACE unloaded participants" + e.getMessage());
 		}
-		}catch (Exception e) {
-			System.err.println(
-					" EEROR::RACE_ELIMINA::MAKE_RACE unloaded participants"+e.getMessage()
-					);
-		}
-		
+
 		int error = listCarParticipe.size();
 
 		// ================================================//
@@ -85,19 +88,20 @@ public class Race_Standar extends Race implements Serializable {
 		// [B1] = = = Definimos Fin de Carrera = = = =
 		// cuando se terminen las vueltas
 		print("\n	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=");
-		print("	=	=	=	=	=	"+getCabeceraT() + getCabecera() + "	=	=	=	=	=	=	=");
+		print("	=	=	=	=	=	" + getCabeceraT() + getCabecera() + "	=	=	=	=	=	=	=");
 		print("	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=	=\n");
 		for (int time = 0; duration != time; time++) {
 			// [B2] = = = Modificamos los parametros de los coches = = = =
 			// coches frena o acelera , update distance y speed
 			runCar();
 			// [B3] = = = Ordenamos los coches por distancia = = = =
-			 Collections.sort(listCarParticipe);
+			Collections.sort(listCarParticipe);
 			// [B4] = = = Actualizamos las vueltas , generamos ditancia de vuleta = = = =
 			if (time == lapTime) {// = Vueltas ; cada vuelta dura --> lap = 60 t
-				print("\n#	lap [" + (lapTime / 60 + 1) + "]	" + "	#	#	" + "#	Time [" + time
-						+ " minutes]	" + "#	duration [" + duration + " minutes]	" + "	#	#	\n\n");
-				msjCoche = getCabeceraT() + getCabecera() +"		= RA:" + this.name + " Lap" + (lapTime / 60 + 1) + " Car =>>";
+				print("\n#	lap [" + (lapTime / 60 + 1) + "]	" + "	#	#	" + "#	Time [" + time + " minutes]	"
+						+ "#	duration [" + duration + " minutes]	" + "	#	#	\n\n");
+				msjCoche = getCabeceraT() + getCabecera() + "		= RA:" + this.name + " Lap" + (lapTime / 60 + 1)
+						+ " Car =>>";
 				printList(this.listCarParticipe, msjCoche);
 				lapTime += 60;
 			}
@@ -106,13 +110,14 @@ public class Race_Standar extends Race implements Serializable {
 		// C = = = TRAS Carrera = = = = = =
 		// ================================================//
 		// order and pass to take positions
-		if(error!=listCarParticipe.size()) {
+		if (error != listCarParticipe.size()) {
 
-				throw new Exception("Do_Race_Standar :: malformed list, size increments" + error + "-->" + listCarParticipe.size());
-	
+			throw new Exception(
+					"Do_Race_Standar :: malformed list, size increments" + error + "-->" + listCarParticipe.size());
+
 		}
 		ArrayList<Car> RaceEliminateResults = new ArrayList<>();
-		for (Car cr: this.listCarParticipe) {
+		for (Car cr : this.listCarParticipe) {
 			RaceEliminateResults.add((Car) cr.clone());
 		}
 		takePoints(RaceEliminateResults);
@@ -137,11 +142,8 @@ public class Race_Standar extends Race implements Serializable {
 		}
 	}
 
-	
-
 	public int getType() {
 		return type;
 	}
-
 
 }

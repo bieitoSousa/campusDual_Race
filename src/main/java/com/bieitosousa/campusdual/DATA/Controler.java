@@ -2,7 +2,9 @@ package com.bieitosousa.campusdual.DATA;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import com.bieitosousa.campusdual.UTILS.JSON;
 import com.bieitosousa.campusdual.UTILS.KeyboardReader;
@@ -20,18 +22,18 @@ public class Controler {
 	private final static String PUBLIC_PATH = ".//public_data//";
 	private final static String PRIVATE_PATH = ".//private_data//";
 
-	private final static String PUBLIC_GARAGE = PUBLIC_PATH + "//public_garage//";
-	private final static String PRIVATE_GARAGE = PRIVATE_PATH + "//private_garage//";
+	private final static String PUBLIC_GARAGE = PUBLIC_PATH + "public_garage//";
+	private final static String PRIVATE_GARAGE = PRIVATE_PATH + "private_garage//";
 
-	private final static String PUBLIC_RACE = PUBLIC_PATH + "//public_race//";
-	private final static String PRIVATE_RACE = PRIVATE_PATH + "//private_race//";
+	private final static String PUBLIC_RACE = PUBLIC_PATH + "public_race//";
+	private final static String PRIVATE_RACE = PRIVATE_PATH + "private_race//";
 
-	private final static String PUBLIC_CAR = PUBLIC_PATH + "//public_car//";
-	private final static String PRIVATE_CAR = PRIVATE_PATH + "//private_car//";
+	private final static String PUBLIC_CAR = PUBLIC_PATH + "public_car//";
+	private final static String PRIVATE_CAR = PRIVATE_PATH + "private_car//";
 
-	private final static String PUBLIC_TORNAMENT = PUBLIC_PATH + "//public_tornament//";
-	private final static String PRIVATE_TORNAMENT = PRIVATE_PATH + "//private_tornament//";
-	private final static String CONF = PRIVATE_PATH + "//private_conf//";
+	private final static String PUBLIC_TORNAMENT = PUBLIC_PATH + "public_tornament//";
+	private final static String PRIVATE_TORNAMENT = PRIVATE_PATH + "private_tornament//";
+	private final static String CONF = PRIVATE_PATH + "private_conf//";
 	// _______________FILES_______________________________________________________________
 
 	// ______ GARAGE
@@ -39,24 +41,24 @@ public class Controler {
 
 	private static String G_PARTIC = PUBLIC_GARAGE + "//garage_partic_" + Utilss.getTime() + "//" + "GARAGE_PARTIC__";
 	private static String G_RESULT = PUBLIC_GARAGE + "//garage_results_" + Utilss.getTime() + "//" + "GARAGE_RESULTS__";
-	private static String G_EXP = PRIVATE_GARAGE + "garage_export_";
+	private static String G_EXP = PRIVATE_GARAGE + "garage_export.json";
 	// ______ RACE
 	// _______________________________________________________________________
-	private static String R_PARTIC = PUBLIC_RACE + "//race_partic_" + Utilss.getTime() + "//" + "RACE_PARTIC__";
-	private static String R_LOG = PUBLIC_RACE + "//race_log_" + Utilss.getTime() + "//" + "RACE_LOG__";
-	private static String R_RESULT = PUBLIC_RACE + "//race_results_" + Utilss.getTime() + "//" + "RACE_RESULTS__";
-	private static String R_EXP = PRIVATE_RACE + "race_export_";
+	public static String R_PARTIC = PUBLIC_RACE + "//race_partic_" + Utilss.getTime() + "//" + "RACE_PARTIC__";
+	public static String R_LOG = PUBLIC_RACE + "//race_log_" + Utilss.getTime() + "//" + "RACE_LOG__";
+	public static String R_RESULT = PUBLIC_RACE + "//race_results_" + Utilss.getTime() + "//" + "RACE_RESULTS__";
+	public static String R_EXP = PRIVATE_RACE + "race_export.json";
 
 	// ______ TORN
 	// _______________________________________________________________________
 	private static String T_PARTIC = PUBLIC_TORNAMENT + "//torn_partic" + Utilss.getTime() + "//" + "TORN_PARTIC__";
 	private static String T_PODIUM = PUBLIC_TORNAMENT + "//torn_podium" + Utilss.getTime() + "//" + "TORN_PODIUM__";
 	private static String T_RESULT = PUBLIC_TORNAMENT + "//torn_results" + Utilss.getTime() + "//" + "TORN_RESULTS__";
-	private static String T_EXP = PRIVATE_TORNAMENT + "tornament_export_";
+	private static String T_EXP = PRIVATE_TORNAMENT + "tornament_export.json";
 	// ______ CONTROL
 	// ____________________________________________________________________
 	private static String BACKUP = CONF + "backup.json";
-	private static String IMPORTCAR = CONF + "car.json";
+	private static String IMPORTCAR = CONF + "cars.json";
 
 	private Car CARSELECT;
 	private Garage GARAGESELECT;
@@ -369,7 +371,8 @@ public class Controler {
 			int op = -1;
 			do {
 				System.out.println("\nMENU PRINCIPAL" + "\n===================" + "\n	1.- Gestionar garajes"
-						+ "\n	2.- Gestionar carreras" + "\n	3.- Gestionar torneos" + "\n	0.- Salir"
+						+ "\n	2.- Gestionar carreras" + "\n	3.- Gestionar torneos" + "\n	4.- export ALL"
+						+ "\n	5.- Import ALL" + "\n	0.- Salir"
 
 				);
 
@@ -386,6 +389,16 @@ public class Controler {
 				case 3:
 					menu_TORNAMENT();
 					break;
+				case 4:
+					exportGARAGE();
+					expRACE();
+					expTORNAMENT();
+					break;
+				case 5:
+					importGARAGE();
+					importRACE();
+					importTORNAMENT();
+					break;
 				}
 			} while (op != 0);
 		} catch (Exception e) {
@@ -395,37 +408,9 @@ public class Controler {
 
 // -------------- GESTION GARAGE---------------------------------------------//
 	// G[0] AUXILIAR
-	private void selectGARAGECAR() {
-		try {
-			if (GARAGESELECT.getAllCar().size() > 0) {
-				int id = -2;
-				do {
-					System.out.println("selected one car");
-					System.out.println("[-1] exit ");
-					int cn = 0;
-					for (Car c : GARAGESELECT.getAllCar()) {
-						System.out.println("[" + (cn++) + "]" + c);
-						id = KeyboardReader.readInt("put  the number of the garage  (-1 to exit): ", "Error");
-						try {
 
-							if (id > -1) {
-								CARSELECT = GARAGESELECT.getAllCar().get(id);
-							}
-						} catch (Exception e) {
-							System.err.println();
-						}
-					}
-				} while (id > c.getGarageL().size() || id < -1);
-			} else {
-				System.out.println("Firts create one garage");
-			}
-		} catch (Exception e) {
-			System.err.println("ERROR::AUXILIAR::SELECT_GARAGE_CAR::" + e.getMessage());
-
-		}
-	}
 	// G[0] AUXILIAR
-	private void selectCAR(List<Car> list) { 
+	private void selectCAR(List<Car> list) {
 		try {
 			if (list.size() > 0) {
 				int id = -2;
@@ -434,24 +419,25 @@ public class Controler {
 					System.out.println("[-1] exit ");
 					int cn = 0;
 					for (Car c : list) {
-						System.out.println("[" + (cn++) + "]" + c);
-						id = KeyboardReader.readInt("put  the number of the garage  (-1 to exit): ", "Error");
-						try {
-							
-							if (id > -1) {
-								CARSELECT = list.get(id);
-							}
-						} catch (Exception e) {
-							System.err.println();
-						}
+						System.out.println("[" + (cn++) + "]" + c.getName());
 					}
-				} while (id > c.getGarageL().size() || id < -1);
+					id = KeyboardReader.readInt("put  the number of the garage  (-1 to exit): ", "Error");
+					try {
+
+						if (id > -1) {
+							CARSELECT = list.get(id);
+						}
+					} catch (Exception e) {
+						System.err.println();
+					}
+
+				} while (id > list.size() || id < -1);
 			} else {
 				System.out.println("Firts create one garage");
 			}
 		} catch (Exception e) {
 			System.err.println("ERROR::AUXILIAR::SELECT_GARAGE_CAR::" + e.getMessage());
-			
+
 		}
 	}
 
@@ -480,7 +466,7 @@ public class Controler {
 						+ "\n*	2.- Añadir garajes" + "\n*	3.- Eliminar garajes"
 						+ "\n*	4.- Listar coches de un garaje" + "\n*	5.- A�adir coche a un garaje"
 						+ "\n*	6.- Eliminar coche de un garaje" + "\n*	7.- Exportar datos" + "\n*	8.- Importar datos"
-						+ "\n*	0.- Atras");
+						+ "\n*	9.- Añadir coches al garaje desde cars.json" + "\n*	0.- Atras");
 
 				op = KeyboardReader.readInt("put  the number of option  (0 to exit): ", "Error");
 				switch (op) {
@@ -534,21 +520,22 @@ public class Controler {
 				System.out.println("[-1] exit ");
 				int cn = 0;
 				for (Garage g : list) {
-					System.out.println("[" + (cn++) + "]" + g);
-					id = KeyboardReader.readInt("put  the number of the garage  (-1 to exit): ", "Error");
-					try {
-
-						if (id > -1) {
-							GARAGESELECT = list.get(id);
-						}
-					} catch (Exception e) {
-						System.err.println();
-					}
+					System.out.println("[" + (cn++) + "]" + g.name + "nª Car [" + g.listGCar.size() + "]");
 				}
-			} while (id > c.getGarageL().size() || id < -1);
+				id = KeyboardReader.readInt("put  the number of the garage  (-1 to exit): ", "Error");
+				try {
+
+					if (id > -1) {
+						GARAGESELECT = list.get(id);
+					}
+				} catch (Exception e) {
+					System.err.println();
+				}
+
+			} while (id > garageL.size() || id < -1);
 
 		} catch (Exception e) {
-			System.err.println("ERROR::SELECT_OF_LIST::" + e.getMessage());
+			System.out.println("ERROR::SELECT_OF_LIST::" + e.getMessage());
 
 		}
 	}
@@ -557,27 +544,28 @@ public class Controler {
 	private void selectGARAGE() {
 		try {
 			if (getGarageL().size() == 0) {
-				throw new Exception("List garage sinze = 0");
-			}
-			int id = -2;
-			do {
-				System.out.println("selected one garage");
-				System.out.println("[-1] exit ");
-				int cn = 0;
-				for (Garage g : c.getGarageL()) {
-					System.out.println("[" + (cn++) + "]" + g);
+				System.out.println("First create a garage ");
+			} else {
+				int id = -2;
+				do {
+					System.out.println("selected one garage");
+					System.out.println("[-1] exit ");
+					int cn = 0;
+					for (Garage g : garageL) {
+						System.out.println("[" + (cn++) + "]" + g.name);
+					}
 					id = KeyboardReader.readInt("put  the number of the garage  (-1 to exit): ", "Error");
 					try {
 
 						if (id > -1) {
-							c.setGARAGESELECT(c.getGarageL().get(id));
+							GARAGESELECT = garageL.get(id);
 						}
 					} catch (Exception e) {
 						System.err.println();
 					}
-				}
-			} while (id > c.getGarageL().size() || id < -1);
 
+				} while (id > garageL.size() || id < -1);
+			}
 		} catch (Exception e) {
 			System.err.println("ERROR::GRARAGE::SELECT::GARAGE" + e.getMessage());
 
@@ -589,15 +577,15 @@ public class Controler {
 		String name = KeyboardReader.readString("Enter the name of the garage ", "wrong name entered", false);
 		try {
 			Garage g = new Garage(name);
-			System.out.println("the garage " + g + "is create");
+			System.out.println("the garage [" + g.name + "] is create");
 
 			if (getGarageL().contains(g)) {
 				throw new Exception("List garage content garage");
 			}
-			c.setGARAGESELECT(g);
-			System.out.println("the garage " + g + "is put in garage_select");
-			c.getGarageL().add(g);
-			System.out.println("the garage " + g + "is put into " + c.getGarageL());
+			GARAGESELECT = g;
+			System.out.println("the garage [" + g.name + "] is put in garage_select");
+			garageL.add(g);
+			System.out.println("the garage [" + g.name + "] is put into " + garageL);
 		} catch (Exception e) {
 			System.err.println("ERROR::GRARAGE::ADD_GARAGE::" + e.getMessage());
 
@@ -609,11 +597,15 @@ public class Controler {
 		try {
 			GARAGESELECT = null;
 			selectGARAGE();
-			if (!(getGarageL().contains(GARAGESELECT))) {
-				throw new Exception("list garage no contenst the gerage ");
+			if (GARAGESELECT == null) {
+				System.out.println("First select a garage ");
+			} else {
+				if (!(getGarageL().contains(GARAGESELECT))) {
+					throw new Exception("list garage no contenst the gerage ");
+				}
+				getGarageL().remove(GARAGESELECT);
+				System.out.println("the garage " + GARAGESELECT + "is remove for " + garageL);
 			}
-			getGarageL().remove(GARAGESELECT);
-			System.out.println("the garage " + GARAGESELECT + "is remove for " + c.getGarageL());
 		} catch (Exception e) {
 			System.err.println("ERROR::GRARAGE::DEL_GARAGE::" + e.getMessage());
 
@@ -628,14 +620,17 @@ public class Controler {
 			GARAGESELECT = null;
 			selectGARAGE();
 			if (GARAGESELECT == null) {
-				throw new Exception("Not Garage selected");
+				System.out.println("First select a garage ");
+			} else {
+				if (GARAGESELECT.getAllCar().size() == 0) {
+					System.out.println("No cars have been inserted in the garage yet");
+				} else {
+					for (Car c : GARAGESELECT.getAllCar()) {
+
+						System.out.println(c.getName());
+					}
+				}
 			}
-
-			for (Car c : GARAGESELECT.getAllCar()) {
-
-				System.out.println(c);
-			}
-
 		} catch (Exception e) {
 			System.err.println("ERROR::GRARAGE::VIEW_GARAGE::" + e.getMessage());
 
@@ -646,20 +641,26 @@ public class Controler {
 
 	private void updateGARAGEaddCar() {
 		try {
+			GARAGESELECT = null;
+			selectGARAGE();
 			if (GARAGESELECT == null) {
-				throw new Exception("Firts select a Garage");
-			}
-			addCAR();
-			if (CARSELECT == null) {
-				throw new Exception("Firts select a Car");
-			} else if (GARAGESELECT.getAllCar().contains(CARSELECT)) {
-				throw new Exception("Garage contenst the car " + CARSELECT);
+				System.out.println("First select a garage ");
 			} else {
-				GARAGESELECT.addCar(CARSELECT);
-				System.out.println("the car " + CARSELECT + "add to" + GARAGESELECT.name);
+				addCAR();
+				if (CARSELECT == null) {
+					System.out.println("First select a Car ");
+				} else {
+
+					if (GARAGESELECT.getAllCar().contains(CARSELECT)) {
+						throw new Exception("Garage contenst the car " + CARSELECT);
+					} else {
+						GARAGESELECT.addCar(CARSELECT);
+						System.out.println("the car " + CARSELECT + "add to" + GARAGESELECT.name);
+					}
+				}
 			}
 		} catch (Exception e) {
-			System.err.println("ERROR::GRARAGE::UPDASTE_GARAGE_ADD_CAR::" + e.getMessage());
+			System.out.println("ERROR::GRARAGE::UPDASTE_GARAGE_ADD_CAR::" + e.getMessage());
 
 		}
 	}
@@ -668,19 +669,21 @@ public class Controler {
 
 	private void updateGARAGEdelCar() {
 		try {
+			selectGARAGE();
 			if (GARAGESELECT == null) {
-				throw new Exception("Firts select a Garage");
-			}
-			selectGARAGECAR();
-			if (CARSELECT == null) {
-				throw new Exception("Firts select a Car");
-			}
-			for (Car c : GARAGESELECT.getAllCar()) {
+				System.out.println("Firts select a Garage");
+			} else {
+				selectCAR(GARAGESELECT.getAllCar());
+				if (CARSELECT == null) {
+					throw new Exception("Firts select a Car");
+				}
+				for (Car c : GARAGESELECT.getAllCar()) {
 
-				System.out.println(c);
+					System.out.println(c);
+				}
 			}
 		} catch (Exception e) {
-			System.err.println("ERROR::GRARAGE::UPDATE_GARAGE_DEL_CAR:: " + e.getMessage());
+			System.out.println("ERROR::GRARAGE::UPDATE_GARAGE_DEL_CAR:: " + e.getMessage());
 
 		} finally {
 			CARSELECT = null;
@@ -690,19 +693,52 @@ public class Controler {
 
 	public void exportGARAGE() {
 		try {
-			Utilss.expList(getGarageL(), G_EXP);
+			try {
+				File f = new File(G_EXP);
+				File fPath = f.getParentFile();
+				if (!fPath.exists()) {
+					fPath.mkdirs();
+				}
+				if (!f.exists()) {
+					f.createNewFile();
+				} else {
+					JSON.WriteObjJsonInFile(f, garageL);
+				}
+			} catch (Exception e) {
+				System.err.println("Error al exportar " + e.getMessage());
+			}
+			System.out.println("Export tha Garage to : " + G_EXP);
 		} catch (Exception e) {
-			System.err.println(" ERROR::GRARAGE::EXPORT_GARAGE:: " + e.getMessage());
+			System.out.println(" ERROR::GRARAGE::EXPORT_GARAGE:: " + e.getMessage());
 
 		}
 	}
 
 	// G[8] GRARAGE::IMPORT_GARAGE::
 	public void importGARAGE() {
+
 		try {
-			Utilss.importList(getGarageL(), G_EXP);
+			garageL.clear();
+			try {
+				File f = new File(G_EXP);
+				File fPath = f.getParentFile();
+				if (!fPath.exists()) {
+					fPath.mkdirs();
+				}
+				if (!f.exists()) {
+					f.createNewFile();
+				} else {
+
+					garageL = (ArrayList<Garage>) JSON.CargarFileGarage(f);
+					// lo.toString();
+					System.out.println(" List of Garage data has been imported from " + f);
+				}
+			} catch (Exception e) {
+				System.err.println("the data file could not be recovered" + e.getMessage());
+			}
+
 		} catch (Exception e) {
-			System.err.println(" ERROR::GRARAGE::IMPORT_GARAGE:: " + e.getMessage());
+			System.out.println(" ERROR::GRARAGE::IMPORT_GARAGE:: " + e.getMessage());
 
 		}
 	}
@@ -710,12 +746,15 @@ public class Controler {
 	// G[9] GARAGE::IMPORT_CAR_IN_GARAGE::
 	private void ImportCarINGARAGE() {
 		try {
+			selectGARAGE();
 			if (GARAGESELECT == null) {
-				throw new Exception("Firts select a Garage");
+				System.out.println("Firts select a Garage");
+			} else {
+
+				GARAGESELECT.ImportCars();
 			}
-			GARAGESELECT.ImportCars();
 		} catch (Exception e) {
-			System.err.println(" ERROR::GRARAGE::IMPORT_CAR_IN_GARAGE:: " + e.getMessage());
+			System.out.println(" ERROR::GRARAGE::IMPORT_CAR_IN_GARAGE:: " + e.getMessage());
 		}
 
 	}
@@ -763,7 +802,7 @@ public class Controler {
 					startRACE();
 					break;
 				case 9:
-					expRace();
+					expRACE();
 					break;
 				case 10:
 					importRACE();
@@ -781,16 +820,18 @@ public class Controler {
 	// R[00] RACE::SELECT::RACE::FRON LIST
 	private void selectRACE(List<Race> list) {
 		try {
-			if (c.getRaceL().size() == 0) {
-				throw new Exception("List race sinze = 0");
-			}
-			int id = -2;
-			do {
-				System.out.println("selected one RACE");
-				System.out.println("[-1] exit ");
-				int cn = 0;
-				for (Race r : list) {
-					System.out.println("[" + (cn++) + "]" + r);
+			if (raceL.size() == 0) {
+				System.out.println("First select a garage ");
+			} else {
+				int id = -2;
+				do {
+					System.out.println("selected one RACE");
+					System.out.println("[-1] exit ");
+					int cn = 0;
+					for (Race r : list) {
+						System.out.println("[" + (cn++) + "]" + r.name + "Nº Garage" + r.particG.size() + "results"
+								+ r.resultC + r);
+					}
 					id = KeyboardReader.readInt("put  the number of the RACE  (-1 to exit): ", "Error");
 					try {
 						if (id > -1) {
@@ -799,40 +840,94 @@ public class Controler {
 					} catch (Exception e) {
 						System.err.println();
 					}
-				}
-			} while (id > c.getRaceL().size() || id < -1);
 
+				} while (id > list.size() || id < -1);
+			}
 		} catch (Exception e) {
 			System.err.println(" RROR::RACE::SELECT_LIST::RACE:: " + e.getMessage());
+		}
+	}
+
+	private List<Garage> getGARAGELIST(List<Garage> list) {
+		ArrayList<Garage> allGARAGE = new ArrayList<>();
+		allGARAGE.addAll(garageL);
+		for (Race r : raceL) {
+			allGARAGE.addAll(r.particG);
+		}
+		Set<Garage> set = new HashSet<>(allGARAGE);
+		allGARAGE.clear();
+		allGARAGE.addAll(set);
+		allGARAGE.removeAll((ArrayList<Garage>) list);
+		return allGARAGE;
+	}
+
+	// R[00] RACE::SELECT::New Garageor fonList
+	private void selectRACEnewORlist(List<Garage> list) {
+		if (list.size() > 0) {
+			try {
+				int op = -1;
+				do {
+					System.out.println(
+							"\n= SELECT =" + "\n====================" + "\n*	1.- Add new Garage to the race Selected"
+									+ "\n*	2.- Selecte from a list of Garage" + "\n*	0.- Atras"
+
+					);
+
+					op = KeyboardReader.readInt("put  the number of option  (0 to exit): ", "Error");
+					switch (op) {
+					case 0:
+						break;
+					case 1:
+						addGARAGE();
+						break;
+					case 2:
+						selectGARAGE(list);
+						break;
+
+					}
+				} while (op != 0);
+			} catch (Exception e) {
+				System.err.println(" MENU_GARAGE:: " + e.getMessage());
+
+			}
+		} else {
+			try {
+				addGARAGE();
+			} catch (Exception e) {
+				System.err.println(" MENU_GARAGE:: " + e.getMessage());
+
+			}
+
 		}
 	}
 
 	// R[1] RACE::SELECT::RACE::
 	private void selectRACE() {
 		try {
-			if (c.getRaceL().size() == 0) {
-				throw new Exception("List race sinze = 0");
-			}
-			int id = -2;
-			do {
-				System.out.println("selected one RACE");
-				System.out.println("[-1] exit ");
-				int cn = 0;
-				for (Race r : c.getRaceL()) {
-					System.out.println("[" + (cn++) + "]" + r);
+			if (raceL.size() == 0) {
+				System.out.println("first create one race");
+			} else {
+				int id = -2;
+				do {
+					System.out.println("selected one RACE");
+					System.out.println("[-1] exit ");
+					int cn = 0;
+					for (Race r : raceL) {
+						System.out.println("[" + (cn++) + "]" + r);
+					}
 					id = KeyboardReader.readInt("put  the number of the RACE  (-1 to exit): ", "Error");
 					try {
 						if (id > -1) {
-							c.setRACESELECT(c.getRaceL().get(id));
+							RACESELECT = raceL.get(id);
 						}
 					} catch (Exception e) {
 						System.err.println();
 					}
-				}
-			} while (id > c.getRaceL().size() || id < -1);
 
+				} while (id > raceL.size() || id < -1);
+			}
 		} catch (Exception e) {
-			System.err.println(" RROR::RACE::SELECT::RACE:: " + e.getMessage());
+			System.out.println(" RROR::RACE::SELECT::RACE:: " + e.getMessage());
 		}
 	}
 
@@ -842,12 +937,12 @@ public class Controler {
 			RACESELECT = null;
 			selectRACE();
 			if (RACESELECT == null) {
-				throw new Exception("Firts select a RACE");
+				System.out.println("Firts select a RACE");
+			} else {
+				RACESELECT.printINFO();
 			}
-			RACESELECT.printINFO();
-
 		} catch (Exception e) {
-			System.err.println(" RROR::RACE::INFO::RACE:: " + e.getMessage());
+			System.out.println(" RROR::RACE::INFO::RACE:: " + e.getMessage());
 		}
 	}
 
@@ -884,6 +979,7 @@ public class Controler {
 			System.out.println("the Race " + r.name + "is put in race_select");
 			raceL.add(r);
 			System.out.println("the race " + r + "is put into List Race ");
+
 		} catch (Exception e) {
 			System.err.println("RROR::RACE::ADD_RACE_ELIMINATORIA::" + e.getMessage());
 
@@ -896,13 +992,13 @@ public class Controler {
 			RACESELECT = null;
 			selectRACE();
 			if (RACESELECT == null) {
-				throw new Exception("Firts select a RACE");
+				System.out.println("Firts select a RACE");
+			} else {
+				if (!(raceL.contains(RACESELECT))) {
+					throw new Exception("List race content race");
+				}
+				raceL.remove(RACESELECT);
 			}
-			if (!(raceL.contains(RACESELECT))) {
-				throw new Exception("Firts select a RACE");
-			}
-			raceL.remove(RACESELECT);
-
 		} catch (Exception e) {
 			System.err.println(" RROR::RACE::DEL_RACE:: " + e.getMessage());
 		} finally {
@@ -913,21 +1009,24 @@ public class Controler {
 	// R[6] UPDATE_RACE_ADD_GARAGE
 	private void updateRACEaddGarage() {
 		try {
-			GARAGESELECT = null;
-			addGARAGE();
-			if (GARAGESELECT == null) {
-				throw new Exception("Firts select a garage");
-			}
+
 			RACESELECT = null;
 			selectRACE();
 			if (RACESELECT == null) {
-				throw new Exception("Firts select a RACE");
-			}
-			if ((RACESELECT.getParticG().contains(GARAGESELECT))) {
-				throw new Exception("RACE contais the garage");
-			}
-			RACESELECT.addG(GARAGESELECT);
+				System.out.println("Firts select a RACE");
+			} else {
+				GARAGESELECT = null;
+				selectRACEnewORlist(getGARAGELIST(RACESELECT.particG));
+				if (GARAGESELECT == null) {
+					System.out.println("Firts select a garage");
+				} else {
 
+					if ((RACESELECT.getParticG().contains(GARAGESELECT))) {
+						throw new Exception("RACE contais the garage");
+					}
+					RACESELECT.addG(GARAGESELECT);
+				}
+			}
 		} catch (Exception e) {
 			System.err.println(" RROR::RACE::UPDATE_RACE_ADD_GARAGE:: " + e.getMessage());
 		}
@@ -940,21 +1039,22 @@ public class Controler {
 			selectRACE();
 
 			if (RACESELECT == null) {
-				throw new Exception("Firts select a RACE");
-			}
-			GARAGESELECT = null;
-			selectGARAGE((List<Garage>) RACESELECT);
-			if (GARAGESELECT == null) {
-				throw new Exception("Firts select a RACE");
-			}
+				System.out.println("Firts select a RACE");
+			} else {
+				GARAGESELECT = null;
+				selectGARAGE((List<Garage>) RACESELECT.particG);
+				if (GARAGESELECT == null) {
+					System.out.println("Firts select a Garage");
+				} else {
 
-			if (!(RACESELECT.particG.contains(GARAGESELECT))) {
-				throw new Exception("Firts select a RACE then a Garage");
+					if (!(RACESELECT.particG.contains(GARAGESELECT))) {
+						throw new Exception("Firts select a RACE then a Garage");
+					}
+					RACESELECT.particG.remove(GARAGESELECT);
+				}
 			}
-			RACESELECT.particG.remove(GARAGESELECT);
-
 		} catch (Exception e) {
-			System.err.println(" RROR::RACE::DEL_RACE:: " + e.getMessage());
+			System.err.println(" RROR::RACE:UPDATE_RACE_DEL_GARAGE:: " + e.getMessage());
 		} finally {
 			RACESELECT = null;
 			GARAGESELECT = null;
@@ -968,11 +1068,11 @@ public class Controler {
 			selectRACE();
 
 			if (RACESELECT == null) {
-				throw new Exception("Firts select a RACE");
+				System.out.println("Firts select a RACE");
+			} else {
+
+				RACESELECT.start();
 			}
-
-			RACESELECT.start();
-
 		} catch (Exception e) {
 			System.err.println(" RROR::RACE::START_RACE:: " + e.getMessage());
 		} finally {
@@ -980,24 +1080,57 @@ public class Controler {
 		}
 	}
 
-	// R[9] RACE::IMPORT_RACE::
-	public void importRACE() {
+	// R[9] RACE::EXPORT_RACE::
+	private void expRACE() {
 		try {
-			Utilss.importList(getRaceL(), R_EXP);
-		} catch (Exception e) {
-			System.err.println(" RROR::RACE::IMPORT_RACE:: " + e.getMessage());
-
-		}
-	}
-
-	// R[10] RACE::EXPORT_RACE::
-	private void expRace() {
-		try {
-			Utilss.expList(getRaceL(), R_EXP);
+			try {
+				File f = new File(R_EXP);
+				File fPath = f.getParentFile();
+				if (!fPath.exists()) {
+					fPath.mkdirs();
+				}
+				if (!f.exists()) {
+					f.createNewFile();
+				} else {
+					JSON.WriteObjJsonInFile(f, raceL);
+					System.out.println("Export races to " + f);
+				}
+			} catch (Exception e) {
+				System.err.println("Error al exportar " + e.getMessage());
+			}
 		} catch (Exception e) {
 			System.err.println(" RROR::RACE::EXPORT_RACE:::: " + e.getMessage());
 		}
 
+	}
+
+	// R[10] RACE::IMPORT_RACE::
+	public void importRACE() {
+		try {
+			raceL.clear();
+			try {
+				File f = new File(R_EXP);
+				File fPath = f.getParentFile();
+				if (!fPath.exists()) {
+					fPath.mkdirs();
+				}
+				if (!f.exists()) {
+					f.createNewFile();
+				} else {
+
+					raceL = (ArrayList<Race>) JSON.CargarFileRace(f);
+
+					// lo.toString();
+					System.out.println(" List of RACE data has been imported from " + f);
+				}
+			} catch (Exception e) {
+				System.err.println("the data file could not be recovered" + e.getMessage());
+			}
+
+		} catch (Exception e) {
+			System.err.println(" RROR::RACE::IMPORT_RACE:: " + e.getMessage());
+
+		}
 	}
 
 	// --------------------------------------------------------MENU TORNAMENT
@@ -1006,19 +1139,13 @@ public class Controler {
 			int op = -1;
 			do {
 				System.out.println("\n= Gesti�n Torneos =" + "\n===================" + "\n*	1.- Seleccionar torneo"
-						+ "\n*	2.- Informacion de un torneo"
-						+ "\n*	3.- Añadir un torneo"
-						+ "\n*	4.- Eliminar un torneo" 
-						+ "\n*	5.- Añadir carrera de Eliminacion al torneo"
-						+ "\n*	6.- Añadir carrera Standar al torneo"
-						+"\n 7.- Eliminar carrera del torneo"
-						+ "\n*	8.- Agregar garaje a un torneo"
-						+ "\n*	9.- Eliminar garaje de un torneo"
+						+ "\n*	2.- Informacion de un torneo" + "\n*	3.- Añadir un torneo"
+						+ "\n*	4.- Eliminar un torneo" + "\n*	5.- Añadir carrera de Eliminacion al torneo"
+						+ "\n*	6.- Añadir carrera Standar al torneo" + "\n*	7.- Eliminar carrera del torneo"
+						+ "\n*	8.- Agregar garaje a un torneo" + "\n*	9.- Eliminar garaje de un torneo"
 						+ "\n*	10.- Añadir coches a los garages en el torneo"
-						+ "\n*	11.-Eliminar coches de los garages en el torneo"
-						+ "\n*	12.- Empezar torneo"
-						+ "\n*	13.- Exportar datos" + "\n*	14.- Importar datos" 
-						+ "\n*	0.- Atras"
+						+ "\n*	11.-Eliminar coches de los garages en el torneo" + "\n*	12.- Empezar torneo"
+						+ "\n*	13.- Exportar datos" + "\n*	14.- Importar datos" + "\n*	0.- Atras"
 
 				);
 
@@ -1041,9 +1168,9 @@ public class Controler {
 				case 5:
 					updateTORNAMENTaddRACEeliminate();
 					break;
-				case 7:
-					updateTORNAMENTaddRACEstandar();
 				case 6:
+					updateTORNAMENTaddRACEstandar();
+				case 7:
 					updateTORNAMENTdelRACE();
 					break;
 				case 8:
@@ -1076,34 +1203,155 @@ public class Controler {
 	}
 
 	// --------------------------------------------------------GESTION TORNAMENT
+	private List<Race> getRACELISTElimination(List<Race> list) {
+		ArrayList<Race> allRACE = new ArrayList<>();
+		allRACE.addAll(raceL);
+		for (Tornament t : tornamentL) {
+			allRACE.addAll(t.listTornRace);
+		}
+		Set<Race> set = new HashSet<>(allRACE);
+		allRACE.clear();
+		allRACE.addAll(set);
+		if (list!= null) {
+		allRACE.removeAll((ArrayList<Race>) list);
+		}
+//		for (Race r : allRACE) {
+//			if (r.type != 1) {
+//				allRACE.remove(r);
+//			}
+//
+//		}
+		return allRACE;
+	}
+
+	private List<Race> getRACELISTStandar(List<Race> list) {
+		ArrayList<Race> allRACE = new ArrayList<>();
+		allRACE.addAll(raceL);
+		for (Tornament t : tornamentL) {
+			allRACE.addAll(t.listTornRace);
+		}
+		Set<Race> set = new HashSet<>(allRACE);
+		allRACE.clear();
+		allRACE.addAll(set);
+		if (list!= null) {
+		allRACE.removeAll((ArrayList<Race>) list);
+		}
+//		for (Race r : allRACE) {
+//			if (r.type != 0) {
+//				allRACE.remove(r);
+//			}
+//
+//		}
+		return allRACE;
+	}
+
+	// R[00] RACE::SELECT::New Garageor fonList
+	private void selectTornnewORlistElimination(List<Race> list) {
+		if (list.size() > 0) {
+			try {
+				int op = -1;
+				do {
+					System.out.println("\n= SELECT =" + "\n===================="
+							+ "\n*	1.- Add new Race to the Tornament Selected"
+							+ "\n*	2.- Selecte from a list of Races" + "\n*	0.- Atras"
+
+					);
+
+					op = KeyboardReader.readInt("put  the number of option  (0 to exit): ", "Error");
+					switch (op) {
+					case 0:
+						break;
+					case 1:
+						addRACEElimination();
+						break;
+					case 2:
+						selectRACE(list);
+						break;
+
+					}
+				} while (op != 0);
+			} catch (Exception e) {
+				System.err.println(" MENU_GARAGE:: " + e.getMessage());
+
+			}
+		} else {
+			try {
+				addRACEElimination();
+			} catch (Exception e) {
+				System.err.println(" MENU_GARAGE:: " + e.getMessage());
+
+			}
+
+		}
+	}
+
+	private void selectTornnewORlistStandar(List<Race> list) {
+		if (list.size() > 0) {
+			try {
+				int op = -1;
+				do {
+					System.out.println("\n= SELECT =" + "\n===================="
+							+ "\n*	1.- Add new Race to the Tornament Selected"
+							+ "\n*	2.- Selecte from a list of Races" + "\n*	0.- Atras"
+
+					);
+
+					op = KeyboardReader.readInt("put  the number of option  (0 to exit): ", "Error");
+					switch (op) {
+					case 0:
+						break;
+					case 1:
+						addRACEStandar();
+						break;
+					case 2:
+						selectRACE(list);
+						break;
+
+					}
+				} while (op != 0);
+			} catch (Exception e) {
+				System.err.println(" MENU_GARAGE:: " + e.getMessage());
+
+			}
+		} else {
+			try {
+				addRACEStandar();
+			} catch (Exception e) {
+				System.err.println(" MENU_GARAGE:: " + e.getMessage());
+
+			}
+
+		}
+	}
 
 	// T[1] RACE::SELECT::TORNAMEN::
 	private void selectTORNAMENT() {
 		try {
-			if (c.getTornamentL().size() > 0) {
-				throw new Exception("Firts create one TORNAMENT");
+			if (tornamentL.size() == 0) {
+				System.out.println("Firts create one TORNAMENT");
 
-			}
-			int id = -2;
-			do {
-				System.out.println("selected one TORNAMENT");
-				System.out.println("[-1] exit ");
-				int cn = 0;
-				for (Tornament t : c.getTornamentL()) {
-					System.out.println("[" + (cn++) + "]" + t);
+			} else {
+				int id = -2;
+				do {
+					System.out.println("selected one TORNAMENT");
+					System.out.println("[-1] exit ");
+					int cn = 0;
+					for (Tornament t : tornamentL) {
+						System.out.println("[" + (cn++) + "]" + t);
+					}
 					id = KeyboardReader.readInt("enter the number of the TORNAMENT  (-1 to exit): ",
 							"wrong number entered");
 					try {
 
 						if (id > -1) {
-							c.setTORNAMENTSELECT(c.getTornamentL().get(id));
+							TORNAMENTSELECT = tornamentL.get(id);
 						}
 					} catch (Exception e) {
 						System.err.println();
 					}
-				}
-			} while (id > c.getTornamentL().size() || id < -1);
 
+				} while (id > tornamentL.size() || id < -1);
+			}
 		} catch (Exception e) {
 			System.err.println(" RROR:: TORNAMEN::SELECT_TORNAMENE:: " + e.getMessage());
 
@@ -1116,16 +1364,16 @@ public class Controler {
 			TORNAMENTSELECT = null;
 			selectTORNAMENT();
 			if (TORNAMENTSELECT == null) {
-				throw new Exception("Firts select a RACE");
+				System.out.println("Firts select a RACE");
+			} else {
+				TORNAMENTSELECT.printINFO();
 			}
-			TORNAMENTSELECT.printINFO();
-
 		} catch (Exception e) {
 			System.err.println(" RROR:: TORNAMEN::INFO::TORNAMENT:: " + e.getMessage());
 		}
 	}
 
-	// T[4] ADD_TORNAMENT
+	// T[3] ADD_TORNAMENT
 	private void addTORNAMENT() {
 		String name = KeyboardReader.readString("Enter the name of the TORNAMENT ", "wrong name entered", false);
 		try {
@@ -1137,26 +1385,26 @@ public class Controler {
 			TORNAMENTSELECT = t;
 			System.out.println("the Tornament " + t.name + "is put in tornament_select");
 			tornamentL.add(t);
-			System.out.println("the Tornament " + t + "is put into List Tornament ");
+			System.out.println("the Tornament " + t.name + "is put into List Tornament ");
 		} catch (Exception e) {
 			System.err.println("RROR:: TORNAMEN::ADD_TORNAMENT::" + e.getMessage());
 
 		}
 	}
 
-	// T[5] DEL_TORNAMENT_
+	// T[4] DEL_TORNAMENT_
 	private void delTORNAMENT() {
 		try {
 			TORNAMENTSELECT = null;
 			selectTORNAMENT();
 			if (TORNAMENTSELECT == null) {
-				throw new Exception("Firts select a TORNAMENT");
+				System.out.println("Firts select a TORNAMENT");
+			} else {
+				if (!(tornamentL.contains(TORNAMENTSELECT))) {
+					throw new Exception("non conten in List Tornament");
+				}
+				tornamentL.remove(TORNAMENTSELECT);
 			}
-			if (!(tornamentL.contains(TORNAMENTSELECT))) {
-				throw new Exception("non conten in List Tornament");
-			}
-			tornamentL.remove(TORNAMENTSELECT);
-
 		} catch (Exception e) {
 			System.err.println("ERROR:: TORNAMEN::DEL_TORNAMENT:: " + e.getMessage());
 		} finally {
@@ -1171,55 +1419,54 @@ public class Controler {
 			TORNAMENTSELECT = null;
 			selectTORNAMENT();
 			if (TORNAMENTSELECT == null) {
-				throw new Exception("Firts select a TORNAMENT");
+				System.out.println("Firts select a TORNAMENT");
+			} else if ((TORNAMENTSELECT.listTornRace.size() != 0)
+					&& (TORNAMENTSELECT.listTornRace.get(0).getType() != 1)) {
+				System.out.println("PLease select a Tornament of  Elimination Race");
+
+			} else {
+if (TORNAMENTSELECT.listTornRace== null) {
+				selectTornnewORlistElimination(getRACELISTElimination(null));
+}else {
+	selectTornnewORlistElimination(getRACELISTElimination(TORNAMENTSELECT.listTornRace));
+}
+				if (RACESELECT.getType() != 1) {
+					System.out.println("PLease select  Elimination Race");
+				} else {
+					TORNAMENTSELECT.listTornRace.add(RACESELECT);
+				}
 			}
-			
-			addRACEStandar();
-			if (RACESELECT == null) {
-				throw new Exception("Firts select a RACE");
-			}
-			
-			if (TORNAMENTSELECT.listTornRace.size() != 0) {
-				 if (TORNAMENTSELECT.listTornRace.get(0).getType()!= 1) {
-				throw new Exception("PLease select a Tornament of  Elimination Race");
-				 }
-			}
-			if (RACESELECT.getType()!= 1) {
-					throw new Exception("PLease select  Elimination Race");
-			}
-			TORNAMENTSELECT.addRE(RACESELECT);
-			
-			
+
 		} catch (Exception e) {
 			System.err.println("ERROR:: TORNAMEN::UPADTE_TORNAMENT_ADD_RACE_ELIMINATE:: " + e.getMessage());
 		}
 	};
+
 	// T[6] UPADTE_TORNAMENT_ADD_RACE_STANDAR
 	public void updateTORNAMENTaddRACEstandar() {
 		try {
-			
+
 			TORNAMENTSELECT = null;
 			selectTORNAMENT();
 			if (TORNAMENTSELECT == null) {
-				throw new Exception("Firts select a TORNAMENT");
-			}
-			
-			addRACEStandar();
-			if (RACESELECT == null) {
-				throw new Exception("Firts select a RACE");
-			}
-			
-			if (TORNAMENTSELECT.listTornRace.size() != 0) {
-				if (TORNAMENTSELECT.listTornRace.get(0).getType()!= 0) {
-					throw new Exception("PLease select a Tornament of  Elimination Race");
+				System.out.println("Firts select a TORNAMENT");
+			} else if ((TORNAMENTSELECT.listTornRace.size() != 0)
+					&& (TORNAMENTSELECT.listTornRace.get(0).getType() != 0)) {
+				System.out.println("PLease select a Tornament of  Elimination Race");
+
+			} else {
+				if (TORNAMENTSELECT.listTornRace == null) {
+					selectTornnewORlistStandar(getRACELISTStandar(null));
+				}else {
+				selectTornnewORlistStandar(getRACELISTStandar(TORNAMENTSELECT.listTornRace));
+				}
+				if (RACESELECT.getType() != 1) {
+					System.out.println("PLease select  Elimination Race");
+				} else {
+					TORNAMENTSELECT.listTornRace.add(RACESELECT);
 				}
 			}
-			if (RACESELECT.getType()!= 0) {
-				throw new Exception("PLease select  Elimination Race");
-			}
-			TORNAMENTSELECT.addRS(RACESELECT);
-			
-			
+
 		} catch (Exception e) {
 			System.err.println("ERROR:: TORNAMEN::UPADTE_TORNAMENT_ADD_RACE_ELIMINATE:: " + e.getMessage());
 		}
@@ -1231,24 +1478,25 @@ public class Controler {
 			TORNAMENTSELECT = null;
 			selectTORNAMENT();
 			if (TORNAMENTSELECT == null) {
-				throw new Exception("Firts select a TORNAMENT");
+				System.out.println("Firts select a TORNAMENT");
+			} else {
+				RACESELECT = null;
+				selectRACE(TORNAMENTSELECT.listTornRace);
+				if (RACESELECT == null) {
+					System.out.println("Firts select a RACE");
+				} else {
+					if ((RACESELECT.particG.contains(GARAGESELECT))) {
+						TORNAMENTSELECT.listTornRace.remove(RACESELECT);
+					}
+				}
 			}
-			RACESELECT=null;
-			selectRACE(TORNAMENTSELECT.listTornRace);
-			if (RACESELECT == null) {
-				throw new Exception("Firts select a RACE");
-			}
-			if ((RACESELECT.particG.contains(GARAGESELECT))) {
-			TORNAMENTSELECT.listTornRace.remove(RACESELECT);
-			}
-
 		} catch (Exception e) {
 			System.err.println("ERROR:: TORNAMEN::UPADTE_TORNAMENT_DEL_RACE:: " + e.getMessage());
-		}finally {
-			GARAGESELECT=null;
-			RACESELECT=null;
-			TORNAMENTSELECT=null;
-			
+		} finally {
+			GARAGESELECT = null;
+			RACESELECT = null;
+			TORNAMENTSELECT = null;
+
 		}
 	};
 
@@ -1259,22 +1507,24 @@ public class Controler {
 			TORNAMENTSELECT = null;
 			selectTORNAMENT();
 			if (TORNAMENTSELECT == null) {
-				throw new Exception("Firts select a TORNAMENT");
+				System.out.println("Firts select a TORNAMENT");
+			} else {
+				RACESELECT = null;
+				selectRACE(TORNAMENTSELECT.listTornRace);
+				if (RACESELECT == null) {
+					System.out.println("Firts select a RACE");
+				} else {
+					GARAGESELECT = null;
+					addGARAGE();
+					if (GARAGESELECT == null) {
+						throw new Exception("Firts select a GARAGE");
+					} else {
+						if (!(RACESELECT.particG.contains(GARAGESELECT))) {
+							RACESELECT.particG.add(GARAGESELECT);
+						}
+					}
+				}
 			}
-			RACESELECT=null;
-			selectRACE(TORNAMENTSELECT.listTornRace);
-			if (RACESELECT == null) {
-				throw new Exception("Firts select a RACE");
-			}
-			GARAGESELECT = null;
-			addGARAGE();
-			if (GARAGESELECT == null) {
-				throw new Exception("Firts select a GARAGE");
-			}
-			if (!(RACESELECT.particG.contains(GARAGESELECT))) {
-			RACESELECT.particG.add(GARAGESELECT);
-		}
-			
 		} catch (Exception e) {
 			System.err.println("ERROR:: TORNAMEN::UPADTE_TORNAMENT_ADD_GARAGE:: " + e.getMessage());
 		}
@@ -1287,23 +1537,23 @@ public class Controler {
 			TORNAMENTSELECT = null;
 			selectTORNAMENT();
 			if (TORNAMENTSELECT == null) {
-				throw new Exception("Firts select a TORNAMENT");
-			}
-			GARAGESELECT=null;
-			selectGARAGE(TORNAMENTSELECT.tornPartiG);
-			for (Race r : TORNAMENTSELECT.listTornRace) {
-				if(r.particG.contains(GARAGESELECT)) {
-					r.particG.remove(GARAGESELECT);
+				System.out.println("Firts select a TORNAMENT");
+			} else {
+				GARAGESELECT = null;
+				selectGARAGE(TORNAMENTSELECT.tornPartiG);
+				for (Race r : TORNAMENTSELECT.listTornRace) {
+					if (r.particG.contains(GARAGESELECT)) {
+						r.particG.remove(GARAGESELECT);
+					}
 				}
 			}
-			
 		} catch (Exception e) {
 			System.err.println("ERROR:: TORNAMEN::UPADTE_TORNAMENT_DEL_GARAGE:: " + e.getMessage());
-		}finally {
-			GARAGESELECT=null;
-			CARSELECT=null;
-			TORNAMENTSELECT=null;
-			
+		} finally {
+			GARAGESELECT = null;
+			CARSELECT = null;
+			TORNAMENTSELECT = null;
+
 		}
 	};
 
@@ -1314,20 +1564,21 @@ public class Controler {
 			TORNAMENTSELECT = null;
 			selectTORNAMENT();
 			if (TORNAMENTSELECT == null) {
-				throw new Exception("Firts select a TORNAMENT");
-			}
-			GARAGESELECT=null;
-			selectCAR(TORNAMENTSELECT.tornPartiC);
-			if (CARSELECT == null) {
-				throw new Exception("Firts select a TORNAMENT");
-			}
-			
-			for (Race r : TORNAMENTSELECT.listTornRace) {
-				if(!(r.particC.contains(CARSELECT))) {
-					r.particC.add(CARSELECT);
+				System.out.println("Firts select a TORNAMENT");
+			} else {
+				GARAGESELECT = null;
+				selectCAR(TORNAMENTSELECT.tornPartiC);
+				if (CARSELECT == null) {
+					System.out.println("Firts select a CAR");
+				} else {
+
+					for (Race r : TORNAMENTSELECT.listTornRace) {
+						if (!(r.particC.contains(CARSELECT))) {
+							r.particC.add(CARSELECT);
+						}
+					}
 				}
 			}
-			
 		} catch (Exception e) {
 			System.err.println("ERROR:: TORNAMEN::UPADTE_TORNAMENT_ADD_CAR_TO_GARAGE:: " + e.getMessage());
 		}
@@ -1339,26 +1590,27 @@ public class Controler {
 			TORNAMENTSELECT = null;
 			selectTORNAMENT();
 			if (TORNAMENTSELECT == null) {
-				throw new Exception("Firts select a TORNAMENT");
-			}
-			GARAGESELECT=null;
-			selectCAR(TORNAMENTSELECT.tornPartiC);
-			if (CARSELECT == null) {
-				throw new Exception("Firts select a TORNAMENT");
-			}
-			
-			for (Race r : TORNAMENTSELECT.listTornRace) {
-				if(r.particC.contains(CARSELECT)) {
-					r.particC.remove(CARSELECT);
+				System.out.println("Firts select a TORNAMENT");
+			} else {
+				GARAGESELECT = null;
+				selectCAR(TORNAMENTSELECT.tornPartiC);
+				if (CARSELECT == null) {
+					System.out.println("Firts select a TORNAMENT");
+				} else {
+
+					for (Race r : TORNAMENTSELECT.listTornRace) {
+						if (r.particC.contains(CARSELECT)) {
+							r.particC.remove(CARSELECT);
+						}
+					}
 				}
 			}
-			
 		} catch (Exception e) {
 			System.err.println("ERROR:: TORNAMEN::DEL_TORNAMENT:: " + e.getMessage());
-		}finally {
-			GARAGESELECT=null;
-			CARSELECT=null;
-			TORNAMENTSELECT=null;
+		} finally {
+			GARAGESELECT = null;
+			CARSELECT = null;
+			TORNAMENTSELECT = null;
 		}
 	};
 
@@ -1369,10 +1621,10 @@ public class Controler {
 			TORNAMENTSELECT = null;
 			selectTORNAMENT();
 			if (TORNAMENTSELECT == null) {
-				throw new Exception("Firts select a TORNAMENT");
+				System.out.println("Firts select a TORNAMENT");
+			} else {
+				TORNAMENTSELECT.start();
 			}
-			TORNAMENTSELECT.start();
-
 		} catch (Exception e) {
 			System.err.println("ERROR:: TORNAMEN::START_TORNAMENT:: " + e.getMessage());
 		}
@@ -1382,7 +1634,21 @@ public class Controler {
 	public void expTORNAMENT() {
 		try {
 
-			Utilss.expList(getTornamentL(), T_EXP);
+			try {
+				File f = new File(T_EXP);
+				File fPath = f.getParentFile();
+				if (!fPath.exists()) {
+					fPath.mkdirs();
+				}
+				if (!f.exists()) {
+					f.createNewFile();
+				} else {
+					JSON.WriteObjJsonInFile(f, tornamentL);
+					System.out.println(" List of Toornament data has been imported from " + f);
+				}
+			} catch (Exception e) {
+				System.err.println("Error al exportar " + e.getMessage());
+			}
 
 		} catch (Exception e) {
 			System.err.println("ERROR:: TORNAMEN::EXPORT_TORNAMENT:: " + e.getMessage());
@@ -1392,7 +1658,24 @@ public class Controler {
 
 	public void importTORNAMENT() {
 		try {
-			Utilss.importList(getTornamentL(), T_EXP);
+			tornamentL.clear();
+			try {
+				File f = new File(T_EXP);
+				File fPath = f.getParentFile();
+				if (!fPath.exists()) {
+					fPath.mkdirs();
+				}
+				if (!f.exists()) {
+					f.createNewFile();
+				} else {
+
+					tornamentL = (ArrayList<Tornament>) JSON.CargarFileTornament(f);
+					// lo.toString();
+					System.out.println(" List of Tornament data has been imported from " + f);
+				}
+			} catch (Exception e) {
+				System.err.println("the data file could not be recovered" + e.getMessage());
+			}
 
 		} catch (Exception e) {
 			System.err.println("ERROR:: TORNAMEN::IMPORT_TORNAMENT:: " + e.getMessage());

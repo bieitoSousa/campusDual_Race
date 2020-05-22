@@ -35,7 +35,23 @@ public class Garage implements Cloneable, Serializable {
 	public Garage(String name) {
 		this.name = name;
 	}
+	public Garage(String name,ArrayList<Car> listGCar) {
+		this.name = name;
+		this.listGCar=listGCar;
+	}
 
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public ArrayList<Car> getListGCar() {
+		return listGCar;
+	}
+	public void setListGCar(ArrayList<Car> listGCar) {
+		this.listGCar = listGCar;
+	}
 	// add a car to the garage
 	public void addCar(Car c) {
 		try {
@@ -51,11 +67,9 @@ public class Garage implements Cloneable, Serializable {
 				listGCar.add(c);
 			}
 		} catch (Exception e) {
-			for (Car c : listc) {
 				System.err.println(" not add the car" );
 			}
 		}
-	}
 
 	// delete a car on the garage
 	public void deleteCar(Car c) {

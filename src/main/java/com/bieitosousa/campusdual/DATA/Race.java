@@ -59,36 +59,18 @@ public abstract class Race implements Serializable {
 			System.err.println("ERRR::RACE::CONSTRUCTOR" + getCabecera() + e.getMessage());
 		}
 	}
-
-	// ------------------------------------ BASIC OPERATIONS ADD / DELETE
-	// ----------------------------------------------------------------------//
-
-	public void addG(ArrayList<Garage> listGarageG) {
-		try {
-			if (this.particG.containsAll(listGarageG)) {
-				throw new Exception("List Garage content this garage");
-			}
-			else if (listGarageG.size() > 0) {
-				for (Garage g : listGarageG) {
-					if (g.getAllCar().size() == 0) {
-						throw new Exception("One or more Gargarages not content cars");
-					}
-				}
-				if (getParticC().size()>0) {
-					throw new Exception("you can only add garages  if the race  is not started");		
-				}
-				for (Garage g :listGarageG) {
-					this.particG.add( (Garage)g.clone());
-				}
-				
-				
-			} else {
-				throw new Exception("ListGarage not contein garages");
-			}
-
-		} catch (Exception e) {
-			System.err.println("ERRR::RACE::ADD" + getCabecera() + e.getMessage());
-		}
+	
+	// ------------------------------------- GSON CONSTRUCTOR
+	
+	public Race(String name, int type, ArrayList<Garage> particG, ArrayList<Car> particC, ArrayList<Car> resultC,
+			ArrayList<Car> pointsC, String cabeceraR) {
+		this.name = name;
+		this.type = type;
+		this.particG = particG;
+		this.particC = particC;
+		this.resultC = resultC;
+		this.pointsC = pointsC;
+		this.cabeceraR = cabeceraR;
 	}
 
 	public void addG(Garage GarageG) {
@@ -97,9 +79,7 @@ public abstract class Race implements Serializable {
 				throw new Exception("List Garage content this garage");
 			}
 
-			else if (GarageG.getAllCar().size() == 0) {
-				throw new Exception("One or more Gargarages not content cars");
-			}
+
 			else if (getParticC().size()>0) {
 				throw new Exception("you can only add garages  if the race  is not started");		
 			}
@@ -113,6 +93,38 @@ public abstract class Race implements Serializable {
 			System.err.println("ERRR::RACE::ADD" + getCabecera() + e.getMessage());
 		}
 	}
+	
+	
+	
+
+	// ------------------------------------ BASIC OPERATIONS ADD / DELETE
+	// ----------------------------------------------------------------------//
+
+	public void addG(ArrayList<Garage> listGarageG) {
+		try {
+			if (this.particG.containsAll(listGarageG)) {
+				throw new Exception("List Garage content this garage");
+			}
+			if (listGarageG.size()==0) {
+				throw new Exception("List Garage not content garage");
+			}
+	
+				if (getParticC().size()>0) {
+					throw new Exception("you can only add garages  if the race  is not started");		
+				}
+				for (Garage g :listGarageG) {
+					this.particG.add( (Garage)g.clone());
+				}
+				
+				
+
+
+		} catch (Exception e) {
+			System.err.println("ERRR::RACE::ADD" + getCabecera() + e.getMessage());
+		}
+	}
+
+	
 
 	public void delG(ArrayList<Garage> listGarageG) {
 		try {
@@ -170,6 +182,7 @@ public abstract class Race implements Serializable {
 
 	public void start() {
 		try {
+			this.particC.clear();
 			this.makeRace();  // extends <<--- [	get the cars from  --> getParticG]
 			//extrends -->>  update RACE with takePoints
 
@@ -185,7 +198,8 @@ public abstract class Race implements Serializable {
 	protected List<Car> takePartC() throws Exception {
 		// Loop the gararges and take one the cart to participate
 		try {
-		if (getParticC().size()!=0) {
+			this.particC.clear();
+		if (particC.size()!=0) {
 			throw new Exception("Error Participants is define");
 		}
 		if (getParticG().size() == 1) {
@@ -319,15 +333,16 @@ public abstract class Race implements Serializable {
 	private void printList(ArrayList<?> l, String cabecera,String operation ,String destination ) {
 
 		if (Utilss.printInConsole()) {
-			System.out.println("[[[[[	=	=	=	"+operation+"	=	=	=	]]]]");
+			System.out.println("\n[[[[[	=	=	=	"+operation+"	=	=	=	]]]]\n");
 			System.out.println(cabecera);
 			l.forEach((a) -> System.out.println("\n			"  +getCabecera()+ getCabeceraT() + a + "\n"));
 		} else {
 			File fname= new File(destination + getCabecera()+ getCabeceraT() +operation +".txt");
-			Utilss.printONFile("[[[[[	=	=	=	"+operation+"	=	=	=	]]]]",fname);
+			Utilss.printONFile("\n[[[[[	=	=	=	"+operation+"	=	=	=	]]]]\n",fname);
 			Utilss.printONFile(cabecera, fname);
 			l.forEach((a) -> Utilss.printONFile("\n			"  +getCabecera()+ getCabeceraT() + a + "\n",
 					fname));
+			System.out.println(operation +	"--> results were printed on"+fname);
 		}
 	
 }
@@ -355,15 +370,15 @@ public abstract class Race implements Serializable {
 
 		String a = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
 				+ "\n	!	!	PARTICIPANTS	+ getCabecera() + getCabeceraT() +	!	!	!	!	!	"
-				+ "\\n!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
-		printList((ArrayList<Car>) getResultC(), a,"PRINT_RACE_PARTICIPANTS",Controler.getR_PARTIC());
+				+ "\n!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
+		printList((ArrayList<Car>) getResultC(), a,"PRINT_RACE_PARTICIPANTS",Controler.R_PARTIC);
 	}
 	private void printResultC() throws Exception {
 		
 		String a = "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	"
 				+ "\n	!	!	RESULTS	+ getCabecera() + getCabeceraT() +	!	!	!	!	!	"
-				+ "\\n!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
-		printList((ArrayList<Car>) getResultC(), a,"PRINT_RACE_RESULTS",Controler.getR_PARTIC());
+				+ "\n!	!	!	!	!	" + "\n	!	!	!	!	!	!	!	!	!	!	!	!	!	!	!	";
+		printList((ArrayList<Car>) getResultC(), a,"PRINT_RACE_RESULTS",Controler.R_PARTIC);
 	}
 
 
@@ -389,29 +404,18 @@ public abstract class Race implements Serializable {
 
 
 
-	public List<Car> getResultC() throws Exception {
+	public ArrayList<Car> getResultC() throws Exception {
 		return resultC;
 	}
 
-	private void setResultC(List<Car> list) {
-		if (this.resultC.size() > 0) {
-			resultC = (ArrayList<Car>) list;
-		} else {
-			resultC.clear();
-			resultC = (ArrayList<Car>) list;
-		}
-	}
+	
 
 //	public List<Garage> getResultG() throws Exception {
 //		return resultG;
 //	}
 
-	private void setPointsC(List<Car> list) {
-		this.pointsC.clear();
-		this.pointsC = (ArrayList<Car>) list;
-	}
-
-	public List<Car> getPointsC() {
+	
+	public ArrayList<Car> getPointsC() {
 		return pointsC;
 	}
 
@@ -451,5 +455,30 @@ public abstract class Race implements Serializable {
 	public void setType(int type) {
 		this.type = type;
 	}
+
+	public String getCabeceraR() {
+		return cabeceraR;
+	}
+
+	public void setCabeceraR(String cabeceraR) {
+		this.cabeceraR = cabeceraR;
+	}
+
+	public void setParticG(ArrayList<Garage> particG) {
+		this.particG = particG;
+	}
+
+	public void setParticC(ArrayList<Car> particC) {
+		this.particC = particC;
+	}
+
+	public void setResultC(ArrayList<Car> resultC) {
+		this.resultC = resultC;
+	}
+
+	public void setPointsC(ArrayList<Car> pointsC) {
+		this.pointsC = pointsC;
+	}
+	
 
 }// End race.class

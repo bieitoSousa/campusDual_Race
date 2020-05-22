@@ -35,10 +35,30 @@ public class Tornament implements Serializable {
 		tornPartiC = new ArrayList<>();
 		tornRaceR = new ArrayList<>();
 	}
+	
+	
+	
 
 	// ------------------------------------ BASIC OPERATIONS ADD / DELETE --> G Garage R Race
 	// ----------------------------------------------------------------------//
 	
+	public Tornament(ArrayList<Race> listTornRace, ArrayList<Car> tornResultC, ArrayList<Car[]> tornPointsC,
+			ArrayList<Car> tornPartiC, ArrayList<Garage> tornPartiG, ArrayList<Car[]> tornRaceR, String name,
+			String cabeceraT) {
+
+		this.listTornRace = listTornRace;
+		this.tornResultC = tornResultC;
+		this.tornPointsC = tornPointsC;
+		this.tornPartiC = tornPartiC;
+		this.tornPartiG = tornPartiG;
+		this.tornRaceR = tornRaceR;
+		this.name = name;
+		this.cabeceraT = cabeceraT;
+	}
+
+
+
+
 	public void addRE(Race r){
 		try {
 		if (r.getType()!=1) {
@@ -274,9 +294,25 @@ public class Tornament implements Serializable {
 		this.tornRaceR = tornRaceR;
 	}
 
+	public ArrayList<Garage> getTornPartiG() {
+		return tornPartiG;
+	}
+
+
+
+
+	public void setTornPartiG(ArrayList<Garage> tornPartiG) {
+		this.tornPartiG = tornPartiG;
+	}
+	
 //	--------------------------------------------[PRINT ]RACE_RESULTS	
 // ----------------------------------------------------------------------//
 	
+	
+
+
+
+
 	public void printINFO()  {
 		try {
 		if(getTornPartiC().size()>0) {
@@ -366,4 +402,14 @@ public class Tornament implements Serializable {
 		printARRAY(getTornPointsC().get(2), third,"PODIUM_THIRD_PLACE",Controler.getT_PODIUM());
 	}
 
+
+
+
+	@Override
+	public String toString() {
+		return "Tornament [listTornRace=" + listTornRace + ", name=" + name + "]";
+	}
+
+	
+	
 }// END
