@@ -62,8 +62,6 @@ public class JSON {
 		}
 		return obj;
 	}
-	
-
 
 	public static boolean WritedArryListJsonInFile(File objectFile, Object obj) {
 		Gson gson = new Gson();
@@ -80,24 +78,25 @@ public class JSON {
 		return true;
 		// System.out.println(gson.toJson(obj));
 	}
+
 	public static List<Car> CargarFileCar(File f) {
 		try {
-		File a = f.getParentFile();
-		if (!a.exists())
-			a.mkdir();
-		f.createNewFile();
+			File a = f.getParentFile();
+			if (!a.exists())
+				a.mkdir();
+			f.createNewFile();
 		} catch (Exception ex) {
-			System.err.println("Fallo GSON::ARCHIVO" +ex.getMessage() );
+			System.err.println("Fallo GSON::ARCHIVO" + ex.getMessage());
 		}
 		List<Car> laux = new ArrayList<>();
 		Gson gson = new Gson();
 		ArrayList<Car> objList = new ArrayList<>();
-		BufferedReader in ;
-		
+		BufferedReader in;
+
 		try (Reader reader = (in = new BufferedReader(new InputStreamReader(new FileInputStream(f), "utf-8")))) {
 			objList = gson.fromJson(reader, new TypeToken<ArrayList<Car>>() {
 			}.getType());
-			
+
 			if (objList == null || objList.size() < 16) {
 				throw new Exception("No se han cargado correctamente " + f.getPath());
 			}
@@ -107,11 +106,12 @@ public class JSON {
 			}
 
 		} catch (Exception e) {
-			System.err.println("Fallo GSON::DATOS" +e.getMessage() );
-			
+			System.err.println("Fallo GSON::DATOS" + e.getMessage());
+
 		}
 		return laux;
 	}
+
 	public static List<Garage> CargarFileGarage(File f) {
 		try {
 			File a = f.getParentFile();
@@ -119,40 +119,40 @@ public class JSON {
 				a.mkdir();
 			f.createNewFile();
 		} catch (Exception ex) {
-			System.err.println("Fallo GSON::ARCHIVO" +ex.getMessage() );
+			System.err.println("Fallo GSON::ARCHIVO" + ex.getMessage());
 		}
 		List<Garage> laux = new ArrayList<>();
 		Gson gson = new Gson();
 		ArrayList<Garage> objList = new ArrayList<>();
-		BufferedReader in ;
-		
+		BufferedReader in;
+
 		try (Reader reader = (in = new BufferedReader(new InputStreamReader(new FileInputStream(f), "utf-8")))) {
 			objList = gson.fromJson(reader, new TypeToken<ArrayList<Garage>>() {
 			}.getType());
-			
-			if (objList == null ) {
+
+			if (objList == null) {
 				throw new Exception("No se han cargado correctamente " + f.getPath());
 			}
-			
+
 			for (int i = 0; i < objList.size(); i++) {
 				laux.add(new Garage(objList.get(i).getName(), objList.get(i).getListGCar()));
 			}
-			
+
 		} catch (Exception e) {
-			System.err.println("Fallo GSON::DATOS" +e.getMessage() );
-			
+			System.err.println("Fallo GSON::DATOS" + e.getMessage());
+
 		}
 		return laux;
 	}
+
 	public static List<Race> CargarFileRace(File f) {
 		List<Race> laux = new ArrayList<>();
-		laux.addAll( (ArrayList<Race>) CargarFileRaceElimination(f));
-		
-		laux.addAll( (ArrayList<Race>)CargarFileRaceStandar(f));
+		laux.addAll((ArrayList<Race>) CargarFileRaceElimination(f));
+
+		laux.addAll((ArrayList<Race>) CargarFileRaceStandar(f));
 		return laux;
 	}
-	
-	
+
 	public static List<Race> CargarFileRaceElimination(File f) {
 		try {
 			File a = f.getParentFile();
@@ -160,49 +160,42 @@ public class JSON {
 				a.mkdir();
 			f.createNewFile();
 		} catch (Exception ex) {
-			System.err.println("Fallo GSON::ARCHIVO" +ex.getMessage() );
+			System.err.println("Fallo GSON::ARCHIVO" + ex.getMessage());
 		}
 		List<Race> laux = new ArrayList<>();
 		Gson gson = new Gson();
 		ArrayList<Race> objList = new ArrayList<>();
-		BufferedReader in ;
-		
+		BufferedReader in;
+
 		try (Reader reader = (in = new BufferedReader(new InputStreamReader(new FileInputStream(f), "utf-8")))) {
 			objList = gson.fromJson(reader, new TypeToken<ArrayList<Race_Elimination>>() {
 			}.getType());
-			
-			if (objList == null ) {
+
+			if (objList == null) {
 				throw new Exception("No se han cargado correctamente " + f.getPath());
 			}
-			
-		
+
 			for (int i = 0; i < objList.size(); i++) {
-				if (objList.get(0).getType()==0) {
-		
-				laux.add(new Race_Standar(
-						objList.get(i).getName(), objList.get(i).getType(),
-						objList.get(i).getParticG(), objList.get(i).getParticC(),
-						objList.get(i).getResultC(), objList.get(i).getPointsC(),
-						objList.get(i).getCabeceraR()
-						));
-			}else {
-				laux.add(new Race_Elimination(
-						objList.get(i).getName(), objList.get(i).getType(),
-						objList.get(i).getParticG(), objList.get(i).getParticC(),
-						objList.get(i).getResultC(), objList.get(i).getPointsC(),
-						objList.get(i).getCabeceraR()
-						));
-			
-			
+				if (objList.get(0).getType() == 0) {
+
+					laux.add(new Race_Standar(objList.get(i).getName(), objList.get(i).getType(),
+							objList.get(i).getParticG(), objList.get(i).getParticC(), objList.get(i).getResultC(),
+							objList.get(i).getPointsC(), objList.get(i).getCabeceraR()));
+				} else {
+					laux.add(new Race_Elimination(objList.get(i).getName(), objList.get(i).getType(),
+							objList.get(i).getParticG(), objList.get(i).getParticC(), objList.get(i).getResultC(),
+							objList.get(i).getPointsC(), objList.get(i).getCabeceraR()));
+
+				}
 			}
-			}
-			
+
 		} catch (Exception e) {
-			System.err.println("Fallo GSON::DATOS" +e.getMessage() );
-			
+			System.err.println("Fallo GSON::DATOS" + e.getMessage());
+
 		}
 		return laux;
 	}
+
 	public static List<Race> CargarFileRaceStandar(File f) {
 		try {
 			File a = f.getParentFile();
@@ -210,93 +203,78 @@ public class JSON {
 				a.mkdir();
 			f.createNewFile();
 		} catch (Exception ex) {
-			System.err.println("Fallo GSON::ARCHIVO" +ex.getMessage() );
+			System.err.println("Fallo GSON::ARCHIVO" + ex.getMessage());
 		}
 		List<Race> laux = new ArrayList<>();
 		Gson gson = new Gson();
 		ArrayList<Race> objList = new ArrayList<>();
-		BufferedReader in ;
-		
+		BufferedReader in;
+
 		try (Reader reader = (in = new BufferedReader(new InputStreamReader(new FileInputStream(f), "utf-8")))) {
 			objList = gson.fromJson(reader, new TypeToken<ArrayList<Race_Elimination>>() {
 			}.getType());
-			
-			if (objList == null ) {
+
+			if (objList == null) {
 				throw new Exception("No se han cargado correctamente " + f.getPath());
 			}
-			
-			
+
 			for (int i = 0; i < objList.size(); i++) {
-				if (objList.get(0).getType()==0) {
-					
-					laux.add(new Race_Standar(
-							objList.get(i).getName(), objList.get(i).getType(),
-							objList.get(i).getParticG(), objList.get(i).getParticC(),
-							objList.get(i).getResultC(), objList.get(i).getPointsC(),
-							objList.get(i).getCabeceraR()
-							));
-				}else {
-					laux.add(new Race_Elimination(
-							objList.get(i).getName(), objList.get(i).getType(),
-							objList.get(i).getParticG(), objList.get(i).getParticC(),
-							objList.get(i).getResultC(), objList.get(i).getPointsC(),
-							objList.get(i).getCabeceraR()
-							));
-					
-					
+				if (objList.get(0).getType() == 0) {
+
+					laux.add(new Race_Standar(objList.get(i).getName(), objList.get(i).getType(),
+							objList.get(i).getParticG(), objList.get(i).getParticC(), objList.get(i).getResultC(),
+							objList.get(i).getPointsC(), objList.get(i).getCabeceraR()));
+				} else {
+					laux.add(new Race_Elimination(objList.get(i).getName(), objList.get(i).getType(),
+							objList.get(i).getParticG(), objList.get(i).getParticC(), objList.get(i).getResultC(),
+							objList.get(i).getPointsC(), objList.get(i).getCabeceraR()));
+
 				}
 			}
-			
+
 		} catch (Exception e) {
-			System.err.println("Fallo GSON::DATOS" +e.getMessage() );
-			
+			System.err.println("Fallo GSON::DATOS" + e.getMessage());
+
 		}
 		return laux;
 	}
 
-
-
-public static List<Tornament> CargarFileTornament(File f) {
-	try {
-		File a = f.getParentFile();
-		if (!a.exists())
-			a.mkdir();
-		f.createNewFile();
-	} catch (Exception ex) {
-		System.err.println("Fallo GSON::ARCHIVO" +ex.getMessage() );
-	}
-	List<Tornament> laux = new ArrayList<>();
-	Gson gson = new Gson();
-	ArrayList<Tornament> objList = new ArrayList<>();
-	BufferedReader in ;
-	
-	try (Reader reader = (in = new BufferedReader(new InputStreamReader(new FileInputStream(f), "utf-8")))) {
-		objList = gson.fromJson(reader, new TypeToken<ArrayList<Tornament>>() {
-		}.getType());
-		
-		if (objList == null ) {
-			throw new Exception("No se han cargado correctamente " + f.getPath());
+	public static List<Tornament> CargarFileTornament(File f) {
+		try {
+			File a = f.getParentFile();
+			if (!a.exists())
+				a.mkdir();
+			f.createNewFile();
+		} catch (Exception ex) {
+			System.err.println("Fallo GSON::ARCHIVO" + ex.getMessage());
 		}
-		
-	
-		for (int i = 0; i < objList.size(); i++) {
+		List<Tornament> laux = new ArrayList<>();
+		Gson gson = new Gson();
+		ArrayList<Tornament> objList = new ArrayList<>();
+		BufferedReader in;
 
-	
-			laux.add(new Tornament(
-					objList.get(i).getListTornRace(), objList.get(i).getTornResultC(),
-					objList.get(i).getTornPointsC(), objList.get(i).getTornPartiC(),
-					objList.get(i).getTornPartiG(), objList.get(i).getTornRaceR(),
-					objList.get(i).getName(),objList.get(i).getCabeceraT()
-					));
-	
+		try (Reader reader = (in = new BufferedReader(new InputStreamReader(new FileInputStream(f), "utf-8")))) {
+			objList = gson.fromJson(reader, new TypeToken<ArrayList<Tornament>>() {
+			}.getType());
+
+			if (objList == null) {
+				throw new Exception("No se han cargado correctamente " + f.getPath());
+			}
+
+			for (int i = 0; i < objList.size(); i++) {
+
+				laux.add(new Tornament(objList.get(i).getListTornRace(), objList.get(i).getTornResultC(),
+						objList.get(i).getTornPointsC(), objList.get(i).getTornPartiC(), objList.get(i).getTornPartiG(),
+						objList.get(i).getTornRaceR(), objList.get(i).getName(), objList.get(i).getCabeceraT()));
+
+			}
+
+		} catch (Exception e) {
+			System.err.println("Fallo GSON::DATOS" + e.getMessage());
+
 		}
-		
-	} catch (Exception e) {
-		System.err.println("Fallo GSON::DATOS" +e.getMessage() );
-		
+		return laux;
 	}
-	return laux;
-}
 
 }
 

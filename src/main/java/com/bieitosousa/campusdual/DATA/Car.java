@@ -18,7 +18,7 @@ import java.io.Serializable;
 //  =   mark, model and autogenerate a id of them
 // ===================================================//
 
-public class Car implements Cloneable, Comparable<Car>,Serializable{
+public class Car implements Cloneable, Comparable<Car>, Serializable {
 	/**
 	 * 
 	 */
@@ -26,7 +26,7 @@ public class Car implements Cloneable, Comparable<Car>,Serializable{
 	// max sped is 5
 	private final int MAXSPEED = 5;
 	// String to identificate a car
-	//private int id;
+	// private int id;
 	// Company make the car
 	private String mark;
 	// name of the model of a car
@@ -141,18 +141,19 @@ public class Car implements Cloneable, Comparable<Car>,Serializable{
 				return -1;
 			} else if (distance < o.distance) {
 				return 1;
-			} 
+			}
 		}
 		return 0;
 	}
 
 	public String getName() {
-		return "Car_" + model + "_" + mark ;
+		return "Car_" + model + "_" + mark;
 	}
+
 	@Override
 	public String toString() {
-		return "Car_" + model + "_" + mark + "_Points_[" + points + "]_:_{distance=" + distance + ",speed= "
-				+ speed + '}';
+		return "Car_" + model + "_" + mark + "_Points_[" + points + "]_:_{distance=" + distance + ",speed= " + speed
+				+ '}';
 	}
 
 }

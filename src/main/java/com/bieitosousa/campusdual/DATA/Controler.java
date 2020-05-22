@@ -407,6 +407,118 @@ public class Controler {
 	}
 
 // -------------- GESTION GARAGE---------------------------------------------//
+	//-------------------------------------------------------- DYNAMIC METHODS TO CHOOSE GARAGE	
+	
+		private List<Car> chooseCAR(List<Car> list) {
+			ArrayList<Car> allCAR = new ArrayList<>();
+			try {
+			
+			for (Garage g : garageL) {
+			allCAR.addAll(g.getAllCar());
+			}
+			for (Race r : raceL) {
+				for (Garage g : r.particG)
+				allCAR.addAll(g.getAllCar());
+			}
+			Set<Car> set = new HashSet<>(allCAR);
+			allCAR.clear();
+			allCAR.addAll(set);
+			allCAR.removeAll((ArrayList<Car>) list);
+
+			} catch (Exception e) {
+				System.out.println("ERROR::CAR::AUXILIAR_DYNAMIC_METHODS::chooseCAR::" + e.getMessage());
+				
+			}
+			return allCAR;
+		}
+		
+		// R[00] RACE::SELECT::New Garage  from List garage or and new
+			private void menuChooseCAR(List<Car> list) {
+				if (list.size() > 0) {
+					try {
+						int op = -1;
+						do {
+							System.out.println(
+									"\n= SELECT =" + "\n====================" + "\n*	1.- Add new Cat to the Garage"
+											+ "\n*	2.- Selecte from a list of Car" + "\n*	0.- Atras"
+
+							);
+
+							op = KeyboardReader.readInt("put  the number of option  (0 to exit): ", "Error");
+							switch (op) {
+							case 0:
+								break;
+							case 1:
+								addCAR();
+								break;
+							case 2:
+								select_AND_CAR(list);
+								break;
+
+							}
+						} while (op != 0);
+					} catch (Exception e) {
+						System.err.println("ERROR::CAR::DYNAMIC METHODS::MENU_CAR:: " + e.getMessage());
+
+					}
+				} else {
+					try {
+						addCAR();
+					} catch (Exception e) {
+						System.err.println("ERROR::CAR::AUXILIAR_DYNAMIC_METHODS::CHOOSE_CAR:: " + e.getMessage());
+
+					}
+
+				}
+			}
+		
+		
+		
+		
+		
+		
+	//G[00] SELECT::GARAGE OF A LIST
+			private void select_AND_CAR(List<Car> list) {
+				try {
+					if (list.size() == 0) {
+						throw new Exception("List Car sinze = 0");
+					}
+					int id = -2;
+					do {
+						System.out.println("selected one car");
+						System.out.println("[-1] exit ");
+						int cn = 0;
+						for (Car c : list) {
+							System.out.println("[" + (cn++) + "]" + c.getName() +"]");
+						}
+						id = KeyboardReader.readInt("put  the number of the car  (-1 to exit): ", "Error");
+						try {
+							
+							if (id > -1) {
+								CARSELECT = list.get(id);
+							}
+						} catch (Exception e) {
+							System.err.println();
+						}
+						
+					} while (id > list.size() || id < -1);
+					
+					if (GARAGESELECT == null) {
+						throw new Exception("Firts select a GARAGE");
+					} 
+					if (!(GARAGESELECT.listGCar.contains(CARSELECT))) {
+						GARAGESELECT.addCar(CARSELECT);
+					}
+					
+				} catch (Exception e) {
+					System.err.println("ERROR::CAR::AUXILIARSELECT::select_AND_CAR::" + e.getMessage());
+					
+				}
+			}	
+			
+				
+	
+	
 	// G[0] AUXILIAR
 
 	// G[0] AUXILIAR
@@ -421,7 +533,7 @@ public class Controler {
 					for (Car c : list) {
 						System.out.println("[" + (cn++) + "]" + c.getName());
 					}
-					id = KeyboardReader.readInt("put  the number of the garage  (-1 to exit): ", "Error");
+					id = KeyboardReader.readInt("put  the number of the car  (-1 to exit): ", "Error");
 					try {
 
 						if (id > -1) {
@@ -436,7 +548,7 @@ public class Controler {
 				System.out.println("Firts create one garage");
 			}
 		} catch (Exception e) {
-			System.err.println("ERROR::AUXILIAR::SELECT_GARAGE_CAR::" + e.getMessage());
+			System.err.println("ERROR::CAR::AUXILIARSELECT::SELECT_CAR::" + e.getMessage());
 
 		}
 	}
@@ -451,7 +563,7 @@ public class Controler {
 			CARSELECT = car;
 			System.out.println("the Car " + car + "is put into car_selected");
 		} catch (Exception e) {
-			System.err.println("ERROR::AUXILIAR::ADD_CAR::" + e.getMessage());
+			System.err.println("ERROR::CAR::AUXILIAR::ADD_CAR::" + e.getMessage());
 
 		}
 	}
@@ -508,7 +620,112 @@ public class Controler {
 	}
 
 //--------------------------------------------------------GESTION GARAGE
+	
+
+	//-------------------------------------------------------- DYNAMIC METHODS TO CHOOSE GARAGE	
+	
+	private List<Garage> chooseGARAGE(List<Garage> list) {
+		ArrayList<Garage> allGARAGE = new ArrayList<>();
+		try {
+		allGARAGE.addAll(garageL);
+		for (Race r : raceL) {
+			allGARAGE.addAll(r.particG);
+		}
+		Set<Garage> set = new HashSet<>(allGARAGE);
+		allGARAGE.clear();
+		allGARAGE.addAll(set);
+		allGARAGE.removeAll((ArrayList<Garage>) list);
+		} catch (Exception e) {
+			System.err.println(" ERROR::GARAGE::AUXILIAR_ DYNAMIC_METHODS::chooseGARAGE:::: " + e.getMessage());
+
+		}
+		return allGARAGE;
+	}
+	
+	// R[00] RACE::SELECT::New Garage  from List garage or and new
+		private void menuChooseGARAGE(List<Garage> list) {
+			try {
+			if (list.size() > 0) {
+				
+					int op = -1;
+					do {
+						System.out.println(
+								"\n= SELECT =" + "\n====================" + "\n*	1.- Add new Garage to the race Selected"
+										+ "\n*	2.- Selecte from a list of Garage" + "\n*	0.- Atras"
+
+						);
+
+						op = KeyboardReader.readInt("put  the number of option  (0 to exit): ", "Error");
+						switch (op) {
+						case 0:
+							break;
+						case 1:
+							addGARAGE();
+							break;
+						case 2:
+							select_AND_GARAGE(list);
+							break;
+
+						}
+					} while (op != 0);
+				
+			} else {
+				
+					addGARAGE();
+			}
+				} catch (Exception e) {
+					System.err.println(" ERROR::GARAGE::AUXILIAR_ DYNAMIC_METHODS::menuChooseGARAGE:::: " + e.getMessage());
+
+				}
+
+			}
+	
+	
+	
+	
+	
+	
+	
 //G[00] SELECT::GARAGE OF A LIST
+		private void select_AND_GARAGE(List<Garage> list) {
+			try {
+				if (getGarageL().size() == 0) {
+					throw new Exception("List garage sinze = 0");
+				}
+				int id = -2;
+				do {
+					System.out.println("selected one garage");
+					System.out.println("[-1] exit ");
+					int cn = 0;
+					for (Garage g : list) {
+						System.out.println("[" + (cn++) + "]" + g.name + "nª Car [" + g.listGCar.size() + "]");
+					}
+					id = KeyboardReader.readInt("put  the number of the garage  (-1 to exit): ", "Error");
+					try {
+						
+						if (id > -1) {
+							GARAGESELECT = list.get(id);
+						}
+					} catch (Exception e) {
+						System.err.println();
+					}
+					
+				} while (id > garageL.size() || id < -1);
+				
+				if (GARAGESELECT == null) {
+					throw new Exception("Firts select a GARAGE");
+				} 
+				if (!(RACESELECT.particG.contains(GARAGESELECT))) {
+					RACESELECT.particG.add(GARAGESELECT);
+				}
+				
+			} catch (Exception e) {
+				System.err.println(" ERROR::GARAGE::AUXILIAR_SELECT::select_AND_GARAGE::" + e.getMessage());
+				
+			}
+		}	
+		
+		
 	private void selectGARAGE(List<Garage> list) {
 		try {
 			if (getGarageL().size() == 0) {
@@ -535,10 +752,11 @@ public class Controler {
 			} while (id > garageL.size() || id < -1);
 
 		} catch (Exception e) {
-			System.out.println("ERROR::SELECT_OF_LIST::" + e.getMessage());
+			System.err.println("ERROR::GARAGE::AUXILIAR_SELECT::selectGARAGE::" + e.getMessage());
 
 		}
 	}
+	
 
 //G[1] SELECT::GARAGE
 	private void selectGARAGE() {
@@ -567,7 +785,7 @@ public class Controler {
 				} while (id > garageL.size() || id < -1);
 			}
 		} catch (Exception e) {
-			System.err.println("ERROR::GRARAGE::SELECT::GARAGE" + e.getMessage());
+			System.err.println("ERROR::GRARAGE::selectGARAGE" + e.getMessage());
 
 		}
 	}
@@ -587,7 +805,7 @@ public class Controler {
 			garageL.add(g);
 			System.out.println("the garage [" + g.name + "] is put into " + garageL);
 		} catch (Exception e) {
-			System.err.println("ERROR::GRARAGE::ADD_GARAGE::" + e.getMessage());
+			System.err.println("ERROR::GRARAGE::addGARAGE::" + e.getMessage());
 
 		}
 	}
@@ -607,7 +825,7 @@ public class Controler {
 				System.out.println("the garage " + GARAGESELECT + "is remove for " + garageL);
 			}
 		} catch (Exception e) {
-			System.err.println("ERROR::GRARAGE::DEL_GARAGE::" + e.getMessage());
+			System.err.println("ERROR::GRARAGE::delGARAGE::" + e.getMessage());
 
 		} finally {
 			GARAGESELECT = null;
@@ -632,7 +850,7 @@ public class Controler {
 				}
 			}
 		} catch (Exception e) {
-			System.err.println("ERROR::GRARAGE::VIEW_GARAGE::" + e.getMessage());
+			System.err.println("ERROR::GRARAGE::viewGARAGE::" + e.getMessage());
 
 		}
 	}
@@ -660,7 +878,7 @@ public class Controler {
 				}
 			}
 		} catch (Exception e) {
-			System.out.println("ERROR::GRARAGE::UPDASTE_GARAGE_ADD_CAR::" + e.getMessage());
+			System.err.println("ERROR::GRARAGE::updateGARAGEaddCar::" + e.getMessage());
 
 		}
 	}
@@ -683,7 +901,7 @@ public class Controler {
 				}
 			}
 		} catch (Exception e) {
-			System.out.println("ERROR::GRARAGE::UPDATE_GARAGE_DEL_CAR:: " + e.getMessage());
+			System.out.println("ERROR::GRARAGE::updateGARAGEdelCar:: " + e.getMessage());
 
 		} finally {
 			CARSELECT = null;
@@ -709,7 +927,7 @@ public class Controler {
 			}
 			System.out.println("Export tha Garage to : " + G_EXP);
 		} catch (Exception e) {
-			System.out.println(" ERROR::GRARAGE::EXPORT_GARAGE:: " + e.getMessage());
+			System.err.println(" ERROR::GRARAGE::exportGARAGE:: " + e.getMessage());
 
 		}
 	}
@@ -738,7 +956,7 @@ public class Controler {
 			}
 
 		} catch (Exception e) {
-			System.out.println(" ERROR::GRARAGE::IMPORT_GARAGE:: " + e.getMessage());
+			System.err.println(" ERROR::GARAGE::importGARAGE:: " + e.getMessage());
 
 		}
 	}
@@ -754,7 +972,7 @@ public class Controler {
 				GARAGESELECT.ImportCars();
 			}
 		} catch (Exception e) {
-			System.out.println(" ERROR::GRARAGE::IMPORT_CAR_IN_GARAGE:: " + e.getMessage());
+			System.err.println(" ERROR::GRARAGE::ImportCarINGARAGE:: " + e.getMessage());
 		}
 
 	}
@@ -815,9 +1033,123 @@ public class Controler {
 		}
 	}
 
-//-------------------------------------------------------- GESTION  RACE	
+//-------------------------------------------------------- MANAGEMENT  RACE	---------------------------------------------------//
+	
+	//-------------------------------------------------------- DYNAMIC METHODS TO CHOOSE RACE		
 
-	// R[00] RACE::SELECT::RACE::FRON LIST
+
+	private List<Race> chooseRace(List<Race> list , int typee) {
+		ArrayList<Race> allRACE = new ArrayList<>();
+		try {
+		allRACE.addAll(raceL);
+		for (Tornament t : tornamentL) {
+			allRACE.addAll(t.listTornRace);
+		}
+		Set<Race> set = new HashSet<>(allRACE);
+		allRACE.clear();
+		allRACE.addAll(set);
+		if (list!= null) {
+		allRACE.removeAll((ArrayList<Race>) list);
+		}
+		// FALLA ?????
+		for (Race r : allRACE) {
+			if (r.type !=  typee) {
+				allRACE.remove(r);
+			}
+
+		}
+		} catch (Exception e) {
+			System.err.println(" ERROR::RACE::AUXILIAR_ DYNAMIC_METHODS::chooseRace:: " + e.getMessage());
+
+		}
+		return allRACE;
+	}
+
+// R[00] RACE::SELECT::New Garageor fonList
+		private void menuChooseRACE(List<Race> list, int typee) {
+			try {
+			if (list.size() > 0) {
+				
+					int op = -1;
+					do {
+						System.out.println(
+								"\n= SELECT =" + "\n====================" + "\n*	1.- Add new RACE to the tournament Selected"
+										+ "\n*	2.- Selecte from a list of Race" + "\n*	0.- Atras"
+
+						);
+
+						op = KeyboardReader.readInt("put  the number of option  (0 to exit): ", "Error");
+						switch (op) {
+						case 0:
+							break;
+						case 1:
+							if (typee == 1) {
+							addRACEElimination();
+							}else {
+							addRACEStandar();
+							}
+							break;
+						case 2:
+							select_AND_RACE(list,typee);
+							break;
+
+						}
+					} while (op != 0);
+				
+			} else {
+				
+					addGARAGE();
+				
+
+			}
+		} catch (Exception e) {
+			System.err.println("  ERROR::RACE::AUXILIAR_ DYNAMIC_METHODS::menuChooseRACE::  " + e.getMessage());
+
+		}
+		}
+
+		
+	//-------------------------------------------------------- DYNAMIC METHODS TO SELECT RACE	
+	
+		// R[00] RACE::SELECT::RACE::FRON LIST
+		private void select_AND_RACE(List<Race> list,int typee) {
+			try {
+				if (raceL.size() == 0) {
+					System.out.println("First select a garage ");
+				} else {
+					int id = -2;
+					do {
+						System.out.println("selected one RACE");
+						System.out.println("[-1] exit ");
+						int cn = 0;
+						for (Race r : list) {
+							System.out.println("[" + (cn++) + "]" + r.name + "Nº Garage" + r.particG.size() + "results"
+									+ r.resultC + r);
+						}
+						id = KeyboardReader.readInt("put  the number of the RACE  (-1 to exit): ", "Error");
+						try {
+							if (id > -1) {
+								RACESELECT = list.get(id);
+							}
+						} catch (Exception e) {
+							System.err.println();
+						}
+
+					} while (id > list.size() || id < -1);
+				}
+
+				if (RACESELECT.getType() != typee) {
+					System.out.println("PLease select  Elimination Race");
+				} else {
+					TORNAMENTSELECT.listTornRace.add(RACESELECT);
+				}
+			} catch (Exception e) {
+				System.err.println(" ERROR::RACE::AUXILIAR_SELECT::select_AND_RACE::RACE:: " + e.getMessage());
+			}
+		}
+	
+	
+	
 	private void selectRACE(List<Race> list) {
 		try {
 			if (raceL.size() == 0) {
@@ -844,62 +1176,18 @@ public class Controler {
 				} while (id > list.size() || id < -1);
 			}
 		} catch (Exception e) {
-			System.err.println(" RROR::RACE::SELECT_LIST::RACE:: " + e.getMessage());
+			System.err.println("  ERROR::RACE::AUXILIAR_SELECT::selectRACE::RACE:: " + e.getMessage());
 		}
 	}
 
-	private List<Garage> getGARAGELIST(List<Garage> list) {
-		ArrayList<Garage> allGARAGE = new ArrayList<>();
-		allGARAGE.addAll(garageL);
-		for (Race r : raceL) {
-			allGARAGE.addAll(r.particG);
-		}
-		Set<Garage> set = new HashSet<>(allGARAGE);
-		allGARAGE.clear();
-		allGARAGE.addAll(set);
-		allGARAGE.removeAll((ArrayList<Garage>) list);
-		return allGARAGE;
-	}
 
-	// R[00] RACE::SELECT::New Garageor fonList
-	private void selectRACEnewORlist(List<Garage> list) {
-		if (list.size() > 0) {
-			try {
-				int op = -1;
-				do {
-					System.out.println(
-							"\n= SELECT =" + "\n====================" + "\n*	1.- Add new Garage to the race Selected"
-									+ "\n*	2.- Selecte from a list of Garage" + "\n*	0.- Atras"
-
-					);
-
-					op = KeyboardReader.readInt("put  the number of option  (0 to exit): ", "Error");
-					switch (op) {
-					case 0:
-						break;
-					case 1:
-						addGARAGE();
-						break;
-					case 2:
-						selectGARAGE(list);
-						break;
-
-					}
-				} while (op != 0);
-			} catch (Exception e) {
-				System.err.println(" MENU_GARAGE:: " + e.getMessage());
-
-			}
-		} else {
-			try {
-				addGARAGE();
-			} catch (Exception e) {
-				System.err.println(" MENU_GARAGE:: " + e.getMessage());
-
-			}
-
-		}
-	}
+	
+	//--------------------------------------------------------  METHODS MENU_RACE		
+	
+	
+	
+	
+	//
 
 	// R[1] RACE::SELECT::RACE::
 	private void selectRACE() {
@@ -927,7 +1215,7 @@ public class Controler {
 				} while (id > raceL.size() || id < -1);
 			}
 		} catch (Exception e) {
-			System.out.println(" RROR::RACE::SELECT::RACE:: " + e.getMessage());
+			System.err.println(" ERROR::RACE::selectRACE:: " + e.getMessage());
 		}
 	}
 
@@ -942,7 +1230,7 @@ public class Controler {
 				RACESELECT.printINFO();
 			}
 		} catch (Exception e) {
-			System.out.println(" RROR::RACE::INFO::RACE:: " + e.getMessage());
+			System.err.println(" ERROR::RACE::infoRACE:: " + e.getMessage());
 		}
 	}
 
@@ -961,7 +1249,7 @@ public class Controler {
 			raceL.add(r);
 			System.out.println("the race " + r + "is put into List Race ");
 		} catch (Exception e) {
-			System.err.println("ERROR::RACE::ADD_RACE_STANDAR::::" + e.getMessage());
+			System.err.println("ERROR::RACE::addRACEStandar::::" + e.getMessage());
 
 		}
 	}
@@ -981,7 +1269,7 @@ public class Controler {
 			System.out.println("the race " + r + "is put into List Race ");
 
 		} catch (Exception e) {
-			System.err.println("RROR::RACE::ADD_RACE_ELIMINATORIA::" + e.getMessage());
+			System.err.println("ERROR::RACE::addRACEElimination::" + e.getMessage());
 
 		}
 	}
@@ -1000,7 +1288,7 @@ public class Controler {
 				raceL.remove(RACESELECT);
 			}
 		} catch (Exception e) {
-			System.err.println(" RROR::RACE::DEL_RACE:: " + e.getMessage());
+			System.err.println(" ERROR::RACE::delRACE:: " + e.getMessage());
 		} finally {
 			RACESELECT = null;
 		}
@@ -1016,7 +1304,7 @@ public class Controler {
 				System.out.println("Firts select a RACE");
 			} else {
 				GARAGESELECT = null;
-				selectRACEnewORlist(getGARAGELIST(RACESELECT.particG));
+				menuChooseGARAGE(chooseGARAGE(RACESELECT.particG));
 				if (GARAGESELECT == null) {
 					System.out.println("Firts select a garage");
 				} else {
@@ -1028,7 +1316,7 @@ public class Controler {
 				}
 			}
 		} catch (Exception e) {
-			System.err.println(" RROR::RACE::UPDATE_RACE_ADD_GARAGE:: " + e.getMessage());
+			System.err.println(" ERROR::RACE::updateRACEaddGarage:: " + e.getMessage());
 		}
 	}
 
@@ -1054,7 +1342,7 @@ public class Controler {
 				}
 			}
 		} catch (Exception e) {
-			System.err.println(" RROR::RACE:UPDATE_RACE_DEL_GARAGE:: " + e.getMessage());
+			System.err.println(" ERROR::RACE:updateRACEdelGarage:: " + e.getMessage());
 		} finally {
 			RACESELECT = null;
 			GARAGESELECT = null;
@@ -1074,7 +1362,7 @@ public class Controler {
 				RACESELECT.start();
 			}
 		} catch (Exception e) {
-			System.err.println(" RROR::RACE::START_RACE:: " + e.getMessage());
+			System.err.println(" ERROR::RACE::startRACE:: " + e.getMessage());
 		} finally {
 			RACESELECT = null;
 		}
@@ -1099,7 +1387,7 @@ public class Controler {
 				System.err.println("Error al exportar " + e.getMessage());
 			}
 		} catch (Exception e) {
-			System.err.println(" RROR::RACE::EXPORT_RACE:::: " + e.getMessage());
+			System.err.println(" ERROR::RACE::expRACE:::: " + e.getMessage());
 		}
 
 	}
@@ -1128,7 +1416,7 @@ public class Controler {
 			}
 
 		} catch (Exception e) {
-			System.err.println(" RROR::RACE::IMPORT_RACE:: " + e.getMessage());
+			System.err.println(" ERROR::RACE::importRACE:: " + e.getMessage());
 
 		}
 	}
@@ -1203,126 +1491,8 @@ public class Controler {
 	}
 
 	// --------------------------------------------------------GESTION TORNAMENT
-	private List<Race> getRACELISTElimination(List<Race> list) {
-		ArrayList<Race> allRACE = new ArrayList<>();
-		allRACE.addAll(raceL);
-		for (Tornament t : tornamentL) {
-			allRACE.addAll(t.listTornRace);
-		}
-		Set<Race> set = new HashSet<>(allRACE);
-		allRACE.clear();
-		allRACE.addAll(set);
-		if (list!= null) {
-		allRACE.removeAll((ArrayList<Race>) list);
-		}
-//		for (Race r : allRACE) {
-//			if (r.type != 1) {
-//				allRACE.remove(r);
-//			}
-//
-//		}
-		return allRACE;
-	}
 
-	private List<Race> getRACELISTStandar(List<Race> list) {
-		ArrayList<Race> allRACE = new ArrayList<>();
-		allRACE.addAll(raceL);
-		for (Tornament t : tornamentL) {
-			allRACE.addAll(t.listTornRace);
-		}
-		Set<Race> set = new HashSet<>(allRACE);
-		allRACE.clear();
-		allRACE.addAll(set);
-		if (list!= null) {
-		allRACE.removeAll((ArrayList<Race>) list);
-		}
-//		for (Race r : allRACE) {
-//			if (r.type != 0) {
-//				allRACE.remove(r);
-//			}
-//
-//		}
-		return allRACE;
-	}
 
-	// R[00] RACE::SELECT::New Garageor fonList
-	private void selectTornnewORlistElimination(List<Race> list) {
-		if (list.size() > 0) {
-			try {
-				int op = -1;
-				do {
-					System.out.println("\n= SELECT =" + "\n===================="
-							+ "\n*	1.- Add new Race to the Tornament Selected"
-							+ "\n*	2.- Selecte from a list of Races" + "\n*	0.- Atras"
-
-					);
-
-					op = KeyboardReader.readInt("put  the number of option  (0 to exit): ", "Error");
-					switch (op) {
-					case 0:
-						break;
-					case 1:
-						addRACEElimination();
-						break;
-					case 2:
-						selectRACE(list);
-						break;
-
-					}
-				} while (op != 0);
-			} catch (Exception e) {
-				System.err.println(" MENU_GARAGE:: " + e.getMessage());
-
-			}
-		} else {
-			try {
-				addRACEElimination();
-			} catch (Exception e) {
-				System.err.println(" MENU_GARAGE:: " + e.getMessage());
-
-			}
-
-		}
-	}
-
-	private void selectTornnewORlistStandar(List<Race> list) {
-		if (list.size() > 0) {
-			try {
-				int op = -1;
-				do {
-					System.out.println("\n= SELECT =" + "\n===================="
-							+ "\n*	1.- Add new Race to the Tornament Selected"
-							+ "\n*	2.- Selecte from a list of Races" + "\n*	0.- Atras"
-
-					);
-
-					op = KeyboardReader.readInt("put  the number of option  (0 to exit): ", "Error");
-					switch (op) {
-					case 0:
-						break;
-					case 1:
-						addRACEStandar();
-						break;
-					case 2:
-						selectRACE(list);
-						break;
-
-					}
-				} while (op != 0);
-			} catch (Exception e) {
-				System.err.println(" MENU_GARAGE:: " + e.getMessage());
-
-			}
-		} else {
-			try {
-				addRACEStandar();
-			} catch (Exception e) {
-				System.err.println(" MENU_GARAGE:: " + e.getMessage());
-
-			}
-
-		}
-	}
 
 	// T[1] RACE::SELECT::TORNAMEN::
 	private void selectTORNAMENT() {
@@ -1353,7 +1523,7 @@ public class Controler {
 				} while (id > tornamentL.size() || id < -1);
 			}
 		} catch (Exception e) {
-			System.err.println(" RROR:: TORNAMEN::SELECT_TORNAMENE:: " + e.getMessage());
+			System.err.println(" ERROR::TORNAMEN::selectTORNAMENT:: " + e.getMessage());
 
 		}
 	}
@@ -1369,7 +1539,7 @@ public class Controler {
 				TORNAMENTSELECT.printINFO();
 			}
 		} catch (Exception e) {
-			System.err.println(" RROR:: TORNAMEN::INFO::TORNAMENT:: " + e.getMessage());
+			System.err.println(" ERROR::TORNAMEN::infoRTORNAMENT:: " + e.getMessage());
 		}
 	}
 
@@ -1387,7 +1557,7 @@ public class Controler {
 			tornamentL.add(t);
 			System.out.println("the Tornament " + t.name + "is put into List Tornament ");
 		} catch (Exception e) {
-			System.err.println("RROR:: TORNAMEN::ADD_TORNAMENT::" + e.getMessage());
+			System.err.println("ERROR::TORNAMEN::addTORNAMENT::" + e.getMessage());
 
 		}
 	}
@@ -1406,7 +1576,7 @@ public class Controler {
 				tornamentL.remove(TORNAMENTSELECT);
 			}
 		} catch (Exception e) {
-			System.err.println("ERROR:: TORNAMEN::DEL_TORNAMENT:: " + e.getMessage());
+			System.err.println("ERROR::TORNAMEN::delTORNAMENT:: " + e.getMessage());
 		} finally {
 			RACESELECT = null;
 		}
@@ -1425,20 +1595,12 @@ public class Controler {
 				System.out.println("PLease select a Tornament of  Elimination Race");
 
 			} else {
-if (TORNAMENTSELECT.listTornRace== null) {
-				selectTornnewORlistElimination(getRACELISTElimination(null));
-}else {
-	selectTornnewORlistElimination(getRACELISTElimination(TORNAMENTSELECT.listTornRace));
-}
-				if (RACESELECT.getType() != 1) {
-					System.out.println("PLease select  Elimination Race");
-				} else {
-					TORNAMENTSELECT.listTornRace.add(RACESELECT);
-				}
-			}
+
+					menuChooseRACE(chooseRace(TORNAMENTSELECT.listTornRace , 1 ),1);
+		}
 
 		} catch (Exception e) {
-			System.err.println("ERROR:: TORNAMEN::UPADTE_TORNAMENT_ADD_RACE_ELIMINATE:: " + e.getMessage());
+			System.err.println("ERROR::TORNAMEN::updateTORNAMENTaddRACEeliminate:: " + e.getMessage());
 		}
 	};
 
@@ -1455,20 +1617,12 @@ if (TORNAMENTSELECT.listTornRace== null) {
 				System.out.println("PLease select a Tornament of  Elimination Race");
 
 			} else {
-				if (TORNAMENTSELECT.listTornRace == null) {
-					selectTornnewORlistStandar(getRACELISTStandar(null));
-				}else {
-				selectTornnewORlistStandar(getRACELISTStandar(TORNAMENTSELECT.listTornRace));
-				}
-				if (RACESELECT.getType() != 1) {
-					System.out.println("PLease select  Elimination Race");
-				} else {
-					TORNAMENTSELECT.listTornRace.add(RACESELECT);
-				}
+				menuChooseRACE(chooseRace(TORNAMENTSELECT.listTornRace , 0 ),0);
+				
 			}
 
 		} catch (Exception e) {
-			System.err.println("ERROR:: TORNAMEN::UPADTE_TORNAMENT_ADD_RACE_ELIMINATE:: " + e.getMessage());
+			System.err.println("ERROR::TORNAMEN::updateTORNAMENTaddRACEstandar:: " + e.getMessage());
 		}
 	};
 
@@ -1485,13 +1639,13 @@ if (TORNAMENTSELECT.listTornRace== null) {
 				if (RACESELECT == null) {
 					System.out.println("Firts select a RACE");
 				} else {
-					if ((RACESELECT.particG.contains(GARAGESELECT))) {
+					if ((TORNAMENTSELECT.listTornRace.contains(RACESELECT))) {
 						TORNAMENTSELECT.listTornRace.remove(RACESELECT);
 					}
 				}
 			}
 		} catch (Exception e) {
-			System.err.println("ERROR:: TORNAMEN::UPADTE_TORNAMENT_DEL_RACE:: " + e.getMessage());
+			System.err.println("ERROR::TORNAMEN::updateTORNAMENTdelRACE:: " + e.getMessage());
 		} finally {
 			GARAGESELECT = null;
 			RACESELECT = null;
@@ -1514,26 +1668,19 @@ if (TORNAMENTSELECT.listTornRace== null) {
 				if (RACESELECT == null) {
 					System.out.println("Firts select a RACE");
 				} else {
-					GARAGESELECT = null;
-					addGARAGE();
-					if (GARAGESELECT == null) {
-						throw new Exception("Firts select a GARAGE");
-					} else {
-						if (!(RACESELECT.particG.contains(GARAGESELECT))) {
-							RACESELECT.particG.add(GARAGESELECT);
-						}
+					menuChooseGARAGE(chooseGARAGE(RACESELECT.particG));
+					
 					}
-				}
+				
 			}
 		} catch (Exception e) {
-			System.err.println("ERROR:: TORNAMEN::UPADTE_TORNAMENT_ADD_GARAGE:: " + e.getMessage());
+			System.err.println("ERROR:: TORNAMEN::updateTORNAMENTaddGarage:: " + e.getMessage());
 		}
 	};
 
 	// T[9] UPADTE_TORNAMENT_DEL_GARAGE
 	public void updateTORNAMENTdelGarage() {
 		try {
-
 			TORNAMENTSELECT = null;
 			selectTORNAMENT();
 			if (TORNAMENTSELECT == null) {
@@ -1541,14 +1688,17 @@ if (TORNAMENTSELECT.listTornRace== null) {
 			} else {
 				GARAGESELECT = null;
 				selectGARAGE(TORNAMENTSELECT.tornPartiG);
+				if (GARAGESELECT != null) {
 				for (Race r : TORNAMENTSELECT.listTornRace) {
 					if (r.particG.contains(GARAGESELECT)) {
 						r.particG.remove(GARAGESELECT);
 					}
 				}
+			}else {System.out.println("Firts select a GARAGE");
+			}
 			}
 		} catch (Exception e) {
-			System.err.println("ERROR:: TORNAMEN::UPADTE_TORNAMENT_DEL_GARAGE:: " + e.getMessage());
+			System.err.println("ERROR::TORNAMEN::updateTORNAMENTdelGarage:: " + e.getMessage());
 		} finally {
 			GARAGESELECT = null;
 			CARSELECT = null;
@@ -1560,27 +1710,28 @@ if (TORNAMENTSELECT.listTornRace== null) {
 	// T[10] UPADTE_TORNAMENT_ADD_CAR_TO_GARAGE
 	public void updateTORNAMENTaddCarToGarage() {
 		try {
-
 			TORNAMENTSELECT = null;
 			selectTORNAMENT();
 			if (TORNAMENTSELECT == null) {
 				System.out.println("Firts select a TORNAMENT");
 			} else {
-				GARAGESELECT = null;
-				selectCAR(TORNAMENTSELECT.tornPartiC);
-				if (CARSELECT == null) {
-					System.out.println("Firts select a CAR");
+				RACESELECT = null;
+				selectRACE(TORNAMENTSELECT.listTornRace);
+				if (RACESELECT == null) {
+					System.out.println("Firts select a RACE");
 				} else {
-
-					for (Race r : TORNAMENTSELECT.listTornRace) {
-						if (!(r.particC.contains(CARSELECT))) {
-							r.particC.add(CARSELECT);
-						}
+					GARAGESELECT = null;
+					selectGARAGE(RACESELECT.particG);
+					if (GARAGESELECT == null) {
+						System.out.println("Firts select a GARAGE");
 					}
+					menuChooseCAR(chooseCAR(GARAGESELECT.getAllCar()));
 				}
+
+
 			}
 		} catch (Exception e) {
-			System.err.println("ERROR:: TORNAMEN::UPADTE_TORNAMENT_ADD_CAR_TO_GARAGE:: " + e.getMessage());
+			System.err.println("ERROR:: TORNAMEN::updateTORNAMENTaddCarToGarage:: " + e.getMessage());
 		}
 	};
 
@@ -1606,7 +1757,7 @@ if (TORNAMENTSELECT.listTornRace== null) {
 				}
 			}
 		} catch (Exception e) {
-			System.err.println("ERROR:: TORNAMEN::DEL_TORNAMENT:: " + e.getMessage());
+			System.err.println("ERROR:: TORNAMEN::updateTORNAMENTdelCarToGarage:: " + e.getMessage());
 		} finally {
 			GARAGESELECT = null;
 			CARSELECT = null;
@@ -1626,7 +1777,7 @@ if (TORNAMENTSELECT.listTornRace== null) {
 				TORNAMENTSELECT.start();
 			}
 		} catch (Exception e) {
-			System.err.println("ERROR:: TORNAMEN::START_TORNAMENT:: " + e.getMessage());
+			System.err.println("ERROR:: TORNAMEN::startTORNAMENT:: " + e.getMessage());
 		}
 	};
 
@@ -1651,7 +1802,7 @@ if (TORNAMENTSELECT.listTornRace== null) {
 			}
 
 		} catch (Exception e) {
-			System.err.println("ERROR:: TORNAMEN::EXPORT_TORNAMENT:: " + e.getMessage());
+			System.err.println("ERROR:: TORNAMEN::expTORNAMENT:: " + e.getMessage());
 		}
 	};
 	// T[14] IMPORT_TORNAMENT
@@ -1678,7 +1829,7 @@ if (TORNAMENTSELECT.listTornRace== null) {
 			}
 
 		} catch (Exception e) {
-			System.err.println("ERROR:: TORNAMEN::IMPORT_TORNAMENT:: " + e.getMessage());
+			System.err.println("ERROR:: TORNAMEN::importTORNAMENT:: " + e.getMessage());
 		}
 	};
 

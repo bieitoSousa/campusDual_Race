@@ -5,40 +5,35 @@
  */
 package com.bieitosousa.campusdual.UTILS;
 
-
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
-
 
 /**
  *
  * @author BIE_FIJO_PC
  */
 public class Utilss {
-	
-	public static boolean  pConsole = false;
+
+	public static boolean pConsole = false;
 //------------------------------------------- TIME ------------------------------------------------------//	
-	
+
 	public static String getTime() {
-		return Long.toString( new Date().getTime());
+		return Long.toString(new Date().getTime());
 	}
-	
-	
-	
+
 //------------------------------------------- PRINT ------------------------------------------------------//	
 	public static boolean printInConsole() {
 		return pConsole;
 	}
+
 	public static void changePrintInConsole() {
-		pConsole=!pConsole ;
+		pConsole = !pConsole;
 	}
-	
+
 	public static void printONFile(String mnj) {
 		FileWriter writer = null;
 		BufferedWriter bw = null;
@@ -79,7 +74,7 @@ public class Utilss {
 		} catch (IOException e) {
 			System.err.format("IOException: %s%n", e);
 		} catch (Exception e) {
-			System.err.println(f+e.getMessage());
+			System.err.println(f + e.getMessage());
 			e.printStackTrace();
 		} finally {
 			try {
@@ -91,8 +86,9 @@ public class Utilss {
 		}
 
 	}
-	
-	// ------------------------------------------------[GENERIC ] EXPORT/IMPORT ------------------------------------//
+
+	// ------------------------------------------------[GENERIC ] EXPORT/IMPORT
+	// ------------------------------------//
 
 //	[EXAMPLE TO  PASS TO A GENERIC METH]
 //	public void exportGarageL() {
@@ -107,23 +103,24 @@ public class Utilss {
 //			System.err.println("Error al exportar " + e.getMessage());
 //		}
 //	}
-	
-	public static <T>  void expList(ArrayList<T> list, String path) {
+
+	public static <T> void expList(ArrayList<T> list, String path) {
 		try {
 			File f = new File(path);
-			File fPath= f.getParentFile();
-			if(!fPath.exists()) {
+			File fPath = f.getParentFile();
+			if (!fPath.exists()) {
 				fPath.mkdirs();
 			}
 			if (!f.exists()) {
 				f.createNewFile();
-			}else {
-			JSON.WriteObjJsonInFile(f, list);
+			} else {
+				JSON.WriteObjJsonInFile(f, list);
 			}
 		} catch (Exception e) {
 			System.err.println("Error al exportar " + e.getMessage());
 		}
 	}
+
 //	[EXAMPLE TO  PASS TO A GENERIC METH]
 //	public void importGarageL() {
 //		garageL.clear();
@@ -150,16 +147,16 @@ public class Utilss {
 		list.clear();
 		try {
 			File f = new File(path);
-			File fPath= f.getParentFile();
-			if(!fPath.exists()) {
+			File fPath = f.getParentFile();
+			if (!fPath.exists()) {
 				fPath.mkdirs();
 			}
 			if (!f.exists()) {
 				f.createNewFile();
-			}else {
-				
-				list =    (ArrayList<T>) JSON.ReadObjJsonInFile(f);
-				
+			} else {
+
+				list = (ArrayList<T>) JSON.ReadObjJsonInFile(f);
+
 				System.out.println(" List of Garage data has been exported to " + f);
 			}
 		} catch (Exception e) {
@@ -167,13 +164,5 @@ public class Utilss {
 		}
 		return list;
 	}
-
-	
-	
-
-
-	
-	
-	
 
 }

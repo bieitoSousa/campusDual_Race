@@ -11,9 +11,6 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-
-import com.bieitosousa.campusdual.UTILS.*;
-
 /**
  *
  * @author BIE_FIJO_PC
@@ -35,23 +32,28 @@ public class Garage implements Cloneable, Serializable {
 	public Garage(String name) {
 		this.name = name;
 	}
-	public Garage(String name,ArrayList<Car> listGCar) {
+
+	public Garage(String name, ArrayList<Car> listGCar) {
 		this.name = name;
-		this.listGCar=listGCar;
+		this.listGCar = listGCar;
 	}
 
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public ArrayList<Car> getListGCar() {
 		return listGCar;
 	}
+
 	public void setListGCar(ArrayList<Car> listGCar) {
 		this.listGCar = listGCar;
 	}
+
 	// add a car to the garage
 	public void addCar(Car c) {
 		try {
@@ -67,16 +69,16 @@ public class Garage implements Cloneable, Serializable {
 				listGCar.add(c);
 			}
 		} catch (Exception e) {
-				System.err.println(" not add the car" );
-			}
+			System.err.println(" not add the car");
 		}
+	}
 
 	// delete a car on the garage
 	public void deleteCar(Car c) {
 		try {
 			listGCar.remove(c);
 		} catch (Exception e) {
-			System.err.println(" not remove the car" );
+			System.err.println(" not remove the car");
 		}
 
 	}
@@ -108,10 +110,10 @@ public class Garage implements Cloneable, Serializable {
 	}
 
 	@Override
-    public Object clone(){
-        Object obj=null;
-        try{
-           obj=super.clone();
+	public Object clone() {
+		Object obj = null;
+		try {
+			obj = super.clone();
 //           obj = (Garage) obj;
 //           ArrayList<Car> listGCarClone = new ArrayList<>();
 //           for(Car c : listGCar) {
@@ -119,13 +121,12 @@ public class Garage implements Cloneable, Serializable {
 //           }
 //           this.listGCar.clear();
 //           this.listGCar=listGCarClone;
-        }catch(CloneNotSupportedException ex){
-            System.out.println(" no se puede duplicar");
-        }
-        return obj;
-    }
-	
-	
+		} catch (CloneNotSupportedException ex) {
+			System.out.println(" no se puede duplicar");
+		}
+		return obj;
+	}
+
 	@Override
 	public String toString() {
 		return "Garage_" + name + " : {" + listGCar + "}";

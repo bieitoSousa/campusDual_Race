@@ -4,7 +4,7 @@
   <artifactId>campusDual_Race_Eclipse</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Race_Eclipse</name>
-  <description>aaaaaaaaaaa</description>
+  <description>proyecto Race Control</description>
  <licenses>
         <license>
             <name>MIT License</name>
@@ -23,7 +23,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.version>3.8.1</maven.compiler.version>
           <maven.jar.version>3.2.0</maven.jar.version>
-        <maven.mainClass>com.bieitosousa.campusdual.Main</maven.mainClass>
+        <maven.mainClass>com.bieitosousa.campusdual.DATA.Controler</maven.mainClass>
     </properties>
     <dependencies>   
     <dependency>
